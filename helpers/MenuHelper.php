@@ -8,8 +8,8 @@ namespace yuncms\admin\helpers;
 
 use Yii;
 use yii\caching\TagDependency;
-use backend\components\RbacManager;
-use common\models\AdminMenu;
+use yuncms\admin\models\AdminMenu;
+use yuncms\admin\components\RbacManager;
 
 /**
  * Class MenuHelper
@@ -39,7 +39,7 @@ class MenuHelper
      */
     public static function getAssignedMenu($userId, $root = null, $callback = null)
     {
-        /* @var $manager \backend\components\RbacManager */
+        /* @var $manager \yuncms\admin\components\RbacManager */
         $manager = Yii::$app->getAuthManager();
         $menus = AdminMenu::find()->asArray()->indexBy('id')->all();
         $key = [__METHOD__, $userId, $manager->defaultRoles];

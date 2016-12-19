@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace yuncms\admin;
+namespace yuncms\admin\controllers;
 
 use Yii;
 use yii\web\Controller;
