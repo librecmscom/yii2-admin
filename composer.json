@@ -1,0 +1,19 @@
+{
+  "name": "yuncms/yii2-admin",
+  "description": "The admin extension for the yuncms",
+  "keywords": [
+    "yuncms",
+    "admin"
+  ],
+  "type": "yii2-extension",
+  "license": "BSD-3-Clause",
+  "require": {
+    "php": ">=5.4.0",
+    "yiisoft/yii2": "~2.0.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "yuncms\\admin\\": ""
+    }
+  }
+}
