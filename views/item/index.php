@@ -2,13 +2,13 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use backend\components\RouteRule;
+use yuncms\admin\components\RouteRule;
 use backend\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
 /* @var \yii\data\ActiveDataProvider $dataProvider */
-/* @var \backend\models\AdminAuthItemSearch $searchModel */
-/* @var \backend\components\ItemController $context */
+/* @var \yuncms\admin\models\AdminAuthItemSearch $searchModel */
+/* @var \yuncms\admin\components\ItemController $context */
 
 $labels = $this->context->labels();
 if ($labels['Item'] == 'Role') {
@@ -16,11 +16,11 @@ if ($labels['Item'] == 'Role') {
     $actions = [
         [
             'label' => Yii::t('backend/role', 'Manage Role'),
-            'url' => ['/role/index'],
+            'url' => ['/admin/role/index'],
         ],
         [
             'label' => Yii::t('backend/role', 'Create Role'),
-            'url' => ['/role/create'],
+            'url' => ['/admin/role/create'],
         ],
     ];
 } else {
@@ -28,11 +28,11 @@ if ($labels['Item'] == 'Role') {
     $actions = [
         [
             'label' => Yii::t('backend/permission', 'Manage Permission'),
-            'url' => ['/permission/index'],
+            'url' => ['/admin/permission/index'],
         ],
         [
             'label' => Yii::t('backend/permission', 'Create Permission'),
-            'url' => ['/permission/create'],
+            'url' => ['/admin/permission/create'],
         ],
     ];
 }

@@ -9,8 +9,7 @@ namespace yuncms\admin\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ArrayDataProvider;
-use backend\components\RouteRule;
-use common\models\AdminBizRule as MBizRule;
+use yuncms\admin\components\RouteRule;
 
 /**
  * Description of BizRule
@@ -53,7 +52,7 @@ class AdminBizRuleSearch extends Model
         $included = !($this->load($params) && $this->validate() && trim($this->name) !== '');
         foreach ($authManager->getRules() as $name => $item) {
             if ($name != RouteRule::RULE_NAME && ($included || stripos($item->name, $this->name) !== false)) {
-                $models[$name] = new MBizRule($item);
+                $models[$name] = new AdminBizRule($item);
             }
         }
 

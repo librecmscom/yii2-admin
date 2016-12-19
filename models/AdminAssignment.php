@@ -8,7 +8,7 @@ namespace yuncms\admin\models;
 
 use Yii;
 use yii\base\Object;
-namespace yuncms\admin\components\Helper;
+use yuncms\admin\components\Helper;
 
 /**
  * Description of Assignment

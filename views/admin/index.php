@@ -4,10 +4,10 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\grid\GridView;
 use backend\widgets\Jarvis;
-use common\models\Admin;
+use yuncms\admin\models\Admin;
 
 /* @var $this */
-/* @var \backend\models\AdminSearch $searchModel */
+/* @var \yuncms\admin\models\AdminSearch $searchModel */
 /* @var \yii\data\ActiveDataProvider $dataProvider */
 
 $this->title = Yii::t('backend/admin', 'Manage Admin');
@@ -24,11 +24,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'bodyToolbarActions' => [
                     [
                         'label' => Yii::t('backend/admin', 'Manage Admin'),
-                        'url' => ['/admin/index'],
+                        'url' => ['/admin/admin/index'],
                     ],
                     [
                         'label' => Yii::t('backend/admin', 'Create Admin'),
-                        'url' => ['/admin/create'],
+                        'url' => ['/admin/admin/create'],
                     ],
                 ]
             ]); ?>

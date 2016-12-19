@@ -11,9 +11,9 @@ use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\bootstrap\ActiveForm;
+use yii\web\NotFoundHttpException;
 use yuncms\admin\models\AdminMenu;
 use yuncms\admin\components\Helper;
-use yii\web\NotFoundHttpException;
 use yuncms\admin\models\AdminMenuSearch;
 
 /**
