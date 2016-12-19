@@ -1,11 +1,14 @@
 <?php
-
-namespace backend\models;
+/**
+ * @link http://www.tintsoft.com/
+ * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
+ * @license http://www.tintsoft.com/license/
+ */
+namespace yuncms\admin\models;
 
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\Banword;
 
 /**
  * BadwordSearch represents the model behind the search form about `common\models\Badword`.

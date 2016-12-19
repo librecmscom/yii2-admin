@@ -4,13 +4,13 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace common\models;
+namespace yuncms\admin\models;
 
 use Yii;
 use yii\rbac\Item;
 use yii\base\Model;
 use yii\helpers\Json;
-use backend\components\Helper;
+use yuncms\admin\components\Helper;
 
 /**
  * This is the model class for table "tbl_auth_item".

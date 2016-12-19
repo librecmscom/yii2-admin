@@ -6,12 +6,13 @@
  */
 namespace yuncms\admin\models;
 
+use yii\db\ActiveQuery;
 /**
- * This is the ActiveQuery class for [[Admin]].
+ * This is the ActiveQuery class for [[Badword]].
  *
- * @see Admin
+ * @see Badword
  */
-class AdminQuery extends \yii\db\ActiveQuery
+class BanwordQuery extends ActiveQuery
 {
     /*public function active()
     {
@@ -20,7 +21,7 @@ class AdminQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Admin[]|array
+     * @return Banword[]|array
      */
     public function all($db = null)
     {
@@ -29,7 +30,7 @@ class AdminQuery extends \yii\db\ActiveQuery
 
     /**
      * @inheritdoc
-     * @return Admin|array|null
+     * @return Banword|array|null
      */
     public function one($db = null)
     {
