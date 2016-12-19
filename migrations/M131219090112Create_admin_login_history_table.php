@@ -4,7 +4,7 @@ namespace yuncms\admin\migrations;
 
 use yii\db\Migration;
 
-class M161219090112Create_admin_login_history_table extends Migration
+class M131219090112Create_admin_login_history_table extends Migration
 {
     public function up()
     {

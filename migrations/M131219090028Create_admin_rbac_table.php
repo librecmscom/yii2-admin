@@ -4,7 +4,7 @@ namespace yuncms\admin\migrations;
 
 use yii\db\Migration;
 
-class M161219090028Create_admin_rbac_table extends Migration
+class M131219090028Create_admin_rbac_table extends Migration
 {
     public function up()
     {

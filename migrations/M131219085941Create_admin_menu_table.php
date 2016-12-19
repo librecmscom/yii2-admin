@@ -4,7 +4,7 @@ namespace yuncms\admin\migrations;
 
 use yii\db\Migration;
 
-class M161219085941Create_admin_menu_table extends Migration
+class M131219085941Create_admin_menu_table extends Migration
 {
     public function up()
     {

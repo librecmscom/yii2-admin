@@ -4,7 +4,7 @@ namespace yuncms\admin\migrations;
 
 use yii\db\Migration;
 
-class M161219085802Create_admin_user extends Migration
+class M131219085802Create_admin_user extends Migration
 {
     public function up()
     {
@@ -24,10 +24,7 @@ class M161219085802Create_admin_user extends Migration
 
     public function down()
     {
-        $this->delete();
-        echo "M161219085802Create_admin_user cannot be reverted.\n";
-
-        return false;
+        $this->delete('{{%admin}}',['username'=>'admin']);
     }
 
     /*
