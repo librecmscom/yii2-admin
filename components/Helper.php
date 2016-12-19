@@ -44,7 +44,7 @@ class Helper
     protected static function getDefaultRoutes()
     {
         if (self::$_defaultRoutes === null) {
-            /** @var \backend\components\RbacManager $manager */
+            /** @var \yuncms\admin\components\RbacManager $manager */
             $manager = Yii::$app->getAuthManager();
             $roles = $manager->defaultRoles;
             if ($manager->cache && ($routes = $manager->cache->get($roles)) !== false) {
@@ -77,7 +77,7 @@ class Helper
     public static function getRoutesByUser($userId)
     {
         if (!isset(self::$_userRoutes[$userId])) {
-            /** @var \backend\components\RbacManager $manager */
+            /** @var \yuncms\admin\components\RbacManager $manager */
             $manager = Yii::$app->getAuthManager();
             if ($manager->cache && ($routes = $manager->cache->get([__METHOD__, $userId])) !== false) {
                 self::$_userRoutes[$userId] = $routes;
@@ -108,7 +108,7 @@ class Helper
      */
     public static function checkRoute($route, $params = [], $user = null)
     {
-        /** @var \backend\components\RbacManager $manager */
+        /** @var \yuncms\admin\components\RbacManager $manager */
         $manager = Yii::$app->getAuthManager();
         $r = static::normalizeRoute($route);
         if ($manager->onlyRegisteredRoute && !isset(static::getRegisteredRoutes()[$r])) {

@@ -10,9 +10,9 @@ use Yii;
 use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
-use common\models\AdminAssignment;
+use yuncms\admin\models\AdminAssignment;
 use yii\web\NotFoundHttpException;
-use backend\models\AdminAssignmentSearch;
+use yuncms\admin\models\AdminAssignmentSearch;
 
 /**
  * AssignmentController implements the CRUD actions for Assignment model.

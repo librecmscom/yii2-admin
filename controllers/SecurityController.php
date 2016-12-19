@@ -9,6 +9,7 @@ namespace yuncms\admin;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
+use yuncms\admin\models\LoginForm;
 
 /**
  * Class SecurityController
@@ -33,7 +34,7 @@ class SecurityController extends Controller
 
     /**
      * Login action.
-     *
+     * @url GET /admin/security/login
      * @return string
      */
     public function actionLogin()
@@ -54,7 +55,7 @@ class SecurityController extends Controller
 
     /**
      * Logout action.
-     *
+     * @url POST /admin/security/logout
      * @return string
      */
     public function actionLogout()

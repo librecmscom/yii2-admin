@@ -23,8 +23,8 @@ use yii\web\ForbiddenHttpException;
  *
  * ```
  * 'as access' => [
- *     'class' => 'backend\components\AccessControl',
- *     'allowActions' => ['site/login', 'site/error']
+ *     'class' => 'yuncms\admin\components\AccessControl',
+ *     'allowActions' => ['/admin/security/login', 'site/error']
  * ]
  * ```
  *
@@ -43,7 +43,7 @@ class AccessControl extends ActionFilter
     /**
      * @var array List of action that not need to check access.
      */
-    public $allowActions = ['site/login', 'site/error', 'site/captcha'];
+    public $allowActions = ['/admin/security/login', 'site/error', 'site/captcha'];
 
     /**
      * Get user

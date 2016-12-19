@@ -10,8 +10,7 @@ use Yii;
 use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
-use common\models\AdminRoute;
-
+use yuncms\admin\models\AdminRoute;
 
 /**
  * Description of RuleController

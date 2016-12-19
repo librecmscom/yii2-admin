@@ -28,7 +28,7 @@ use yii\rbac\DbManager;
 class RbacManager extends DbManager
 {
 
-    const CACHE_TAG = 'backend.rbac';
+    const CACHE_TAG = 'admin.rbac';
 
     /**
      * @var string the name of the table storing authorization items. Defaults to "auth_item".

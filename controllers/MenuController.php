@@ -11,10 +11,10 @@ use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\bootstrap\ActiveForm;
-use common\models\AdminMenu;
-use backend\components\Helper;
+use yuncms\admin\models\AdminMenu;
+use yuncms\admin\components\Helper;
 use yii\web\NotFoundHttpException;
-use backend\models\AdminMenuSearch;
+use yuncms\admin\models\AdminMenuSearch;
 
 /**
  * Class MenuController

@@ -9,10 +9,10 @@ namespace yuncms\admin\controllers;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
-use common\models\AdminBizRule;
-use backend\components\Helper;
 use yii\web\NotFoundHttpException;
-use backend\models\AdminBizRuleSearch;
+use yuncms\admin\models\AdminBizRule;
+use yuncms\admin\components\Helper;
+use yuncms\admin\models\AdminBizRuleSearch;
 
 /**
  * Description of RuleController

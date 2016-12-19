@@ -7,7 +7,7 @@
 namespace yuncms\admin\controllers;
 
 use yii\rbac\Item;
-use backend\components\ItemController;
+use yuncms\admin\components\ItemController;
 
 /**
  * PermissionController implements the CRUD actions for AuthItem model.

@@ -12,8 +12,8 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
 use yii\base\NotSupportedException;
-use common\models\AdminAuthItem;
-use backend\models\AdminAuthItemSearch;
+use yuncms\admin\models\AdminAuthItem;
+use yuncms\admin\models\AdminAuthItemSearch;
 
 /**
  * Class ItemController
@@ -150,7 +150,6 @@ class ItemController extends Controller
 
     /**
      * Label use in view
-     * @return array
      */
     public function labels()
     {

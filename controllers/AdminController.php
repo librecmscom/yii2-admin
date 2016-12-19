@@ -10,8 +10,8 @@ use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\web\NotFoundHttpException;
-use common\models\Admin;
-use backend\models\AdminSearch;
+use yuncms\admin\models\Admin;
+use yuncms\admin\models\AdminSearch;
 
 /**
  * Class AdminController
