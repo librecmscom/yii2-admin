@@ -44,23 +44,23 @@ $this->registerCss("
 $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>';
 
 if ($labels['Item'] == 'Role') {
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/role', 'Manage Role'), 'url' => ['index']];
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/role', 'Manage Role'), 'url' => ['index']];
     $actions = [
         [
-            'label' => Yii::t('backend/role', 'Manage Role'),
-            'url' => ['/role/index'],
+            'label' => Yii::t('admin/role', 'Manage Role'),
+            'url' => ['/admin/role/index'],
         ],
         [
-            'label' => Yii::t('backend/role', 'Create Role'),
-            'url' => ['/role/create'],
+            'label' => Yii::t('admin/role', 'Create Role'),
+            'url' => ['/admin/role/create'],
         ],
         [
-            'label' => Yii::t('backend/role', 'Update Role'),
-            'url' => ['/role/update', 'id' => $model->name],
+            'label' => Yii::t('admin/role', 'Update Role'),
+            'url' => ['/admin/role/update', 'id' => $model->name],
         ],
         [
-            'label' => Yii::t('backend/role', 'Delete Role'),
-            'url' => ['/role/delete', 'id' => $model->name],
+            'label' => Yii::t('admin/role', 'Delete Role'),
+            'url' => ['/admin/role/delete', 'id' => $model->name],
             'options' => [
                 'class' => 'btn btn-danger  btn-sm',
                 'data-confirm' => Yii::t('app', 'Are you sure to delete this item?'),
@@ -69,23 +69,23 @@ if ($labels['Item'] == 'Role') {
         ],
     ];
 } else {
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/permission', 'Manage Permission'), 'url' => ['index']];
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/permission', 'Manage Permission'), 'url' => ['index']];
     $actions = [
         [
-            'label' => Yii::t('backend/permission', 'Manage Permission'),
-            'url' => ['/permission/index'],
+            'label' => Yii::t('admin/permission', 'Manage Permission'),
+            'url' => ['/admin/permission/index'],
         ],
         [
-            'label' => Yii::t('backend/permission', 'Create Permission'),
-            'url' => ['/permission/create'],
+            'label' => Yii::t('admin/permission', 'Create Permission'),
+            'url' => ['/admin/permission/create'],
         ],
         [
-            'label' => Yii::t('backend/permission', 'Update Permission'),
-            'url' => ['/permission/update', 'id' => $model->name],
+            'label' => Yii::t('admin/permission', 'Update Permission'),
+            'url' => ['/admin/permission/update', 'id' => $model->name],
         ],
         [
-            'label' => Yii::t('backend/permission', 'Delete Permission'),
-            'url' => ['/permission/delete', 'id' => $model->name],
+            'label' => Yii::t('admin/permission', 'Delete Permission'),
+            'url' => ['/admin/permission/delete', 'id' => $model->name],
             'options' => [
                 'class' => 'btn btn-danger  btn-sm',
                 'data-confirm' => Yii::t('app', 'Are you sure to delete this item?'),
@@ -124,7 +124,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="row">
                 <div class="col-sm-5">
                     <input class="form-control search" data-target="avaliable"
-                           placeholder="<?= Yii::t('backend/role', 'Search for avaliable') ?>">
+                           placeholder="<?= Yii::t('admin/role', 'Search for avaliable') ?>">
                     <select multiple size="20" class="form-control list" data-target="avaliable">
                     </select>
                 </div>
@@ -141,7 +141,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="col-sm-5">
                     <input class="form-control search" data-target="assigned"
-                           placeholder="<?= Yii::t('backend/role', 'Search for assigned') ?>">
+                           placeholder="<?= Yii::t('admin/role', 'Search for assigned') ?>">
                     <select multiple size="20" class="form-control list" data-target="assigned">
                     </select>
                 </div>

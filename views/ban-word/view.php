@@ -1,14 +1,13 @@
 <?php
-
-use backend\helpers\Html;
 use yii\widgets\DetailView;
+use yii\helpers\Html;
 use backend\widgets\Jarvis;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Badword */
+/* @var $model yuncms\admin\models\Badword */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/ban-word', 'Manage Ban Word'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin/ban-word', 'Manage Ban Word'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -21,21 +20,21 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/ban-word', 'Manage Ban Word'),
-                        'url' => ['/ban-word/index'],
+                        'label' => Yii::t('admin/ban-word', 'Manage Ban Word'),
+                        'url' => ['/admin/ban-word/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/ban-word', 'Create Ban Word'),
-                        'url' => ['/ban-word/create'],
+                        'label' => Yii::t('admin/ban-word', 'Create Ban Word'),
+                        'url' => ['/admin/ban-word/create'],
                     ],
                     [
-                        'label' => Yii::t('backend/ban-word', 'Update Ban Word'),
-                        'url' => ['/ban-word/update', 'id' => $model->id],
+                        'label' => Yii::t('admin/ban-word', 'Update Ban Word'),
+                        'url' => ['/admin/ban-word/update', 'id' => $model->id],
                         'options' => ['class' => 'btn btn-primary btn-sm']
                     ],
                     [
-                        'label' => Yii::t('backend/ban-word', 'Delete Ban Word'),
-                        'url' => ['/ban-word/delete', 'id' => $model->id],
+                        'label' => Yii::t('admin/ban-word', 'Delete Ban Word'),
+                        'url' => ['/admin/ban-word/delete', 'id' => $model->id],
                         'options' => [
                             'class' => 'btn btn-danger btn-sm',
                             'data' => [

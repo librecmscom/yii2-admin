@@ -1,37 +1,37 @@
 <?php
 
-use backend\helpers\Html;
+use yii\helpers\Html;
 use backend\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\AdminAuthItem $model */
-/* @var \backend\components\ItemController $context */
+/* @var \yuncms\admin\models\AdminAuthItem $model */
+/* @var \yuncms\admin\components\ItemController $context */
 
 $labels = $this->context->labels();
 if ($labels['Item'] == 'Role') {
-    $this->title = Yii::t('backend/role', 'Update Role') . ': ' . $model->name;
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/role', 'Manage Role'), 'url' => ['index']];
+    $this->title = Yii::t('admin/role', 'Update Role') . ': ' . $model->name;
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/role', 'Manage Role'), 'url' => ['index']];
     $actions = [
         [
-            'label' => Yii::t('backend/role', 'Manage Role'),
-            'url' => ['/role/index'],
+            'label' => Yii::t('admin/role', 'Manage Role'),
+            'url' => ['/admin/role/index'],
         ],
         [
             'label' => Yii::t('backend/role', 'Create Role'),
-            'url' => ['/role/create'],
+            'url' => ['/admin/role/create'],
         ],
     ];
 } else {
-    $this->title = Yii::t('backend/permission', 'Update Permission') . ': ' . $model->name;
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/permission', 'Manage Permission'), 'url' => ['index']];
+    $this->title = Yii::t('admin/permission', 'Update Permission') . ': ' . $model->name;
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/permission', 'Manage Permission'), 'url' => ['index']];
     $actions = [
         [
-            'label' => Yii::t('backend/permission', 'Manage Permission'),
-            'url' => ['/permission/index'],
+            'label' => Yii::t('admin/permission', 'Manage Permission'),
+            'url' => ['/admin/permission/index'],
         ],
         [
-            'label' => Yii::t('backend/permission', 'Create Permission'),
-            'url' => ['/permission/create'],
+            'label' => Yii::t('admin/permission', 'Create Permission'),
+            'url' => ['/admin/permission/create'],
         ],
     ];
 }

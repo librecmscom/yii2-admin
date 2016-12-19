@@ -6,7 +6,7 @@ use backend\widgets\Jarvis;
 /* @var $this yii\web\View */
 /* @var $model common\models\Badword */
 
-$this->title = Yii::t('backend/ban-word', 'Create Ban Word');
+$this->title = Yii::t('admin/ban-word', 'Create Ban Word');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/ban-word', 'Manage Ban Word'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -19,12 +19,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/ban-word', 'Manage Ban Word'),
-                        'url' => ['/ban-word/index'],
+                        'label' => Yii::t('admin/ban-word', 'Manage Ban Word'),
+                        'url' => ['/admin/ban-word/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/ban-word', 'Create Ban Word'),
-                        'url' => ['/ban-word/create'],
+                        'label' => Yii::t('admin/ban-word', 'Create Ban Word'),
+                        'url' => ['/admin/ban-word/create'],
                     ],
                 ]
             ]); ?>

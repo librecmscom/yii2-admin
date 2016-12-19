@@ -4,9 +4,9 @@ use backend\helpers\Html;
 use backend\widgets\Jarvis;
 
 /* @var yii\web\View $this   */
-/* @var common\models\AdminBizRule $model  */
+/* @var yuncms\admin\models\AdminBizRule $model  */
 
-$this->title = Yii::t('backend/rule', 'Update Rule') . ': ' . $model->name;
+$this->title = Yii::t('admin', 'Update Rule') . ': ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/rule', 'Manage Rule'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->name]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
@@ -20,11 +20,11 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/rule', 'Manage Rule'),
+                        'label' => Yii::t('admin', 'Manage Rule'),
                         'url' => ['/rule/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/rule', 'Create Rule'),
+                        'label' => Yii::t('admin', 'Create Rule'),
                         'url' => ['/rule/create'],
                     ],
                 ]

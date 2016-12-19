@@ -123,7 +123,7 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
 
                         </fieldset>
                         <footer>
-                            <?= Html::submitButton(Yii::t('backend', 'Sign in'), ['class' => 'btn btn-primary']) ?>
+                            <?= Html::submitButton(Yii::t('admin', 'Sign in'), ['class' => 'btn btn-primary']) ?>
                         </footer>
                         <?php ActiveForm::end(); ?>
                     </div>

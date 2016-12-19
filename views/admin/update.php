@@ -4,15 +4,15 @@ use yii\helpers\Html;
 use backend\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\Admin $model */
+/* @var \yuncms\admin\models\Admin $model */
 
-$this->title = Yii::t('backend/admin', 'Update Admin') . ': ' . $model->username;
+$this->title = Yii::t('admin/admin', 'Update Admin') . ': ' . $model->username;
 $this->params['breadcrumbs'][] = [
-    'label' => Yii::t('backend/admin', 'Manage Admin'),
+    'label' => Yii::t('admin/admin', 'Manage Admin'),
     'url' => ['index']
 ];
 $this->params['breadcrumbs'][] = ['label' => $model->username, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
+$this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <section id="widget-grid">
     <div class="row">
@@ -23,12 +23,12 @@ $this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/admin', 'Manage Admin'),
-                        'url' => ['/admin/index'],
+                        'label' => Yii::t('admin/admin', 'Manage Admin'),
+                        'url' => ['/admin/admin/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/admin', 'Create Admin'),
-                        'url' => ['/admin/create'],
+                        'label' => Yii::t('admin/admin', 'Create Admin'),
+                        'url' => ['/admin/admin/create'],
                     ],
                 ]
             ]); ?>

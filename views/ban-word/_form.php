@@ -2,10 +2,10 @@
 
 use backend\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use common\models\Badword;
+use yuncms\admin\models\Badword;
 
 /* @var \yii\web\View $this */
-/* @var common\models\Badword $model */
+/* @var yuncms\admin\models\Badword $model */
 /* @var ActiveForm $form */
 ?>
 <?php $form = ActiveForm::begin(['layout' => 'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => false,]); ?>

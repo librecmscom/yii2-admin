@@ -5,11 +5,11 @@ use yii\grid\GridView;
 use backend\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\AdminBizRule $model */
+/* @var \yuncms\admin\models\AdminBizRule $model */
 /* @var \yii\data\ActiveDataProvider $dataProvider */
-/* @var \backend\models\AdminBizRuleSearch $searchModel */
+/* @var \yuncms\admin\models\AdminBizRuleSearch $searchModel */
 
-$this->title = Yii::t('backend/rule', 'Manage Rule');
+$this->title = Yii::t('admin', 'Manage Rule');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -22,12 +22,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/rule', 'Manage Rule'),
-                        'url' => ['/rule/index'],
+                        'label' => Yii::t('admin', 'Manage Rule'),
+                        'url' => ['/admin/rule/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/rule', 'Create Rule'),
-                        'url' => ['/rule/create'],
+                        'label' => Yii::t('admin', 'Create Rule'),
+                        'url' => ['/admin/rule/create'],
                     ],
                 ]
             ]); ?>
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
                     [
                         'attribute' => 'name',
-                        'label' => Yii::t('backend/rule', 'Rule Name'),
+                        'label' => Yii::t('admin', 'Rule Name'),
                     ],
                     ['class' => 'yii\grid\ActionColumn', 'header' => Yii::t('app', 'Operation')],
                 ],

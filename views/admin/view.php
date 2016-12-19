@@ -3,14 +3,14 @@
 use backend\helpers\Html;
 use yii\widgets\DetailView;
 use backend\widgets\Jarvis;
-use common\models\Admin;
+use yuncms\admin\models\Admin;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\Admin $model */
+/* @var \yuncms\admin\models\Admin $model */
 
 $this->title = $model->username;
 $this->params['breadcrumbs'][] = [
-    'label' => Yii::t('backend/admin', 'Manage Admin'),
+    'label' => Yii::t('admin/admin', 'Manage Admin'),
     'url' => ['index']
 ];
 $this->params['breadcrumbs'][] = $this->title;
@@ -25,20 +25,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/admin', 'Manage Admin'),
-                        'url' => ['/admin/index'],
+                        'label' => Yii::t('admin/admin', 'Manage Admin'),
+                        'url' => ['/admin/admin/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/admin', 'Create Admin'),
-                        'url' => ['/admin/create'],
+                        'label' => Yii::t('admin/admin', 'Create Admin'),
+                        'url' => ['/admin/admin/create'],
                     ],
                     [
-                        'label' => Yii::t('backend/admin', 'Update Admin'),
-                        'url' => ['/admin/update', 'id' => $model->id],
+                        'label' => Yii::t('admin/admin', 'Update Admin'),
+                        'url' => ['/admin/admin/update', 'id' => $model->id],
                     ],
                     [
-                        'label' => Yii::t('backend/admin', 'Delete Admin'),
-                        'url' => ['/admin/delete', 'id' => $model->id],
+                        'label' => Yii::t('admin/admin', 'Delete Admin'),
+                        'url' => ['/admin/admin/delete', 'id' => $model->id],
                         'options' => [
                             'class' => 'btn btn-danger btn-sm',
                             'data' => [
@@ -57,7 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'username',
                     'email:email',
                     [
-                        'value' => $model->status == Admin::STATUS_ACTIVE ? Yii::t('backend/admin', 'Active') : Yii::t('backend/admin', 'Disable'),
+                        'value' => $model->status == Admin::STATUS_ACTIVE ? Yii::t('admin/admin', 'Active') : Yii::t('admin/admin', 'Disable'),
                         'label' => Yii::t('app', 'Status'),
                     ],
                     'created_at:datetime',

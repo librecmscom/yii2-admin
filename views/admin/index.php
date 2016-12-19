@@ -10,7 +10,7 @@ use yuncms\admin\models\Admin;
 /* @var \yuncms\admin\models\AdminSearch $searchModel */
 /* @var \yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = Yii::t('backend/admin', 'Manage Admin');
+$this->title = Yii::t('admin/admin', 'Manage Admin');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -23,11 +23,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/admin', 'Manage Admin'),
+                        'label' => Yii::t('admin/admin', 'Manage Admin'),
                         'url' => ['/admin/admin/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/admin', 'Create Admin'),
+                        'label' => Yii::t('admin/admin', 'Create Admin'),
                         'url' => ['/admin/admin/create'],
                     ],
                 ]
@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'attribute' => 'status',
                         'value' => function ($model) {
-                            return $model->status == Admin::STATUS_ACTIVE ? Yii::t('backend/admin', 'Active') : Yii::t('backend/admin', 'Disable');
+                            return $model->status == Admin::STATUS_ACTIVE ? Yii::t('admin/admin', 'Active') : Yii::t('admin/admin', 'Disable');
                         },
                         'label' => Yii::t('app', 'Status'),
                     ],
@@ -54,9 +54,9 @@ $this->params['breadcrumbs'][] = $this->title;
                         'template' => '{assignment} {view} {update} {delete}',
                         'buttons' => ['assignment' => function ($url, $model, $key) {
                             return Html::a('<span class="glyphicon glyphicon-dashboard"></span>',
-                                Url::toRoute(['assignment/view', 'id' => $model->id]), [
-                                    'title' => Yii::t('backend/admin', 'Assignment'),
-                                    'aria-label' => Yii::t('backend/admin', 'Assignment'),
+                                Url::toRoute(['/admin/assignment/view', 'id' => $model->id]), [
+                                    'title' => Yii::t('admin/admin', 'Assignment'),
+                                    'aria-label' => Yii::t('admin/admin', 'Assignment'),
                                     'data-pjax' => '0',
                                 ]);
                         }]

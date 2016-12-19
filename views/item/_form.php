@@ -2,12 +2,12 @@
 
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use backend\components\RouteRule;
+use yuncms\admin\components\RouteRule;
 
 /* @var yii\web\View $this */
-/* @var common\models\AdminAuthItem $model */
+/* @var yuncms\admin\models\AdminAuthItem $model */
 /* @var backend\widgets\ActiveForm $form */
-/* @var backend\components\ItemController $context */
+/* @var yuncms\admin\components\ItemController $context */
 
 $labels = $this->context->labels();
 $rules = array_keys(Yii::$app->getAuthManager()->getRules());

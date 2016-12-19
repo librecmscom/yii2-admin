@@ -6,8 +6,8 @@ use backend\widgets\Jarvis;
 /* @var $this yii\web\View */
 /* @var $model common\models\Badword */
 
-$this->title = Yii::t('backend/ban-word', 'Update Ban Word') . ': ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/ban-word', 'Manage Ban Word'), 'url' => ['index']];
+$this->title = Yii::t('admin/ban-word', 'Update Ban Word') . ': ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin/ban-word', 'Manage Ban Word'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
 ?>
@@ -20,12 +20,12 @@ $this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/ban-word', 'Manage Ban Word'),
-                        'url' => ['/ban-word/index'],
+                        'label' => Yii::t('admin/ban-word', 'Manage Ban Word'),
+                        'url' => ['/admin/ban-word/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/ban-word', 'Create Ban Word'),
-                        'url' => ['/ban-word/create'],
+                        'label' => Yii::t('admin/ban-word', 'Create Ban Word'),
+                        'url' => ['/admin/ban-word/create'],
                     ],
                 ]
             ]); ?>

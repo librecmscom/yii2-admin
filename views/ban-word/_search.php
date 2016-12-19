@@ -4,7 +4,7 @@ use backend\helpers\Html;
 use backend\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model backend\models\BadwordSearch */
+/* @var $model yuncms\admin\models\BadwordSearch */
 /* @var $form backend\widgets\ActiveForm */
 ?>
 

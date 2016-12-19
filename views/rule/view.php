@@ -6,10 +6,10 @@ use backend\widgets\Jarvis;
 
 /**
  * @var \yii\web\View $this
- * @var \common\models\AdminAuthItem $model
+ * @var \yuncms\admin\models\AdminAuthItem $model
  */
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/rule', 'Manage Rule'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Rule'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -22,20 +22,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/rule', 'Manage Rule'),
-                        'url' => ['/rule/index'],
+                        'label' => Yii::t('admin', 'Manage Rule'),
+                        'url' => ['/admin/rule/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/rule', 'Create Rule'),
-                        'url' => ['/rule/create'],
+                        'label' => Yii::t('admin', 'Create Rule'),
+                        'url' => ['/admin/rule/create'],
                     ],
                     [
-                        'label' => Yii::t('backend/rule', 'Update Rule'),
-                        'url' => ['/rule/update', 'id' => $model->name],
+                        'label' => Yii::t('admin', 'Update Rule'),
+                        'url' => ['/admin/rule/update', 'id' => $model->name],
                     ],
                     [
-                        'label' => Yii::t('backend/rule', 'Delete Rule'),
-                        'url' => ['/rule/delete', 'id' => $model->name],
+                        'label' => Yii::t('admin', 'Delete Rule'),
+                        'url' => ['/admin/rule/delete', 'id' => $model->name],
                         'options' => [
                             'class' => 'btn btn-danger btn-sm',
                             'data' => [

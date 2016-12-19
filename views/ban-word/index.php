@@ -10,7 +10,7 @@ use common\models\Badword;
 /* @var $searchModel backend\models\BadwordSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('backend/ban-word', 'Manage Ban Word');
+$this->title = Yii::t('admin/ban-word', 'Manage Ban Word');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -24,12 +24,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/ban-word', 'Manage Ban Word'),
-                        'url' => ['/ban-word/index'],
+                        'label' => Yii::t('admin/ban-word', 'Manage Ban Word'),
+                        'url' => ['/admin/ban-word/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/ban-word', 'Create Ban Word'),
-                        'url' => ['/ban-word/create'],
+                        'label' => Yii::t('admin/ban-word', 'Create Ban Word'),
+                        'url' => ['/admin/ban-word/create'],
                     ],
                 ]
             ]); ?>

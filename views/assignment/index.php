@@ -11,7 +11,7 @@ use yii\grid\GridView;
 /* @var $usernameField string */
 /* @var $extraColumns string[] */
 
-$this->title = Yii::t('backend/admin', 'Manage Assignment');
+$this->title = Yii::t('admin/assignment', 'Manage Assignment');
 $this->params['breadcrumbs'][] = $this->title;
 
 $columns = [
@@ -36,12 +36,12 @@ $columns[] = [
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/admin', 'Manage Assignment'),
-                        'url' => ['/assignment/index'],
+                        'label' => Yii::t('admin/assignment', 'Manage Assignment'),
+                        'url' => ['/admin/assignment/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/admin', 'Create Admin'),
-                        'url' => ['/admin/create'],
+                        'label' => Yii::t('admin/assignment', 'Create Admin'),
+                        'url' => ['/admin/admin/create'],
                     ],
                 ]
             ]); ?>

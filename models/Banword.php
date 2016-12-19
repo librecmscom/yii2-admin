@@ -63,14 +63,14 @@ class Banword extends ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'word' => Yii::t('common/badword', 'Word'),
+            'word' => Yii::t('admin/ban-word', 'Word'),
             'created_at' => Yii::t('app', 'Created At'),
         ];
     }
 
     /**
      * @inheritdoc
-     * @return BadwordQuery the active query used by this AR class.
+     * @return BanwordQuery the active query used by this AR class.
      */
     public static function find()
     {

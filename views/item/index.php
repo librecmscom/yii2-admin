@@ -60,16 +60,16 @@ unset($rules[RouteRule::RULE_NAME]);
                     ['class' => 'yii\grid\SerialColumn'],
                     [
                         'attribute' => 'name',
-                        'label' => Yii::t('backend/role', 'Name'),
+                        'label' => Yii::t('admin/role', 'Name'),
                     ],
                     [
                         'attribute' => 'ruleName',
-                        'label' => Yii::t('backend/role', 'Rule Name'),
+                        'label' => Yii::t('admin/role', 'Rule Name'),
                         'filter' => $rules
                     ],
                     [
                         'attribute' => 'description',
-                        'label' => Yii::t('backend/role', 'Description'),
+                        'label' => Yii::t('admin/role', 'Description'),
                     ],
                     ['class' => 'yii\grid\ActionColumn',],
                 ],
