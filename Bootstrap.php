@@ -9,6 +9,7 @@ namespace yuncms\admin;
 
 use Yii;
 use yii\web\Cookie;
+use yii\i18n\PhpMessageSource;
 use yii\base\BootstrapInterface;
 use common\helpers\SettingHelper;
 
@@ -24,34 +25,42 @@ class Bootstrap implements BootstrapInterface
      */
     public function bootstrap($app)
     {
-        //自动检测语言
-        if (($language = Yii::$app->request->getQueryParam('language')) !== null) {
-            $app->language = $language;
-            Yii::$app->response->cookies->add(new Cookie(['name' => 'language', 'value' => $language]));
-        } else if (($cookie = Yii::$app->request->cookies->get('language')) !== null) {
-            $app->language = $cookie->value;
-        } else if (($language = Yii::$app->request->getPreferredLanguage()) !== null) {
-            $app->language = $language;
+        if ($app instanceof \yuncms\admin\Application) {
+            Yii::$container->set('yii\web\User', [
+                'enableAutoLogin' => true,
+                'loginUrl' => ['/admin/security/login'],
+                'identityClass' => 'yuncms\admin\models\Admin',
+                'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+            ]);
+            $app->set('authManager', [
+                'class' => 'yuncms\admin\components\RbacManager',
+                'cache' => 'cache',
+            ]);
+
+            //设置前台URL
+            $app->frontUrlManager->baseUrl = SettingHelper::get('frontendUrl','site');
+
+            //附加权限验证行为
+            $app->attachBehavior('access', Yii::createObject([
+                'class' => 'yuncms\admin\components\AccessControl'
+            ]));
+
+            $app->urlManager->addRules([
+                'login' => '/site/login',
+                'logout' => '/site/logout',
+                'error' => '/site/error',
+            ], false);
         }
 
-        $app->set('authManager', [
-            'class' => 'yuncms\admin\components\RbacManager',
-            'cache' => 'cache',
-        ]);
-
-        //设置前台URL
-        $app->frontUrlManager->baseUrl = SettingHelper::get('frontendUrl','site');
-
-
-        //附加权限验证行为
-        $app->attachBehavior('access', Yii::createObject([
-            'class' => 'yuncms\admin\components\AccessControl'
-        ]));
-
-        $app->urlManager->addRules([
-            'login' => '/site/login',
-            'logout' => '/site/logout',
-            'error' => '/site/error',
-        ], false);
+        /**
+         * 注册语言包
+         */
+        if (!isset($app->get('i18n')->translations['admin*'])) {
+            $app->get('i18n')->translations['admin*'] = [
+                'class' => PhpMessageSource::className(),
+                'sourceLanguage' => 'en-US',
+                'basePath' => __DIR__ . '/messages',
+            ];
+        }
     }
 }
