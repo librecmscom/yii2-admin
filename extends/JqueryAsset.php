@@ -6,16 +6,19 @@
  */
 namespace yii\web;
 
+use yuncms\admin\assets\LayoutAsset;
 /**
  * This asset bundle provides the [jQuery](http://jquery.com/) JavaScript library.
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class JqueryAsset extends AssetBundle
+class JqueryAsset extends LayoutAsset
 {
-    //public $sourcePath = '@bower/jquery/dist';
+
+    public $css = [];
     public $js = [
-        '//lib.baomitu.com/jquery/2.2.4/jquery.min.js',
+        'js/libs/jquery-2.1.1.min.js',
     ];
+    public $depends = [];
 }

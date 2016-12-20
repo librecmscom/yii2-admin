@@ -6,23 +6,19 @@
  */
 namespace yii\jui;
 
-use yii\web\AssetBundle;
+use yuncms\admin\assets\LayoutAsset;
 
 /**
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class JuiAsset extends AssetBundle
+class JuiAsset extends LayoutAsset
 {
-    public $sourcePath = '@bower/jquery-ui';
-
     public $js = [
-        'jquery-ui.js',
+        'js/libs/jquery-ui-1.10.3.min.js',
     ];
 
-    public $css = [
-        'themes/smoothness/jquery-ui.css',
-    ];
+    public $css = [];
 
     public $depends = [
         'yii\web\JqueryAsset',

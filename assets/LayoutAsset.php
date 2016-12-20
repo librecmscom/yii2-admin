@@ -25,8 +25,6 @@ class LayoutAsset extends AssetBundle
         //SmartAdmin RTL Support
         'css/smartadmin-rtl.min.css',
         'css/style.css',
-        'css/app.css',
-
         // GOOGLE FONT
         '//fonts.tintsoft.com/css?family=Open+Sans:400italic,700italic,300,400,700',
         //'http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700',

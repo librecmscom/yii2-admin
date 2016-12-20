@@ -27,6 +27,9 @@ class Application extends \yii\web\Application
         ]));
         Yii::$classMap['yii\jui\JuiAsset'] = '@yuncms/admin/extends/JuiAsset.php';
         Yii::$classMap['yii\helpers\Html'] = '@yuncms/admin/extends/Html.php';
+        Yii::$classMap['yii\jui\JuiAsset'] = '@yuncms/admin/extends/JuiAsset.php';
+        Yii::$classMap['yii\bootstrap\BootstrapAsset'] = '@yuncms/admin/extends/BootstrapAsset.php';
+        Yii::$classMap['yii\bootstrap\BootstrapPluginAsset'] = '@yuncms/admin/extends/BootstrapPluginAsset.php';
 
         //锁定布局
         $this->layout = '@yuncms/admin/views/layouts/main';

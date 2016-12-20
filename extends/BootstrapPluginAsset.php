@@ -6,7 +6,7 @@
  */
 namespace yii\bootstrap;
 
-use yii\web\AssetBundle;
+use yuncms\admin\assets\LayoutAsset;
 
 /**
  * Asset bundle for the Twitter bootstrap javascript files.
@@ -14,11 +14,11 @@ use yii\web\AssetBundle;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class BootstrapPluginAsset extends AssetBundle
+class BootstrapPluginAsset extends LayoutAsset
 {
-    //public $sourcePath = '@bower/bootstrap/dist';
+    public $css = [];
     public $js = [
-        '//lib.baomitu.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js',
+        'js/bootstrap/bootstrap.min.js',
     ];
     public $depends = [
         'yii\web\JqueryAsset',
