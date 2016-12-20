@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6, a, p, span {
+    font-family: "微软雅黑", "Microsoft YaHei", "Microsoft YaHei UI", "Hiragino Sans GB W3", "Segoe UI", Arial, Verdana, Sans-Serif, sans-serif;
+}
+
+.container, .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 13px;
+    padding-right: 13px
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 746px
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 966px
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1166px
+    }
+}
+
+.row {
+    margin-right: -13px;
+    margin-left: -13px
+}
+
+div.dataTables_info {
+    padding-top: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    font-style: normal;
+    color: #969696
+}
+
+

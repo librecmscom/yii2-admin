@@ -7,14 +7,16 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use yuncms\admin\widgets\Alert;
-use yuncms\admin\assets\AdminAsset;
+use yuncms\admin\assets\LayoutAsset;
 use yuncms\admin\widgets\MainBreadcrumbs;
 
-$asset = AdminAsset::register($this);
+$asset = LayoutAsset::register($this);
 
 $this->registerJs('pageSetUp();');
 
-$this->title = Yii::t('admin', 'Manage Center');
+$this->registerJs('var sound_path="' . $asset->baseUrl . '/sound/";', \yii\web\View::POS_HEAD);
+
+$this->title = Yii::t('admin/layout', 'Manage Center');
 //Meta
 $this->registerMetaTag(['charset' => Yii::$app->charset]);
 //$this->registerMetaTag(['http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1']);
@@ -102,7 +104,7 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
 
     <!-- Left panel : Navigation area -->
     <?= $this->render(
-        'left.php'
+        'left.php', ['asset' => $asset]
     ) ?>
     <!-- END NAVIGATION -->
 
@@ -171,7 +173,7 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
 
     <!-- PAGE FOOTER -->
     <?= $this->render(
-        'footer.php'
+        'footer.php', ['asset' => $asset]
     ) ?>
     <!-- END PAGE FOOTER -->
 

@@ -11,11 +11,9 @@ use yii\web\AssetBundle;
 /**
  * Main backend application asset bundle.
  */
-class AdminAsset extends AssetBundle
+class LayoutAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-
-    public $baseUrl = '@web';
+    public $sourcePath = '@yuncms/admin/resources/assets';
 
     public $css = [
 
@@ -53,5 +51,6 @@ class AdminAsset extends AssetBundle
         'xutl\fontawesome\Asset',
         'yii\jui\JuiAsset',
         'yii\web\YiiAsset',
+
     ];
 }

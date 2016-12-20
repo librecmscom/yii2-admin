@@ -15,9 +15,7 @@ use yii\web\AssetBundle;
 class TypeAheadAsset extends AssetBundle
 {
 
-    public $basePath = '@webroot';
-
-    public $baseUrl = '@web';
+    public $sourcePath = '@yuncms/admin/resources/assets';
 
     public $css = [
         'js/plugins/bootstrap-typeahead/css/bootstrap-typeahead.css',

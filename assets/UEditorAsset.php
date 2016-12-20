@@ -10,9 +10,7 @@ use yii\web\AssetBundle;
 
 class UEditorAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-
-    public $baseUrl = '@web';
+    public $sourcePath = '@yuncms/admin/resources/assets';
 
     public $css = [
         'js/plugins/ueditor/themes/iframe.css',

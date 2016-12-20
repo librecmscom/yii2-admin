@@ -10,7 +10,7 @@ namespace yuncms\admin\assets;
  * @author Tongle Xu <xutongle@gmail.com>
  * @since 3.0
  */
-class LoginAsset extends AppAsset
+class LoginAsset extends LayoutAsset
 {
     public $js = [
         'js/app.config.js',

@@ -21,6 +21,8 @@ return [
     'Close Popup' => '',
     'Collapse Menu' => '',
     'Loading...' => '',
+    'Logout' => '',
+    'Manage Center' => '',
     'Shortcut' => '',
     'Voice command failed' => '',
     'You can improve your security further after logging out by closing this opened browser' => '',

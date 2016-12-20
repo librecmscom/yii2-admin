@@ -10,8 +10,7 @@ use yii\web\AssetBundle;
 
 class IconpIckerAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
-    public $baseUrl = '@web';
+    public $sourcePath = '@yuncms/admin/resources/assets';
 
     /**
      * 发布参数
