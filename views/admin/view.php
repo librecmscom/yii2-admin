@@ -1,6 +1,6 @@
 <?php
 
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yuncms\admin\widgets\Jarvis;
 use yuncms\admin\models\Admin;

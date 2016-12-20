@@ -7,7 +7,7 @@
 namespace yuncms\admin\widgets;
 
 use Yii;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /**
  * A Bootstrap 3 enhanced version of [[\yii\widgets\ActiveForm]].

@@ -11,7 +11,7 @@ $urlParams = $generator->generateUrlParams();
 echo "<?php\n";
 ?>
 
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 use yii\widgets\DetailView;
 use yuncms\admin\widgets\Jarvis;
 

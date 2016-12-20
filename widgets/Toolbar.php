@@ -11,7 +11,7 @@ use yii\bootstrap\Widget;
 use yii\bootstrap\BootstrapAsset;
 use yii\helpers\ArrayHelper;
 use yii\base\InvalidConfigException;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /**
  * Toolbar renders a toolbar HTML component.

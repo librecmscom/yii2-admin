@@ -4,10 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace yuncms\admin\helpers;
-
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html as BaseHtml;
+namespace yii\helpers;
 
 /**
  * Class Html

@@ -10,7 +10,7 @@ use Yii;
 use yii\base\Widget;
 use yii\helpers\ArrayHelper;
 use yii\base\InvalidConfigException;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /**
  * Class SideBar
@@ -20,7 +20,7 @@ class SideBar extends Widget
 {
     /**
      * @var array the HTML attributes for the widget container tag.
-     * @see \yuncms\admin\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * @see \yii\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
     public $options = [];
     /**

@@ -9,7 +9,7 @@ use yii\helpers\StringHelper;
 echo "<?php\n";
 ?>
 
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 use yuncms\admin\widgets\ActiveForm;
 
 /* @var $this yii\web\View */

@@ -9,7 +9,7 @@ namespace yuncms\admin\widgets;
 use Yii;
 use yii\widgets\InputWidget;
 use yuncms\admin\assets\IconpIckerAsset;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /**
  * Class IconpIcker

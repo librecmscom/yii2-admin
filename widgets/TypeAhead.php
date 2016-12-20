@@ -10,7 +10,7 @@ use Yii;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
 use yuncms\admin\assets\TypeAheadAsset;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /**
  * TypeAhead renders a Twitter typeahead Bootstrap plugin.

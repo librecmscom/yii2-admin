@@ -9,7 +9,7 @@ namespace yuncms\admin\widgets;
 use yii\helpers\Url;
 use yii\base\Exception;
 use yii\helpers\ArrayHelper;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /**
  * Class Jarvis

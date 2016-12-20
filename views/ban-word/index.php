@@ -1,6 +1,6 @@
 <?php
 
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 use yuncms\admin\widgets\Jarvis;
 use yii\grid\GridView;
 use yii\widgets\Pjax;

@@ -10,7 +10,7 @@ use yii\helpers\Url;
 use yii\helpers\Json;
 use yii\widgets\InputWidget;
 use yuncms\admin\assets\UEditorAsset;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /**
  * Class UEditor

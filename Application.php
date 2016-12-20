@@ -25,6 +25,10 @@ class Application extends \yii\web\Application
         $this->attachBehavior('access', Yii::createObject([
             'class' => 'yuncms\admin\components\AccessControl'
         ]));
+        Yii::$classMap['yii\jui\JuiAsset'] = '@yuncms/admin/extends/JuiAsset.php';
+        Yii::$classMap['yii\helpers\Html'] = '@yuncms/admin/extends/Html.php';
+        //锁定布局
+        $this->layout = '@yuncms/admin/views/layouts/main';
     }
 
     /**

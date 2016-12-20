@@ -9,7 +9,7 @@ namespace yuncms\admin\widgets;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\base\InvalidConfigException;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /**
  * Nav renders a nav HTML component.

@@ -1,6 +1,6 @@
 <?php
 
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 use yuncms\admin\widgets\Jarvis;
 
 /* @var yii\web\View $this   */

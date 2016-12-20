@@ -16,7 +16,7 @@ if (empty($safeAttributes)) {
 echo "<?php\n";
 ?>
 use yii\bootstrap\ActiveForm;
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 
 /* @var \yii\web\View $this */
 /* @var <?= ltrim($generator->modelClass, '\\') ?> $model */

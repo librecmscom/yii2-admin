@@ -12,7 +12,7 @@ $nameAttribute = $generator->getNameAttribute();
 echo "<?php\n";
 ?>
 
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 use yuncms\admin\widgets\Jarvis;
 use <?= $generator->indexWidgetType === 'grid' ? "backend\\components\\GridView" : "yii\\widgets\\ListView" ?>;
 <?= $generator->enablePjax ? 'use yii\widgets\Pjax;' : '' ?>

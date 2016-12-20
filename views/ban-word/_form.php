@@ -1,6 +1,6 @@
 <?php
 
-use yuncms\admin\helpers\Html;
+use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yuncms\admin\models\Banword;
 
