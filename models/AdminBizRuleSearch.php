@@ -35,7 +35,7 @@ class AdminBizRuleSearch extends Model
     public function attributeLabels()
     {
         return [
-            'name' => Yii::t('admin', 'Name'),
+            'name' => Yii::t('admin/rule', 'Name'),
         ];
     }
 

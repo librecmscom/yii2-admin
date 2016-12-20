@@ -1,16 +1,13 @@
 <?php
-use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use yuncms\admin\models\AdminMenu;
-use backend\assets\JuiAsset;
 use yuncms\admin\widgets\IconpIcker;
 use xutl\typeahead\Bloodhound;
 use xutl\typeahead\TypeAhead;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\AdminMenu $model */
+/* @var \yuncms\admin\models\AdminMenu $model */
 /* @var yii\bootstrap\ActiveForm $form */
 $engine = new Bloodhound([
     'name' => 'countriesEngine',
@@ -27,7 +24,9 @@ $engine = new Bloodhound([
 
 ?>
 
-<?php $form = ActiveForm::begin(['layout' => 'horizontal']); ?>
+<?php $form = ActiveForm::begin([
+    'layout' => 'horizontal'
+]); ?>
 <?= Html::activeHiddenInput($model, 'parent', ['id' => 'parent_id']); ?>
 <fieldset>
     <?= $form->field($model, 'name')->textInput(['maxlength' => 128]) ?>
@@ -50,8 +49,7 @@ $engine = new Bloodhound([
         ]
     ); ?>
     <?= $form->field($model, 'route')->textInput(['id' => 'route']) ?>
-    <?= $form->field($model, 'visible')->inline(true)->radioList(['1' => Yii::t('backend', 'Yes'), '0' => Yii::t('backend', 'No')]) ?>
-
+    <?= $form->field($model, 'visible')->inline(true)->radioList(['1' => Yii::t('app', 'Yes'), '0' => Yii::t('app', 'No')]) ?>
     <?= $form->field($model, 'sort')->input('number') ?>
     <?= $form->field($model, 'icon')->widget(IconpIcker::className()) ?>
     <?= $form->field($model, 'data')->textarea(['rows' => 4]) ?>

@@ -18,13 +18,19 @@
  */
 return [
     'Active' => '',
+    'Address' => '',
     'Assignment' => '',
     'Auth Key' => '',
     'Create Admin' => '',
+    'Current' => '',
     'Delete Admin' => '',
     'Disable' => '',
+    'Incorrect username or password.' => '',
     'Last Login At' => '',
     'Manage Admin' => '',
+    'Name' => '',
     'Password Hash' => '',
+    'Slug' => '',
     'Update Admin' => '',
+    'Username' => '',
 ];

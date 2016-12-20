@@ -30,10 +30,10 @@ class AdminSearch extends Admin
     public function attributeLabels()
     {
         return [
-            'id' => Yii::t('admin', 'ID'),
-            'username' => Yii::t('admin', 'Current'),
-            'email' => Yii::t('admin', 'Slug'),
-            'status' => Yii::t('admin', 'Address'),
+            'id' => Yii::t('app', 'ID'),
+            'username' => Yii::t('admin/admin', 'Current'),
+            'email' => Yii::t('admin/admin', 'Slug'),
+            'status' => Yii::t('admin/admin', 'Address'),
         ];
     }
 

@@ -56,7 +56,7 @@ class LoginForm extends Model
             // verifyCode needs to be entered correctly
             'verifyCodeRequired' => ['verifyCode', 'required'],
 
-            'verifyCode' => ['verifyCode', 'captcha', 'captchaAction' => '/site/captcha'],
+            'verifyCode' => ['verifyCode', 'captcha', 'captchaAction' => '/admin/security/captcha'],
         ];
     }
 
@@ -72,7 +72,7 @@ class LoginForm extends Model
         if (!$this->hasErrors()) {
             $user = $this->getUser();
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, Yii::t('backend', 'Incorrect username or password.'));
+                $this->addError($attribute, Yii::t('admin/admin', 'Incorrect username or password.'));
             }
         }
     }

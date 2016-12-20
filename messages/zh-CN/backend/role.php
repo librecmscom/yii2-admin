@@ -18,5 +18,4 @@
  */
 return [
     'Create Role' => '',
-    'Manage Role' => '',
 ];

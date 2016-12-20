@@ -17,11 +17,5 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Add subMenu' => '',
-    'Create Menu' => '',
-    'Delete Menu' => '',
     'Loop detected.' => '',
-    'Manage Menu' => '',
-    'Parent Menu' => '',
-    'Update Menu' => '',
 ];

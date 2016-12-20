@@ -11,8 +11,8 @@ use Exception;
 use yii\base\Object;
 use yii\helpers\VarDumper;
 use yii\caching\TagDependency;
-use backend\components\Helper;
-use backend\components\RouteRule;
+use yuncms\admin\components\Helper;
+use yuncms\admin\components\RouteRule;
 
 /**
  * Description of Route
@@ -22,7 +22,7 @@ use backend\components\RouteRule;
  */
 class AdminRoute extends Object
 {
-    const CACHE_TAG = 'backend.route';
+    const CACHE_TAG = 'admin.route';
 
     /**
      * Assign or remove items

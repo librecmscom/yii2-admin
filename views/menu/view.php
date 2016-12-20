@@ -8,7 +8,7 @@ use yuncms\admin\widgets\Jarvis;
 /* @var \yuncms\admin\models\AdminMenu $model */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/menu', 'Manage Menu'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin/menu', 'Manage Menu'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -21,20 +21,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/menu', 'Manage Menu'),
-                        'url' => ['/menu/index'],
+                        'label' => Yii::t('admin/menu', 'Manage Menu'),
+                        'url' => ['/admin/menu/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/menu', 'Create Menu'),
-                        'url' => ['/menu/create'],
+                        'label' => Yii::t('admin/menu', 'Create Menu'),
+                        'url' => ['/admin/menu/create'],
                     ],
                     [
-                        'label' => Yii::t('backend/menu', 'Update Menu'),
-                        'url' => ['/menu/update', 'id' => $model->id],
+                        'label' => Yii::t('admin/menu', 'Update Menu'),
+                        'url' => ['/admin/menu/update', 'id' => $model->id],
                     ],
                     [
-                        'label' => Yii::t('backend/menu', 'Delete Menu'),
-                        'url' => ['/menu/delete', 'id' => $model->id],
+                        'label' => Yii::t('admin/menu', 'Delete Menu'),
+                        'url' => ['/admin/menu/delete', 'id' => $model->id],
                         'options' => [
                             'class' => 'btn btn-danger btn-sm',
                             'data' => [

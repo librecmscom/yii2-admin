@@ -8,7 +8,11 @@ use yuncms\admin\models\Banword;
 /* @var yuncms\admin\models\Banword $model */
 /* @var ActiveForm $form */
 ?>
-<?php $form = ActiveForm::begin(['layout' => 'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => false,]); ?>
+<?php $form = ActiveForm::begin([
+    'layout' => 'horizontal',
+    'enableAjaxValidation' => true,
+    'enableClientValidation' => false,
+]); ?>
 <fieldset>
     <?= $form->field($model, 'word')->textInput(['maxlength' => true]) ?>
 </fieldset>

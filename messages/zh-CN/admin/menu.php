@@ -17,11 +17,16 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Add subMenu' => '',
+    'Create Menu' => '',
     'Data' => '',
+    'Delete Menu' => '',
     'Icon' => '',
+    'Manage Menu' => '',
     'Menu Name' => '',
     'Parent Menu' => '',
     'Route' => '',
     'Sort' => '',
+    'Update Menu' => '',
     'Visible' => '',
 ];

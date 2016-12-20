@@ -6,8 +6,8 @@ use yuncms\admin\widgets\Jarvis;
 /* @var \yii\web\View $this */
 /* @var \yuncms\admin\models\AdminMenu $model */
 
-$this->title = Yii::t('backend/menu', 'Create Menu');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('backend/menu', 'Manage Menu'), 'url' => ['index']];
+$this->title = Yii::t('admin/menu', 'Create Menu');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin/menu', 'Manage Menu'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -20,12 +20,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('backend/menu', 'Manage Menu'),
-                        'url' => ['/menu/index'],
+                        'label' => Yii::t('admin/menu', 'Manage Menu'),
+                        'url' => ['/admin/menu/index'],
                     ],
                     [
-                        'label' => Yii::t('backend/menu', 'Create Menu'),
-                        'url' => ['/menu/create'],
+                        'label' => Yii::t('admin/menu', 'Create Menu'),
+                        'url' => ['/admin/menu/create'],
                     ],
                 ]
             ]); ?>

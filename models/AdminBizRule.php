@@ -88,8 +88,8 @@ class AdminBizRule extends Model
     public function attributeLabels()
     {
         return [
-            'name' => Yii::t('admin', 'Name'),
-            'className' => Yii::t('admin', 'Class Name'),
+            'name' => Yii::t('admin/rule', 'Name'),
+            'className' => Yii::t('admin/rule', 'Class Name'),
         ];
     }
 

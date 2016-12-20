@@ -115,7 +115,7 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
                             <?= $form->field($model, 'password')->passwordInput()->icon('fa-lock')->tooltip(Yii::t('backend', 'Enter your password')); ?>
 
                             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                                'captchaAction' => '/site/captcha',
+                                'captchaAction' => '/admin/security/captcha',
                                 'template' => '<div class="row" style="margin-left: 0px;"><div class="col-lg-6"><i class="icon-append fa fa-file-image-o" aria-hidden="true"></i>{input}<b class="tooltip tooltip-top-right">' . Yii::t('backend', 'Enter your verifyCode') . '</b></div><div class="col-lg-3">{image}</div></div>'
                             ]) ?>
 

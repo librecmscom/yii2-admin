@@ -17,24 +17,9 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Address' => '',
     'Assignment' => '',
-    'Class Name' => '',
-    'Create Rule' => '',
-    'Current' => '',
-    'Data' => '',
-    'Delete Rule' => '',
-    'Description' => '',
-    'ID' => '',
     'Manage Assignment' => '',
-    'Manage Rule' => '',
-    'Name' => '',
-    'Rule Name' => '',
     'Search for assigned' => '',
     'Search for avaliable' => '',
     'Sign in' => '',
-    'Slug' => '',
-    'Type' => '',
-    'Update Rule' => '',
-    'Username' => '',
 ];

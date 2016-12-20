@@ -33,6 +33,22 @@ class SecurityController extends Controller
     }
 
     /**
+     * @inheritdoc
+     */
+    public function actions()
+    {
+        return [
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'minLength' => 4,
+                'maxLength' => 5,
+                'height' => 32,
+                'fixedVerifyCode' => YII_ENV_TEST ? 'test' : null,
+            ],
+        ];
+    }
+
+    /**
      * Login action.
      * @url GET /admin/security/login
      * @return string

@@ -17,6 +17,11 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Active' => '',
-    'Disable' => '',
+    'Class Name' => '',
+    'Create Rule' => '',
+    'Delete Rule' => '',
+    'Manage Rule' => '',
+    'Name' => '',
+    'Rule Name' => '',
+    'Update Rule' => '',
 ];

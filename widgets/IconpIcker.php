@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
-namespace backend\widgets;
+namespace yuncms\admin\widgets;
 
 use Yii;
 use yii\helpers\Json;

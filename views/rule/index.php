@@ -9,7 +9,7 @@ use yuncms\admin\widgets\Jarvis;
 /* @var \yii\data\ActiveDataProvider $dataProvider */
 /* @var \yuncms\admin\models\AdminBizRuleSearch $searchModel */
 
-$this->title = Yii::t('admin', 'Manage Rule');
+$this->title = Yii::t('admin/rule', 'Manage Rule');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -22,11 +22,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('admin', 'Manage Rule'),
+                        'label' => Yii::t('admin/rule', 'Manage Rule'),
                         'url' => ['/admin/rule/index'],
                     ],
                     [
-                        'label' => Yii::t('admin', 'Create Rule'),
+                        'label' => Yii::t('admin/rule', 'Create Rule'),
                         'url' => ['/admin/rule/create'],
                     ],
                 ]
@@ -39,7 +39,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     ['class' => 'yii\grid\SerialColumn'],
                     [
                         'attribute' => 'name',
-                        'label' => Yii::t('admin', 'Rule Name'),
+                        'label' => Yii::t('admin/rule', 'Rule Name'),
                     ],
                     ['class' => 'yii\grid\ActionColumn', 'header' => Yii::t('app', 'Operation')],
                 ],

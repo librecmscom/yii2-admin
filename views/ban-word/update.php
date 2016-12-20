@@ -9,7 +9,7 @@ use yuncms\admin\widgets\Jarvis;
 $this->title = Yii::t('admin/ban-word', 'Update Ban Word') . ': ' . $model->id;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/ban-word', 'Manage Ban Word'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = Yii::t('backend', 'Update');
+$this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
 <section id="widget-grid">
     <div class="row">

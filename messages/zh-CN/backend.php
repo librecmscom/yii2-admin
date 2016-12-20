@@ -19,10 +19,6 @@
 return [
     'Enter your password' => '',
     'Enter your verifyCode' => '',
-    'Incorrect username or password.' => '',
-    'No' => '',
     'Please enter username.' => '',
     'Sign in' => '',
-    'Update' => '',
-    'Yes' => '',
 ];
