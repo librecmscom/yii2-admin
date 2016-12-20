@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\helpers\Json;
-use backend\widgets\Jarvis;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
 $this->title = Yii::t('admin/route', 'Manage Route');

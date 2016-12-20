@@ -1,8 +1,8 @@
 <?php
 
-use backend\helpers\Html;
+use yuncms\admin\helpers\Html;
 use yii\widgets\DetailView;
-use backend\widgets\Jarvis;
+use yuncms\admin\widgets\Jarvis;
 use yuncms\admin\models\Admin;
 
 /* @var \yii\web\View $this */

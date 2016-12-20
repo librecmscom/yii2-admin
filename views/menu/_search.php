@@ -1,11 +1,11 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\ActiveForm;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\ActiveForm;
 
 /**
  * @var \yii\web\View $this
- * @var \backend\models\AdminMenuSearch $model
+ * @var \yuncms\admin\models\AdminMenuSearch $model
  * @var ActiveForm $form
  */
 ?>

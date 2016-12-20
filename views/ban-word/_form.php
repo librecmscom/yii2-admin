@@ -1,11 +1,11 @@
 <?php
 
-use backend\helpers\Html;
+use yuncms\admin\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use yuncms\admin\models\Badword;
+use yuncms\admin\models\Banword;
 
 /* @var \yii\web\View $this */
-/* @var yuncms\admin\models\Badword $model */
+/* @var yuncms\admin\models\Banword $model */
 /* @var ActiveForm $form */
 ?>
 <?php $form = ActiveForm::begin(['layout' => 'horizontal', 'enableAjaxValidation' => true, 'enableClientValidation' => false,]); ?>

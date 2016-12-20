@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use backend\widgets\Jarvis;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
 /* @var \yuncms\admin\models\Admin $model */

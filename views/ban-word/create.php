@@ -1,10 +1,10 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\Badword */
+/* @var $model yuncms\admin\models\Banword */
 
 $this->title = Yii::t('admin/ban-word', 'Create Ban Word');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/ban-word', 'Manage Ban Word'), 'url' => ['index']];

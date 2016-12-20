@@ -3,7 +3,7 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\grid\GridView;
-use backend\widgets\Jarvis;
+use yuncms\admin\widgets\Jarvis;
 use yuncms\admin\models\Admin;
 
 /* @var $this */

@@ -4,11 +4,11 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
 use yii\grid\GridView;
-use backend\widgets\Jarvis;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
 /* @var \yii\data\ActiveDataProvider $dataProvider */
-/* @var \backend\models\AdminMenuSearch $searchModel */
+/* @var \yuncms\admin\models\AdminMenuSearch $searchModel */
 
 $this->title = Yii::t('backend/menu', 'Manage Menu');
 $this->params['breadcrumbs'][] = $this->title;

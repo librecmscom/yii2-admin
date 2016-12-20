@@ -6,7 +6,7 @@ use yuncms\admin\components\RouteRule;
 
 /* @var yii\web\View $this */
 /* @var yuncms\admin\models\AdminAuthItem $model */
-/* @var backend\widgets\ActiveForm $form */
+/* @var yuncms\admin\widgets\ActiveForm $form */
 /* @var yuncms\admin\components\ItemController $context */
 
 $labels = $this->context->labels();

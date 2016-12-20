@@ -2,11 +2,11 @@
 
 use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var yii\web\View $this */
-/* @var \common\models\AdminAssignment $model */
+/* @var \yuncms\admin\models\AdminAssignment $model */
 /* @var string $fullnameField */
 
 $userName = $model->{$usernameField};

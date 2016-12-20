@@ -2,8 +2,8 @@
 
 use yii\helpers\Html;
 use yii\captcha\Captcha;
-use backend\assets\LoginAsset;
-use backend\widgets\ActiveForm;
+use yuncms\admin\assets\LoginAsset;
+use yuncms\admin\widgets\ActiveForm;
 
 /* @var \yii\web\View $this */
 /* @var ActiveForm $form */

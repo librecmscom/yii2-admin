@@ -1,10 +1,10 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\AdminBizRule $model */
+/* @var \yuncms\admin\models\AdminBizRule $model */
 
 $this->title = Yii::t('admin', 'Create Rule');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Rule'), 'url' => ['index']];

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\AdminBizRule $model */
+/* @var \yuncms\admin\models\AdminBizRule $model */
 /* @var $form ActiveForm */
 ?>
 <?php $form = ActiveForm::begin(['layout'=>'horizontal', ]); ?>

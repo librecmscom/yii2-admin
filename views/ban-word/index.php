@@ -1,13 +1,13 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use common\models\Badword;
+use yuncms\admin\models\Banword;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\BadwordSearch */
+/* @var $searchModel yuncms\admin\models\BanwordSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('admin/ban-word', 'Manage Ban Word');

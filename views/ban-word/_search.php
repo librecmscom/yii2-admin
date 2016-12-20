@@ -1,11 +1,11 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\ActiveForm;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model yuncms\admin\models\BadwordSearch */
-/* @var $form backend\widgets\ActiveForm */
+/* @var $model yuncms\admin\models\BanwordSearch */
+/* @var $form yuncms\admin\widgets\ActiveForm */
 ?>
 
 <div class="badword-search">

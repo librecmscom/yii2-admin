@@ -3,9 +3,9 @@ use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use common\models\AdminMenu;
+use yuncms\admin\models\AdminMenu;
 use backend\assets\JuiAsset;
-use backend\widgets\IconpIcker;
+use yuncms\admin\widgets\IconpIcker;
 use xutl\typeahead\Bloodhound;
 use xutl\typeahead\TypeAhead;
 

@@ -1,10 +1,10 @@
 <?php
 
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\AdminMenu $model */
+/* @var \yuncms\admin\models\AdminMenu $model */
 
 $this->title = Yii::t('backend/menu', 'Update Menu') . ': ' . ' ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => Yii::t('backend/menu', 'Manage Menu'), 'url' => ['index']];

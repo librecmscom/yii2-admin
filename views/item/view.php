@@ -2,12 +2,12 @@
 
 use yii\helpers\Json;
 use yii\widgets\DetailView;
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
-/* @var \common\models\AdminAuthItem $model */
-/* @var \backend\components\ItemController $context */
+/* @var \yuncms\admin\models\AdminAuthItem $model */
+/* @var \yuncms\admin\components\ItemController $context */
 
 $labels = $this->context->labels();
 $this->title = $model->name;

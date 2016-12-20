@@ -1,13 +1,13 @@
 <?php
 
 use yii\widgets\Pjax;
-use backend\helpers\Html;
-use backend\widgets\Jarvis;
+use yuncms\admin\helpers\Html;
+use yuncms\admin\widgets\Jarvis;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
-/* @var $searchModel \backend\models\AdminAssignmentSearch */
+/* @var $searchModel \yuncms\admin\models\AdminAssignmentSearch */
 /* @var $usernameField string */
 /* @var $extraColumns string[] */
 
