@@ -17,7 +17,7 @@ if ($labels['Item'] == 'Role') {
             'url' => ['/admin/role/index'],
         ],
         [
-            'label' => Yii::t('backend/role', 'Create Role'),
+            'label' => Yii::t('admin/role', 'Create Role'),
             'url' => ['/admin/role/create'],
         ],
     ];

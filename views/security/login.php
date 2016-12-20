@@ -10,7 +10,7 @@ use yuncms\admin\widgets\ActiveForm;
 /* @var \yuncms\admin\models\LoginForm $model */
 
 $asset = LoginAsset::register($this);
-$this->title = Yii::$app->name . ' - ' . Yii::t('backend', 'Sign in');
+$this->title = Yii::$app->name . ' - ' . Yii::t('admin/admin', 'Sign in');
 
 //Meta
 $this->registerMetaTag(['charset' => Yii::$app->charset]);
@@ -110,20 +110,20 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
                         <fieldset>
                             <?= $form->field($model, 'login', ['inputOptions' => [
                                 'autofocus' => 'autofocus', 'autocomplete' => 'off'
-                            ]])->icon('fa-user')->tooltip(Yii::t('backend', 'Please enter username.')); ?>
+                            ]])->icon('fa-user')->tooltip(Yii::t('admin/admin', 'Please enter username.')); ?>
                             
-                            <?= $form->field($model, 'password')->passwordInput()->icon('fa-lock')->tooltip(Yii::t('backend', 'Enter your password')); ?>
+                            <?= $form->field($model, 'password')->passwordInput()->icon('fa-lock')->tooltip(Yii::t('admin/admin', 'Enter your password')); ?>
 
                             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                                 'captchaAction' => '/admin/security/captcha',
-                                'template' => '<div class="row" style="margin-left: 0px;"><div class="col-lg-6"><i class="icon-append fa fa-file-image-o" aria-hidden="true"></i>{input}<b class="tooltip tooltip-top-right">' . Yii::t('backend', 'Enter your verifyCode') . '</b></div><div class="col-lg-3">{image}</div></div>'
+                                'template' => '<div class="row" style="margin-left: 0px;"><div class="col-lg-6"><i class="icon-append fa fa-file-image-o" aria-hidden="true"></i>{input}<b class="tooltip tooltip-top-right">' . Yii::t('admin/admin', 'Enter your verifyCode') . '</b></div><div class="col-lg-3">{image}</div></div>'
                             ]) ?>
 
                             <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
                         </fieldset>
                         <footer>
-                            <?= Html::submitButton(Yii::t('admin', 'Sign in'), ['class' => 'btn btn-primary']) ?>
+                            <?= Html::submitButton(Yii::t('admin/admin', 'Sign in'), ['class' => 'btn btn-primary']) ?>
                         </footer>
                         <?php ActiveForm::end(); ?>
                     </div>

@@ -89,7 +89,7 @@ class AdminMenu extends ActiveRecord
             ->where('[[id]]=:id');
         while ($parent) {
             if ($this->id == $parent) {
-                $this->addError('parent_name', Yii::t('backend/menu', 'Loop detected.'));
+                $this->addError('parent_name', Yii::t('admin/menu', 'Loop detected.'));
                 return;
             }
             $parent = $query->params([':id' => $parent])->scalar($db);

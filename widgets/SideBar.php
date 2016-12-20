@@ -20,7 +20,7 @@ class SideBar extends Widget
 {
     /**
      * @var array the HTML attributes for the widget container tag.
-     * @see \backend\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
+     * @see \yuncms\admin\helpers\Html::renderTagAttributes() for details on how attributes are being rendered.
      */
     public $options = [];
     /**

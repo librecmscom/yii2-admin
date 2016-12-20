@@ -13,7 +13,7 @@ use yuncms\admin\helpers\Html;
 
 /**
  * Class Jarvis
- * @package backend
+ * @package yuncms\admin
  */
 class Jarvis extends \yii\base\Widget
 {

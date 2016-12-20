@@ -17,9 +17,9 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Create Ban Word' => '',
-    'Delete Ban Word' => '',
-    'Manage Ban Word' => '',
-    'Update Ban Word' => '',
-    'Word' => '',
+    'Create Ban Word' => '创建敏感词',
+    'Delete Ban Word' => '删除敏感词',
+    'Manage Ban Word' => '敏感词管理',
+    'Update Ban Word' => '修改敏感词',
+    'Word' => '敏感词',
 ];

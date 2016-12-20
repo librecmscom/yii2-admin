@@ -23,7 +23,7 @@ unset($rules[RouteRule::RULE_NAME]);
 
     <?= $form->field($model, 'description')->textarea(['rows' => 2]) ?>
 
-    <?= $form->field($model, 'ruleName')->dropDownList($rules, ['prompt' => '--' . Yii::t('backend/rule', 'Select Rule')]) ?>
+    <?= $form->field($model, 'ruleName')->dropDownList($rules, ['prompt' => '--' . Yii::t('admin/rule', 'Select Rule')]) ?>
 
     <?= $form->field($model, 'data')->textarea(['rows' => 6]) ?>
 </fieldset>

@@ -17,6 +17,9 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Assignment' => '',
     'Create Admin' => '',
     'Manage Assignment' => '',
+    'Search for assigned' => '',
+    'Search for avaliable' => '',
 ];

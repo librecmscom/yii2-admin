@@ -23,5 +23,6 @@ return [
     'Manage Rule' => '',
     'Name' => '',
     'Rule Name' => '',
+    'Select Rule' => '',
     'Update Rule' => '',
 ];

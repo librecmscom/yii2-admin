@@ -21,11 +21,11 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
                 'bodyToolbarActions' => [
                     [
                         'label' => Yii::t('admin/rule', 'Manage Rule'),
-                        'url' => ['/rule/index'],
+                        'url' => ['/admin/rule/index'],
                     ],
                     [
                         'label' => Yii::t('admin/rule', 'Create Rule'),
-                        'url' => ['/rule/create'],
+                        'url' => ['/admin/rule/create'],
                     ],
                 ]
             ]); ?>

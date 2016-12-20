@@ -40,7 +40,7 @@ use yuncms\admin\helpers\Html;
  * - [[inlineRadioListTemplate]] the template for inline radioLists
  * Example:
  * ```php
- * use backend\widgets\ActiveForm;
+ * use yuncms\admin\widgets\ActiveForm;
  * $form = ActiveForm::begin(['layout' => 'horizontal']);
  * // Form field without label
  * echo $form->field($model, 'demo', [
@@ -67,7 +67,7 @@ use yuncms\admin\helpers\Html;
  * ActiveForm::end();
  * ```
  *
- * @see \backend\widgets\ActiveForm
+ * @see \yuncms\admin\widgets\ActiveForm
  * @see http://getbootstrap.com/css/#forms
  * @author Michael Härtl <haertl.mike@gmail.com>
  * @since 2.0
