@@ -6,8 +6,26 @@
  */
 namespace yuncms\admin;
 
+use Yii;
+
+/**
+ * Class Application
+ * @package yuncms\admin
+ */
 class Application extends \yii\web\Application
 {
+
+    /**
+     * @inheritdoc
+     */
+    protected function bootstrap()
+    {
+        parent::bootstrap();
+        //附加权限验证行为
+        $this->attachBehavior('access', Yii::createObject([
+            'class' => 'yuncms\admin\components\AccessControl'
+        ]));
+    }
 
     /**
      * Returns the URL manager for this application.
@@ -23,6 +41,7 @@ class Application extends \yii\web\Application
      */
     public function coreComponents()
     {
+        //增加或重置一些系统默认组件的默认配置
         return array_merge(parent::coreComponents(), [
             'request' => [
                 'class' => 'yii\web\Request',

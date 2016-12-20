@@ -41,9 +41,9 @@ class Bootstrap implements BootstrapInterface
             $app->frontUrlManager->baseUrl = SettingHelper::get('frontendUrl','site');
 
             //附加权限验证行为
-            $app->attachBehavior('access', Yii::createObject([
-                'class' => 'yuncms\admin\components\AccessControl'
-            ]));
+//            $app->attachBehavior('access', Yii::createObject([
+//                'class' => 'yuncms\admin\components\AccessControl'
+//            ]));
 
 //            $app->urlManager->addRules([
 //                'login' => '/site/login',
