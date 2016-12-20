@@ -21,21 +21,21 @@ class Bootstrap implements BootstrapInterface
 {
     /**
      * Bootstrap method to be called during application bootstrap stage.
-     * @param \yii\base\Application $app the application currently running
+     * @param \yuncms\admin\Application $app the application currently running
      */
     public function bootstrap($app)
     {
         if ($app instanceof \yuncms\admin\Application) {
-            Yii::$container->set('yii\web\User', [
-                'enableAutoLogin' => true,
-                'loginUrl' => ['/admin/security/login'],
-                'identityClass' => 'yuncms\admin\models\Admin',
-                'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
-            ]);
-            $app->set('authManager', [
-                'class' => 'yuncms\admin\components\RbacManager',
-                'cache' => 'cache',
-            ]);
+//            Yii::$container->set('yii\web\User', [
+//                'enableAutoLogin' => true,
+//                'loginUrl' => ['/admin/security/login'],
+//                'identityClass' => 'yuncms\admin\models\Admin',
+//                'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
+//            ]);
+            //$app->set('authManager', [
+            //    'class' => 'yuncms\admin\components\RbacManager',
+            //    'cache' => 'cache',
+            //]);
 
             //设置前台URL
             $app->frontUrlManager->baseUrl = SettingHelper::get('frontendUrl','site');
@@ -45,11 +45,11 @@ class Bootstrap implements BootstrapInterface
                 'class' => 'yuncms\admin\components\AccessControl'
             ]));
 
-            $app->urlManager->addRules([
-                'login' => '/site/login',
-                'logout' => '/site/logout',
-                'error' => '/site/error',
-            ], false);
+//            $app->urlManager->addRules([
+//                'login' => '/site/login',
+//                'logout' => '/site/logout',
+//                'error' => '/site/error',
+//            ], false);
         }
 
         /**
