@@ -17,12 +17,12 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Clear' => '',
+    'Clear' => '取消',
     'Close Popup' => '',
     'Collapse Menu' => '',
     'Loading...' => '',
-    'Logout' => '',
-    'Manage Center' => '',
+    'Logout' => '退出',
+    'Manage Center' => '管理中心',
     'Refresh' => '',
     'Shortcut' => '',
     'Voice command failed' => '',

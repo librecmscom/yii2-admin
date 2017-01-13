@@ -43,7 +43,7 @@ class AccessControl extends ActionFilter
     /**
      * @var array List of action that not need to check access.
      */
-    public $allowActions = ['/admin/security/login', 'site/error', '/admin/security/captcha'];
+    public $allowActions = ['admin/security/login', 'site/error', 'admin/security/captcha'];
 
     /**
      * Get user

@@ -103,4 +103,17 @@ class LoginForm extends Model
         }
         return $this->_user;
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function attributeLabels()
+    {
+        return [
+            'login' => Yii::t('admin/login', 'Account'),
+            'password' => Yii::t('admin/login', 'Password'),
+            'rememberMe' => Yii::t('admin/login', 'Remember Me'),
+            'verifyCode' => Yii::t('admin/login', 'Verify Code'),
+        ];
+    }
 }

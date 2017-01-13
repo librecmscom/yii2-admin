@@ -54,7 +54,6 @@ use yii\helpers\Html;
 class Nav extends \yii\bootstrap\Nav
 {
 
-
     /**
      * Renders a widget's item.
      * @param string|array $item the item to render.

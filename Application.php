@@ -22,9 +22,7 @@ class Application extends \yii\web\Application
     {
         parent::bootstrap();
         //附加权限验证行为
-        $this->attachBehavior('access', Yii::createObject([
-            'class' => 'yuncms\admin\components\AccessControl'
-        ]));
+        $this->attachBehavior('access', Yii::createObject('yuncms\admin\components\AccessControl'));
         Yii::$classMap['yii\jui\JuiAsset'] = '@yuncms/admin/extends/JuiAsset.php';
         Yii::$classMap['yii\helpers\Html'] = '@yuncms/admin/extends/Html.php';
         Yii::$classMap['yii\jui\JuiAsset'] = '@yuncms/admin/extends/JuiAsset.php';

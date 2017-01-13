@@ -50,7 +50,7 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
     <header id="header">
 
         <div id="logo-group">
-            <span id="logo"> <img src="img/logo.png" alt="SmartAdmin"> </span>
+            <span id="logo"> <img src="<?= $asset->baseUrl?>/img/logo.png" alt="SmartAdmin"> </span>
         </div>
     </header>
 
@@ -61,7 +61,7 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
-                    <h1 class="txt-color-red login-header-big">SmartAdmin</h1>
+                    <h1 class="txt-color-red login-header-big"><?=Yii::t('admin/layout','Manage Center');?></h1>
                     <div class="hero">
 
                         <div class="pull-left login-desc-box-l">
@@ -73,7 +73,7 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
                             </div>
                         </div>
 
-                        <img src="img/demo/iphoneview.png" class="pull-right display-image" alt="" style="width:210px">
+                        <img src="<?= $asset->baseUrl?>/img/demo/iphoneview.png" class="pull-right display-image" alt="" style="width:210px">
 
                     </div>
 
