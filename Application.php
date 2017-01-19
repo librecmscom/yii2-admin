@@ -15,6 +15,8 @@ use Yii;
 class Application extends \yii\web\Application
 {
 
+    public $id = 'app-backend';
+
     /**
      * @inheritdoc
      */
