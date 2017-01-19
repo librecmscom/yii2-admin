@@ -38,6 +38,19 @@ class AdminMenu extends ActiveRecord
         return '{{%admin_menu}}';
     }
 
+    public function behaviors()
+    {
+        return [
+            'positionBehavior' => [
+                'class' => 'yuncms\admin\behaviors\PositionBehavior',
+                'positionAttribute' => 'sort',
+                'groupAttributes' => [
+                    'parent' // multiple lists varying by 'parent'
+                ],
+            ],
+        ];
+    }
+
     /**
      * @inheritdoc
      */

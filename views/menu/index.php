@@ -3,7 +3,7 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\widgets\Pjax;
-use yii\grid\GridView;
+use yuncms\admin\grid\TreeGrid;
 use yuncms\admin\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
@@ -33,22 +33,28 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]
             ]); ?>
             <?php Pjax::begin(); ?>
-            <?= GridView::widget([
+            <?= TreeGrid::widget([
                 'dataProvider' => $dataProvider,
-                'filterModel' => $searchModel,
+                'keyColumnName' => 'id',
+                'parentColumnName' => 'parent',
+                'parentRootValue' => null, //first parentId value
+                'pluginOptions' => [
+                    'initialState' => 'collapse',
+                ],
                 'columns' => [
-                    ['class' => 'yii\grid\SerialColumn'],
                     'name',
-                    [
-                        'attribute' => 'menuParent.name',
-                        'filter' => Html::activeTextInput($searchModel, 'parent_name', [
-                            'class' => 'form-control', 'id' => null
-                        ]),
-                        'label' => Yii::t('admin/menu', 'Parent Menu'),
-                    ],
                     'route',
-                    'icon',
-                    'sort',
+                    [
+                        'attribute' => 'icon',
+                        'value' => function($model) {
+                            return Html::icon($model->icon);
+                        },
+                        'format' => 'raw'
+                    ],
+                    [
+                        'class' => 'yuncms\admin\grid\PositionColumn',
+                        'attribute' => 'sort'
+                    ],
                     [
                         'class' => 'yii\grid\ActionColumn',
                         'header' => Yii::t('app', 'Operation'),

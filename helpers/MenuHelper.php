@@ -80,7 +80,7 @@ class MenuHelper
                 }
             }
             $assigned = [];
-            $query = AdminMenu::find()->select(['id'])->asArray();
+            $query = AdminMenu::find()->select(['id'])->orderBy(['sort' => SORT_ASC])->asArray();
             if (count($filter2)) {
                 $assigned = $query->where(['route' => $filter2])->column();
             }

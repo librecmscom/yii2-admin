@@ -7,10 +7,12 @@
 namespace yuncms\admin\controllers;
 
 use Yii;
+use yii\helpers\Url;
 use yii\web\Response;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\bootstrap\ActiveForm;
+use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
 use yuncms\admin\models\AdminMenu;
 use yuncms\admin\components\Helper;
@@ -37,18 +39,30 @@ class MenuController extends Controller
         ];
     }
 
+    public function actions()
+    {
+        return [
+            'position' => [
+                'class' => 'yuncms\admin\actions\Position',
+                'returnUrl' => Url::current()
+            ]
+        ];
+    }
+
     /**
      * Lists all Menu models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new AdminMenuSearch;
-        $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
+        $query = AdminMenu::find()->orderBy(['sort' => SORT_ASC]);
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => false
+        ]);
 
         return $this->render('index', [
-            'dataProvider' => $dataProvider,
-            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider
         ]);
     }
 
@@ -86,7 +100,7 @@ class MenuController extends Controller
         }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Helper::invalidate();
-            Yii::$app->getSession()->setFlash('success', Yii::t('app','Create success.'));
+            Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Create success.'));
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -113,7 +127,7 @@ class MenuController extends Controller
         }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             Helper::invalidate();
-            Yii::$app->getSession()->setFlash('success', Yii::t('app','Update success.'));
+            Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Update success.'));
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -132,7 +146,7 @@ class MenuController extends Controller
     {
         $this->findModel($id)->delete();
         Helper::invalidate();
-        Yii::$app->getSession()->setFlash('success', Yii::t('app','Delete success.'));
+        Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Delete success.'));
         return $this->redirect(['index']);
     }
 
@@ -155,7 +169,7 @@ class MenuController extends Controller
      * @return AdminMenu the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
+    public function findModel($id)
     {
         if (($model = AdminMenu::findOne($id)) !== null) {
             return $model;
