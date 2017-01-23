@@ -9,7 +9,8 @@
   "license": "BSD-3-Clause",
   "require": {
     "php": ">=5.4.0",
-    "yiisoft/yii2": "~2.0.10"
+    "yiisoft/yii2": "~2.0.10",
+    "yuncms/yii2-user": "*"
   },
   "autoload": {
     "psr-4": {

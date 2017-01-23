@@ -8,6 +8,7 @@ namespace yuncms\admin\models;
 
 use Yii;
 use yii\base\Model;
+use yuncms\user\models\User;
 
 /**
  * Login form
@@ -94,12 +95,12 @@ class LoginForm extends Model
     /**
      * Finds user by [[username]] or [[email]]
      *
-     * @return Admin|null
+     * @return User|null
      */
     protected function getUser()
     {
         if ($this->_user === null) {
-            $this->_user = Admin::findByUsernameOrEmail($this->login);
+            $this->_user = User::findByUsernameOrEmail($this->login);
         }
         return $this->_user;
     }

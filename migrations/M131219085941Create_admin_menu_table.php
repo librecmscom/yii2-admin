@@ -42,7 +42,7 @@ class M131219085941Create_admin_menu_table extends Migration
 
             //核心设置子菜单
             [21, '站点设置', 2, '/site/setting', 'fa-gears', NULL, NULL],
-            [22, '管理员管理', 2, '/admin/admin/index', 'fa-user', NULL, NULL],
+            [22, '用户管理', 2, '/user/user/index', 'fa-user', NULL, NULL],
             [23, '安全设置', 2, '/site/security', 'fa-sun-o', NULL, NULL],
             [24, '角色管理', 2, '/admin/role/index', 'fa-group', NULL, NULL],
             [25, '权限管理', 2, '/admin/permission/index', 'fa-certificate', NULL, NULL],
@@ -61,10 +61,10 @@ class M131219085941Create_admin_menu_table extends Migration
 
         //隐藏的子菜单[隐藏的子菜单不设置id字段，使用自增]//从10000开始
         $this->batchInsert('{{%admin_menu}}', ['id', 'name', 'parent', 'route', 'visible', 'sort'], [
-            [10000, '管理员查看', 22, '/admin/view', 0, NULL],
+            [10000, '用户查看', 22, '/admin/view', 0, NULL],
         ]);
         $this->batchInsert('{{%admin_menu}}', ['name', 'parent', 'route', 'visible', 'sort'], [
-            ['创建管理员', 22, '/admin/admin/create', 0, NULL], ['更新管理员', 22, '/admin/admin/update', 0, NULL], ['授权设置', 22, '/admin/assignment/view', 0, NULL],
+             ['更新用户', 22, '/user/user/update', 0, NULL], ['授权设置', 22, '/admin/assignment/view', 0, NULL],
             ['角色查看', 24, '/admin/role/view', 0, NULL], ['创建角色', 24, '/admin/role/create', 0, NULL], ['更新角色', 24, '/admin/role/update', 0, NULL],
             ['权限查看', 25, '/admin/permission/view', 0, NULL], ['创建权限', 25, '/admin/permission/create', 0, NULL], ['更新权限', 25, '/admin/permission/update', 0, NULL],
             ['路由查看', 26, '/admin/route/view', 0, NULL], ['创建路由', 26, '/admin/route/create', 0, NULL],

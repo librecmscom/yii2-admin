@@ -104,6 +104,7 @@ class AdminRoute extends Object
 
     /**
      * Get list of application routes
+     * @param string $module
      * @return array
      */
     public function getAppRoutes($module = null)
