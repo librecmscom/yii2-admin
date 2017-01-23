@@ -63,7 +63,7 @@ class Application extends \yii\web\Application
                 'class' => 'yii\web\User',
                 'enableAutoLogin' => true,
                 'loginUrl' => ['/admin/security/login'],
-                'identityClass' => 'yuncms\admin\models\Admin',
+                'identityClass' => 'yuncms\user\models\User',
                 'identityCookie' => [
                     'name' => '_identity-backend',
                     'httpOnly' => true
