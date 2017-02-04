@@ -14,7 +14,7 @@ echo "<?php\n";
 
 use yii\helpers\Html;
 use yuncms\admin\widgets\Jarvis;
-use <?= $generator->indexWidgetType === 'grid' ? "backend\\components\\GridView" : "yii\\widgets\\ListView" ?>;
+use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
 <?= $generator->enablePjax ? 'use yii\widgets\Pjax;' : '' ?>
 
 /* @var $this yii\web\View */
