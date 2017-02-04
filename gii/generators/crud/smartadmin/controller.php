@@ -58,6 +58,7 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['POST'],
+                    'batch-delete' => ['POST'],
                 ],
             ],
         ];
@@ -155,6 +156,24 @@ class <?= $controllerClass ?> extends <?= StringHelper::basename($generator->bas
     {
         $this->findModel(<?= $actionParams ?>)->delete();
         Yii::$app->getSession()->setFlash('success', Yii::t('app','Delete success.'));
+        return $this->redirect(['index']);
+    }
+     /**
+      * Batch Delete existing <?= $modelClass ?> model.
+      * If deletion is successful, the browser will be redirected to the 'index' page.
+      * @return mixed
+      */
+    public function actionBatchDelete()
+    {
+        if (($ids = Yii::$app->request->post('ids', null)) != null) {
+            foreach ($ids as $id) {
+                $model = $this->findModel($id);
+                $model->delete();
+            }
+            Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Delete success.'));
+        } else {
+            Yii::$app->getSession()->setFlash('success', Yii::t('app', 'Delete failed.'));
+        }
         return $this->redirect(['index']);
     }
 

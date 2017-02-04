@@ -11,7 +11,7 @@ $nameAttribute = $generator->getNameAttribute();
 
 echo "<?php\n";
 ?>
-
+use yii\web\View;
 use yii\helpers\Html;
 use yuncms\admin\widgets\Jarvis;
 use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\widgets\\ListView" ?>;
@@ -23,6 +23,12 @@ use <?= $generator->indexWidgetType === 'grid' ? "yii\\grid\\GridView" : "yii\\w
 
 $this->title = <?= $generator->generateString('Manage ' . Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?>;
 $this->params['breadcrumbs'][] = $this->title;
+$this->registerJs("jQuery(\"#batch_deletion\").on(\"click\", function () {
+    yii.confirm('".Yii::t('app', 'Are you sure you want to delete this item?')."',function(){
+        var ids = jQuery('#gridview').yiiGridView(\"getSelectedRows\");
+        jQuery.post(\"batch-delete\",{ids:ids});
+    });
+});", View::POS_LOAD);
 ?>
 <section id="widget-grid">
     <div class="row">
@@ -52,7 +58,11 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= "<?= " ?>GridView::widget([
                 'dataProvider' => $dataProvider,
                 <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n                'columns' => [\n" : "'columns' => [\n"; ?>
-                    ['class' => 'yii\grid\SerialColumn'],
+                    [
+                        'class' => 'yii\grid\CheckboxColumn',
+                        "name" => "id",
+                    ],
+                    //['class' => 'yii\grid\SerialColumn'],
 <?php
 $count = 0;
 if (($tableSchema = $generator->getTableSchema()) === false) {
