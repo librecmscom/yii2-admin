@@ -50,6 +50,11 @@ $this->registerJs("jQuery(\"#batch_deletion\").on(\"click\", function () {
                         'label' => <?= $generator->generateString('Create ' . Inflector::camel2words(StringHelper::basename($generator->modelClass))) ?>,
                         'url' => ['/<?= Inflector::camel2id(StringHelper::basename($generator->modelClass)) ?>/create'],
                     ],
+                    [
+                        'options' => ['id' => 'batch_deletion','class'=>'btn btn-sm btn-danger'],
+                        'label' => <?= $generator->generateString('Batch Deletion');?>,
+                        'url' => 'javascript:void(0);',
+                    ]
                 ]
             ]); ?>
 <?php if(!empty($generator->searchModelClass)): ?>
