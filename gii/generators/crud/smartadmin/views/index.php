@@ -91,7 +91,16 @@ if (($tableSchema = $generator->getTableSchema()) === false) {
     }
 }
 ?>
-                    ['class' => 'yii\grid\ActionColumn','header' => Yii::t('app', 'Operation'),],
+                    [
+                        'class' => 'yii\grid\ActionColumn',
+                        'header' => Yii::t('app', 'Operation'),
+                        'template' => '{view} {update} {delete}',
+                        //'buttons' => [
+                        //    'update' => function ($url, $model, $key) {
+                        //        return $model->status === 'editable' ? Html::a('Update', $url) : '';
+                        //    },
+                        //],
+                    ],
                 ],
             ]); ?>
             <?= "<?php " ?>Jarvis::end(); ?>
