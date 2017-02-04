@@ -54,9 +54,9 @@ class M131219085941Create_admin_menu_table extends Migration
             [40, '地区管理', 3, '/area/index', 'fa-globe', NULL, NULL],
             [41, 'Url规则管理', 3, '/url-rule/index', 'fa-exclamation-triangle', NULL, NULL],
             [42, '单页管理', 3, '/page/index', 'fa-edit', NULL, NULL],
-            [43, 'Tag管理', 8, '/tag/index', 'fa-book', NULL, NULL],
-            [44, '附件管理', 8, '/attachment/index', 'fa-folder-open', NULL, NULL],
-            [45, '敏感词管理', 3, '/admin/ban-word/index', 'fa-exclamation-triangle', NULL, NULL],
+
+
+            [43, '敏感词管理', 3, '/admin/ban-word/index', 'fa-exclamation-triangle', NULL, NULL],
         ]);
 
         //隐藏的子菜单[隐藏的子菜单不设置id字段，使用自增]//从10000开始
@@ -73,9 +73,8 @@ class M131219085941Create_admin_menu_table extends Migration
             ['创建地区', 40, '/area/create', 0, NULL], ['更新地区', 40, '/area/update', 0, NULL],
             ['创建URL规则', 41, '/url-rule/create', 0, NULL], ['更新URL规则', 41, '/url-rule/update', 0, NULL],
             ['创建单页', 42, '/page/create', 0, NULL], ['更新单页', 42, '/page/update', 0, NULL],
-            ['创建Tag', 43, '/tag/create', 0, NULL], ['更新Tag', 43, '/tag/update', 0, NULL],
-            ['附件查看', 44, '/attachment/view', 0, NULL],
-            ['敏感词查看', 45, '/admin/ban-word/view', 0, NULL], ['创建敏感词', 45, '/admin/ban-word/create', 0, NULL], ['更新敏感词', 45, '/admin/ban-word/update', 0, NULL],
+
+            ['敏感词查看', 43, '/admin/ban-word/view', 0, NULL], ['创建敏感词', 43, '/admin/ban-word/create', 0, NULL], ['更新敏感词', 43, '/admin/ban-word/update', 0, NULL],
         ]);
     }
 
