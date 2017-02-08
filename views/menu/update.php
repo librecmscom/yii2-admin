@@ -6,8 +6,8 @@ use yuncms\admin\widgets\Jarvis;
 /* @var \yii\web\View $this */
 /* @var \yuncms\admin\models\AdminMenu $model */
 
-$this->title = Yii::t('admin/menu', 'Update Menu') . ': ' . ' ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('admin/menu', 'Manage Menu'), 'url' => ['index']];
+$this->title = Yii::t('admin', 'Update Menu') . ': ' . ' ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Menu'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
@@ -20,11 +20,11 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('admin/menu', 'Manage Menu'),
+                        'label' => Yii::t('admin', 'Manage Menu'),
                         'url' => ['/admin/menu/index'],
                     ],
                     [
-                        'label' => Yii::t('admin/menu', 'Create Menu'),
+                        'label' => Yii::t('admin', 'Create Menu'),
                         'url' => ['/admin/menu/create'],
                     ],
                 ]

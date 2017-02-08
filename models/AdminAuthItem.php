@@ -97,11 +97,11 @@ class AdminAuthItem extends Model
     public function attributeLabels()
     {
         return [
-            'name' => Yii::t('admin/authitem', 'Name'),
-            'type' => Yii::t('admin/authitem', 'Type'),
-            'description' => Yii::t('admin/authitem', 'Description'),
-            'ruleName' => Yii::t('admin/authitem', 'Rule Name'),
-            'data' => Yii::t('admin/authitem', 'Data'),
+            'name' => Yii::t('admin', 'Auth Name'),
+            'type' => Yii::t('admin', 'Auth Type'),
+            'description' => Yii::t('admin', 'Auth Description'),
+            'ruleName' => Yii::t('admin', 'Auth Rule Name'),
+            'data' => Yii::t('admin', 'Auth Data'),
         ];
     }
 

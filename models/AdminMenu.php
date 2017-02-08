@@ -79,14 +79,14 @@ class AdminMenu extends ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('admin/menu', 'Menu Name'),
-            'parent' => Yii::t('admin/menu', 'Parent Menu'),
-            'route' => Yii::t('admin/menu', 'Route'),
-            'icon' => Yii::t('admin/menu', 'Icon'),
-            'visible' => Yii::t('admin/menu', 'Visible'),
-            'sort' => Yii::t('admin/menu', 'Sort'),
-            'data' => Yii::t('admin/menu', 'Data'),
-            'parent_name' => Yii::t('admin/menu', 'Parent Menu'),
+            'name' => Yii::t('admin', 'Menu Name'),
+            'parent' => Yii::t('admin', 'Parent Menu'),
+            'route' => Yii::t('admin', 'Menu Route'),
+            'icon' => Yii::t('admin', 'Menu Icon'),
+            'visible' => Yii::t('admin', 'Visible'),
+            'sort' => Yii::t('admin', 'Sort'),
+            'data' => Yii::t('admin', 'Menu Data'),
+            'parent_name' => Yii::t('admin', 'Parent Menu'),
         ];
     }
 
@@ -102,7 +102,7 @@ class AdminMenu extends ActiveRecord
             ->where('[[id]]=:id');
         while ($parent) {
             if ($this->id == $parent) {
-                $this->addError('parent_name', Yii::t('admin/menu', 'Loop detected.'));
+                $this->addError('parent_name', Yii::t('admin', 'Loop detected.'));
                 return;
             }
             $parent = $query->params([':id' => $parent])->scalar($db);

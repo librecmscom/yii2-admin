@@ -6,8 +6,8 @@ use yuncms\admin\widgets\Jarvis;
 /* @var \yii\web\View $this */
 /* @var \yuncms\admin\models\AdminBizRule $model */
 
-$this->title = Yii::t('admin/rule', 'Create Rule');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('admin/rule', 'Manage Rule'), 'url' => ['index']];
+$this->title = Yii::t('admin', 'Create Rule');
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Rule'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -19,11 +19,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('admin/rule', 'Manage Rule'),
+                        'label' => Yii::t('admin', 'Manage Rule'),
                         'url' => ['/admin/rule/index'],
                     ],
                     [
-                        'label' => Yii::t('admin/rule', 'Create Rule'),
+                        'label' => Yii::t('admin', 'Create Rule'),
                         'url' => ['/admin/rule/create'],
                     ],
                 ]

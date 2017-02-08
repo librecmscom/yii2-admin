@@ -47,7 +47,7 @@ use yii\helpers\Html;
             <!-- footer: refresh area -->
 					<span> Last updated on: 12/12/2013 9:43AM
 						<button type="button"
-                                data-loading-text="<i class='fa fa-refresh fa-spin'></i> <?= Yii::t('admin/layout', 'Loading...'); ?>"
+                                data-loading-text="<i class='fa fa-refresh fa-spin'></i> <?= Yii::t('admin', 'Loading...'); ?>"
                                 class="btn btn-xs btn-default pull-right">
                             <i class="fa fa-refresh"></i>
                         </button>
@@ -79,7 +79,7 @@ use yii\helpers\Html;
             </li>
             <li class="divider"></li>
             <li>
-                <a href="javascript:void(0);"><i class="fa fa-power-off"></i> <?= Yii::t('admin/layout', 'Clear'); ?></a>
+                <a href="javascript:void(0);"><i class="fa fa-power-off"></i> <?= Yii::t('admin', 'Clear'); ?></a>
             </li>
         </ul>
         <!-- end dropdown-menu-->
@@ -93,7 +93,7 @@ use yii\helpers\Html;
         <!-- collapse menu button -->
         <div id="hide-menu" class="btn-header pull-right">
             <span> <a href="javascript:void(0);" data-action="toggleMenu"
-                      title="<?= Yii::t('admin/layout', 'Collapse Menu'); ?>"><i
+                      title="<?= Yii::t('admin', 'Collapse Menu'); ?>"><i
                         class="fa fa-reorder"></i></a> </span>
         </div>
         <!-- end collapse menu -->
@@ -119,22 +119,22 @@ use yii\helpers\Html;
                     <li>
                         <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0"
                            data-action="toggleShortcut"><i
-                                class="fa fa-arrow-down"></i> <?= Yii::t('admin/layout', 'Shortcut') ?></a>
+                                class="fa fa-arrow-down"></i> <?= Yii::t('admin', 'Shortcut') ?></a>
                     </li>
                     <li class="divider"></li>
                     <li>
                         <a href="javascript:void(0);" class="padding-10 padding-top-0 padding-bottom-0"
                            data-action="launchFullscreen"><i
-                                class="fa fa-arrows-alt"></i> <?= Yii::t('admin/layout', 'Full Screen') ?></a>
+                                class="fa fa-arrows-alt"></i> <?= Yii::t('admin', 'Full Screen') ?></a>
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <?= Html::a('<i class="fa fa-sign-out fa-lg"></i>' . Yii::t('admin/layout', 'Logout'), Url::to(['/site/logout']), [
+                        <?= Html::a('<i class="fa fa-sign-out fa-lg"></i>' . Yii::t('admin', 'Logout'), Url::to(['/admin/security/logout']), [
                             'class' => 'padding-10 padding-top-0 padding-bottom-0',
-                            'title' => Yii::t('admin/layout', 'Sign Out'),
+                            'title' => Yii::t('admin', 'Sign Out'),
                             'data' => [
                                 'method' => 'post',
-                                'confirm' => Yii::t('admin/layout', 'You can improve your security further after logging out by closing this opened browser')
+                                'confirm' => Yii::t('admin', 'You can improve your security further after logging out by closing this opened browser')
                             ]
                         ]); ?>
                     </li>
@@ -146,10 +146,10 @@ use yii\helpers\Html;
         <div id="logout" class="btn-header transparent pull-right">
                 <span>
                     <?= Html::a('<i class="fa fa-sign-out"></i>', Url::to(['/admin/security/logout']), [
-                        'title' => Yii::t('admin/layout', 'Sign Out'),
+                        'title' => Yii::t('admin', 'Sign Out'),
                         'data' => [
                             'method' => 'post',
-                            'confirm' => Yii::t('admin/layout', 'You can improve your security further after logging out by closing this opened browser')
+                            'confirm' => Yii::t('admin', 'You can improve your security further after logging out by closing this opened browser')
                         ]
                     ]); ?>
                  </span>
@@ -158,7 +158,7 @@ use yii\helpers\Html;
 
         <!-- search mobile button (this is hidden till mobile view port) -->
         <div id="search-mobile" class="btn-header transparent pull-right">
-            <span> <a href="javascript:void(0)" title="<?= Yii::t('admin/layout', 'Search'); ?>"><i class="fa fa-search"></i></a> </span>
+            <span> <a href="javascript:void(0)" title="<?= Yii::t('admin', 'Search'); ?>"><i class="fa fa-search"></i></a> </span>
         </div>
         <!-- end search mobile button -->
 
@@ -191,7 +191,7 @@ use yii\helpers\Html;
                 <i class="fa fa-search"></i>
             </button>
             <a href="javascript:void(0);" id="cancel-search-js"
-               title="<?= Yii::t('admin/layout', 'Cancel Search'); ?>"><i
+               title="<?= Yii::t('admin', 'Cancel Search'); ?>"><i
                     class="fa fa-times"></i></a>
         </form>
         <!-- end input: search field -->
@@ -199,7 +199,7 @@ use yii\helpers\Html;
         <!-- fullscreen button -->
         <div id="fullscreen" class="btn-header transparent pull-right">
             <span> <a href="javascript:void(0);" data-action="launchFullscreen"
-                      title="<?= Yii::t('admin/layout', 'Full Screen'); ?>"><i
+                      title="<?= Yii::t('admin', 'Full Screen'); ?>"><i
                         class="fa fa-arrows-alt"></i></a> </span>
         </div>
         <!-- end fullscreen button -->
@@ -216,7 +216,7 @@ use yii\helpers\Html;
                             <small>Please speak clearly into the mic</small>
                         </h4>
                         <h4 class="vc-title-error text-center">
-                            <i class="fa fa-microphone-slash"></i> <?= Yii::t('admin/layout', 'Voice command failed'); ?>
+                            <i class="fa fa-microphone-slash"></i> <?= Yii::t('admin', 'Voice command failed'); ?>
                             <br>
                             <small class="txt-color-red">Must <strong>"Allow"</strong> Microphone</small>
                             <br>
@@ -225,7 +225,7 @@ use yii\helpers\Html;
                         <a href="javascript:void(0);" class="btn btn-success" onclick="commands.help()">See
                             Commands</a>
                         <a href="javascript:void(0);" class="btn bg-color-purple txt-color-white"
-                           onclick="$('#speech-btn .popover').fadeOut(50);"><?= Yii::t('admin/layout', 'Close Popup'); ?></a>
+                           onclick="$('#speech-btn .popover').fadeOut(50);"><?= Yii::t('admin', 'Close Popup'); ?></a>
                     </div>
                 </div>
             </div>

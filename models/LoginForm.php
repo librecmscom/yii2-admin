@@ -36,7 +36,7 @@ class LoginForm extends Model
 
     /**
      * 用户组件
-     * @var Admin
+     * @var User
      */
     private $_user;
 
@@ -73,7 +73,7 @@ class LoginForm extends Model
         if (!$this->hasErrors()) {
             $user = $this->getUser();
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, Yii::t('admin/admin', 'Incorrect username or password.'));
+                $this->addError($attribute, Yii::t('admin', 'Incorrect username or password.'));
             }
         }
     }
@@ -111,10 +111,10 @@ class LoginForm extends Model
     public function attributeLabels()
     {
         return [
-            'login' => Yii::t('admin/login', 'Account'),
-            'password' => Yii::t('admin/login', 'Password'),
-            'rememberMe' => Yii::t('admin/login', 'Remember Me'),
-            'verifyCode' => Yii::t('admin/login', 'Verify Code'),
+            'login' => Yii::t('admin', 'Account'),
+            'password' => Yii::t('admin', 'Password'),
+            'rememberMe' => Yii::t('admin', 'Remember Me'),
+            'verifyCode' => Yii::t('admin', 'Verify Code'),
         ];
     }
 }

@@ -6,8 +6,8 @@ use yuncms\admin\widgets\Jarvis;
 /* @var $this yii\web\View */
 /* @var $model yuncms\admin\models\Banword */
 
-$this->title = Yii::t('admin/ban-word', 'Update Ban Word') . ': ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('admin/ban-word', 'Manage Ban Word'), 'url' => ['index']];
+$this->title = Yii::t('admin', 'Update Ban Word') . ': ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Ban Word'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
 ?>
@@ -20,11 +20,11 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Update');
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('admin/ban-word', 'Manage Ban Word'),
+                        'label' => Yii::t('admin', 'Manage Ban Word'),
                         'url' => ['/admin/ban-word/index'],
                     ],
                     [
-                        'label' => Yii::t('admin/ban-word', 'Create Ban Word'),
+                        'label' => Yii::t('admin', 'Create Ban Word'),
                         'url' => ['/admin/ban-word/create'],
                     ],
                 ]

@@ -7,7 +7,7 @@ use yuncms\admin\widgets\Jarvis;
 /* @var $model yuncms\admin\models\Banword */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => Yii::t('admin/ban-word', 'Manage Ban Word'), 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Ban Word'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -20,20 +20,20 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('admin/ban-word', 'Manage Ban Word'),
+                        'label' => Yii::t('admin', 'Manage Ban Word'),
                         'url' => ['/admin/ban-word/index'],
                     ],
                     [
-                        'label' => Yii::t('admin/ban-word', 'Create Ban Word'),
+                        'label' => Yii::t('admin', 'Create Ban Word'),
                         'url' => ['/admin/ban-word/create'],
                     ],
                     [
-                        'label' => Yii::t('admin/ban-word', 'Update Ban Word'),
+                        'label' => Yii::t('admin', 'Update Ban Word'),
                         'url' => ['/admin/ban-word/update', 'id' => $model->id],
                         'options' => ['class' => 'btn btn-primary btn-sm']
                     ],
                     [
-                        'label' => Yii::t('admin/ban-word', 'Delete Ban Word'),
+                        'label' => Yii::t('admin', 'Delete Ban Word'),
                         'url' => ['/admin/ban-word/delete', 'id' => $model->id],
                         'options' => [
                             'class' => 'btn btn-danger btn-sm',

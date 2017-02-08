@@ -10,13 +10,13 @@ use yuncms\admin\widgets\ActiveForm;
 /* @var \yuncms\admin\models\LoginForm $model */
 
 $asset = LoginAsset::register($this);
-$this->title = Yii::$app->name . ' - ' . Yii::t('admin/admin', 'Sign in');
+$this->title = Yii::$app->name . ' - ' . Yii::t('admin', 'Sign in');
 
 //Meta
 $this->registerMetaTag(['charset' => Yii::$app->charset]);
 $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no']);
-$this->registerMetaTag(['name' => 'description', 'content' => 'YUNCMS Team']);
-$this->registerMetaTag(['name' => 'author', 'content' => 'YUNCMS Team']);
+$this->registerMetaTag(['name' => 'description', 'content' => 'TintSoft Team']);
+$this->registerMetaTag(['name' => 'author', 'content' => 'TintSoft Team']);
 
 //FAVICONS
 $this->registerLinkTag(['rel' => 'shortcut icon', 'href' => $asset->baseUrl . '/img/favicon/favicon.ico', 'type' => 'image/x-icon']);
@@ -48,7 +48,6 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
     <body class="animated fadeInDown">
     <?php $this->beginBody() ?>
     <header id="header">
-
         <div id="logo-group">
             <span id="logo"> <img src="<?= $asset->baseUrl?>/img/logo.png" alt="SmartAdmin"> </span>
         </div>
@@ -61,7 +60,7 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-7 col-lg-8 hidden-xs hidden-sm">
-                    <h1 class="txt-color-red login-header-big"><?=Yii::t('admin/layout','Manage Center');?></h1>
+                    <h1 class="txt-color-red login-header-big"><?=Yii::t('admin','Manage Center');?></h1>
                     <div class="hero">
 
                         <div class="pull-left login-desc-box-l">
@@ -110,20 +109,20 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
                         <fieldset>
                             <?= $form->field($model, 'login', ['inputOptions' => [
                                 'autofocus' => 'autofocus', 'autocomplete' => 'off'
-                            ]])->icon('fa-user')->tooltip(Yii::t('admin/admin', 'Please enter username.')); ?>
+                            ]])->icon('fa-user')->tooltip(Yii::t('admin', 'Please enter username.')); ?>
                             
-                            <?= $form->field($model, 'password')->passwordInput()->icon('fa-lock')->tooltip(Yii::t('admin/admin', 'Enter your password')); ?>
+                            <?= $form->field($model, 'password')->passwordInput()->icon('fa-lock')->tooltip(Yii::t('admin', 'Enter your password')); ?>
 
                             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                                 'captchaAction' => '/admin/security/captcha',
-                                'template' => '<div class="row" style="margin-left: 0px;"><div class="col-lg-6"><i class="icon-append fa fa-file-image-o" aria-hidden="true"></i>{input}<b class="tooltip tooltip-top-right">' . Yii::t('admin/admin', 'Enter your verifyCode') . '</b></div><div class="col-lg-3">{image}</div></div>'
+                                'template' => '<div class="row" style="margin-left: 0px;"><div class="col-lg-6"><i class="icon-append fa fa-file-image-o" aria-hidden="true"></i>{input}<b class="tooltip tooltip-top-right">' . Yii::t('admin', 'Enter your verifyCode') . '</b></div><div class="col-lg-3">{image}</div></div>'
                             ]) ?>
 
                             <?= $form->field($model, 'rememberMe')->checkbox() ?>
 
                         </fieldset>
                         <footer>
-                            <?= Html::submitButton(Yii::t('admin/admin', 'Sign in'), ['class' => 'btn btn-primary']) ?>
+                            <?= Html::submitButton(Yii::t('admin', 'Sign in'), ['class' => 'btn btn-primary']) ?>
                         </footer>
                         <?php ActiveForm::end(); ?>
                     </div>

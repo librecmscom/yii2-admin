@@ -64,7 +64,7 @@ class M131219085941Create_admin_menu_table extends Migration
             [10000, '用户查看', 22, '/admin/view', 0, NULL],
         ]);
         $this->batchInsert('{{%admin_menu}}', ['name', 'parent', 'route', 'visible', 'sort'], [
-             ['更新用户', 22, '/user/user/update', 0, NULL], ['授权设置', 22, '/admin/assignment/view', 0, NULL],
+            ['更新用户', 22, '/user/user/update', 0, NULL], ['授权设置', 22, '/admin/assignment/view', 0, NULL],
             ['角色查看', 24, '/admin/role/view', 0, NULL], ['创建角色', 24, '/admin/role/create', 0, NULL], ['更新角色', 24, '/admin/role/update', 0, NULL],
             ['权限查看', 25, '/admin/permission/view', 0, NULL], ['创建权限', 25, '/admin/permission/create', 0, NULL], ['更新权限', 25, '/admin/permission/update', 0, NULL],
             ['路由查看', 26, '/admin/route/view', 0, NULL], ['创建路由', 26, '/admin/route/create', 0, NULL],

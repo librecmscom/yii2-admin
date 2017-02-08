@@ -10,7 +10,7 @@ use yuncms\admin\widgets\Jarvis;
 /* @var \yii\data\ActiveDataProvider $dataProvider */
 /* @var \yuncms\admin\models\AdminMenuSearch $searchModel */
 
-$this->title = Yii::t('admin/menu', 'Manage Menu');
+$this->title = Yii::t('admin', 'Manage Menu');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -23,11 +23,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('admin/menu', 'Manage Menu'),
+                        'label' => Yii::t('admin', 'Manage Menu'),
                         'url' => ['/admin/menu/index'],
                     ],
                     [
-                        'label' => Yii::t('admin/menu', 'Create Menu'),
+                        'label' => Yii::t('admin', 'Create Menu'),
                         'url' => ['/admin/menu/create'],
                     ],
                 ]
@@ -62,8 +62,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         'buttons' => ['add' => function ($url, $model, $key) {
                             return Html::a('<span class="fa fa-plus"></span>',
                                 Url::toRoute(['/admin/menu/create', 'parent' => $model->id]), [
-                                    'title' => Yii::t('admin/menu', 'Add subMenu'),
-                                    'aria-label' => Yii::t('admin/menu', 'Add subMenu'),
+                                    'title' => Yii::t('admin', 'Add subMenu'),
+                                    'aria-label' => Yii::t('admin', 'Add subMenu'),
                                     'data-pjax' => '0',
                                 ]);
                         }]

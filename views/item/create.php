@@ -9,28 +9,28 @@ use yuncms\admin\widgets\Jarvis;
 
 $labels = $this->context->labels();
 if ($labels['Item'] == 'Role') {
-    $this->title = Yii::t('admin/role', 'Create Role');
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/role', 'Manage Role'), 'url' => ['index']];
+    $this->title = Yii::t('admin', 'Create Role');
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Role'), 'url' => ['index']];
     $actions = [
         [
-            'label' => Yii::t('admin/role', 'Manage Role'),
+            'label' => Yii::t('admin', 'Manage Role'),
             'url' => ['/admin/role/index'],
         ],
         [
-            'label' => Yii::t('admin/role', 'Create Role'),
+            'label' => Yii::t('admin', 'Create Role'),
             'url' => ['/admin/role/create'],
         ],
     ];
 } else {
-    $this->title = Yii::t('admin/permission', 'Create Permission');
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/permission', 'Manage Permission'), 'url' => ['index']];
+    $this->title = Yii::t('admin', 'Create Permission');
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Permission'), 'url' => ['index']];
     $actions = [
         [
-            'label' => Yii::t('admin/permission', 'Manage Permission'),
+            'label' => Yii::t('admin', 'Manage Permission'),
             'url' => ['/admin/permission/index'],
         ],
         [
-            'label' => Yii::t('admin/permission', 'Create Permission'),
+            'label' => Yii::t('admin', 'Create Permission'),
             'url' => ['/admin/permission/create'],
         ],
     ];

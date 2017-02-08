@@ -5,7 +5,7 @@ use yii\helpers\Json;
 use yuncms\admin\widgets\Jarvis;
 
 /* @var \yii\web\View $this */
-$this->title = Yii::t('admin/route', 'Manage Route');
+$this->title = Yii::t('admin', 'Manage Route');
 $this->params['breadcrumbs'][] = $this->title;
 
 $opts = Json::htmlEncode([
@@ -49,9 +49,9 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
             <div class="widget-body-toolbar">
                 <div class="input-group">
                     <input id="inp-route" type="text" class="form-control"
-                           placeholder="<?= Yii::t('admin/route', 'New route(s)') ?>">
+                           placeholder="<?= Yii::t('admin', 'New route(s)') ?>">
                     <span class="input-group-btn">
-                        <?= Html::a(Yii::t('app', 'Add') . $animateIcon, ['create'], ['class' => 'btn btn-success', 'id' => 'btn-new']) ?>
+                        <?= Html::a(Yii::t('admin', 'Add') . $animateIcon, ['create'], ['class' => 'btn btn-success', 'id' => 'btn-new']) ?>
                     </span>
                 </div>
             </div>
@@ -60,7 +60,7 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
                 <div class="col-sm-5">
                     <div class="input-group">
                         <input class="form-control search" data-target="avaliable"
-                               placeholder="<?= Yii::t('admin/route', 'Search for avaliable') ?>">
+                               placeholder="<?= Yii::t('admin', 'Search for avaliable') ?>">
                         <span class="input-group-btn">
                             <?= Html::a('<span class="glyphicon glyphicon-refresh"></span>', ['refresh'], ['class' => 'btn btn-default', 'id' => 'btn-refresh']) ?>
                         </span>
@@ -84,7 +84,7 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
                 </div>
                 <div class="col-sm-5">
                     <input class="form-control search" data-target="assigned"
-                           placeholder="<?= Yii::t('admin/route', 'Search for assigned') ?>">
+                           placeholder="<?= Yii::t('admin', 'Search for assigned') ?>">
                     <select multiple size="20" class="form-control list" data-target="assigned">
                     </select>
                 </div>

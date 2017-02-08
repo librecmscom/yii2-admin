@@ -12,26 +12,26 @@ use yuncms\admin\widgets\Jarvis;
 
 $labels = $this->context->labels();
 if ($labels['Item'] == 'Role') {
-    $this->title = Yii::t('admin/role', 'Manage Role');
+    $this->title = Yii::t('admin', 'Manage Role');
     $actions = [
         [
-            'label' => Yii::t('admin/role', 'Manage Role'),
+            'label' => Yii::t('admin', 'Manage Role'),
             'url' => ['/admin/role/index'],
         ],
         [
-            'label' => Yii::t('admin/role', 'Create Role'),
+            'label' => Yii::t('admin', 'Create Role'),
             'url' => ['/admin/role/create'],
         ],
     ];
 } else {
-    $this->title = Yii::t('admin/permission', 'Manage Permission');
+    $this->title = Yii::t('admin', 'Manage Permission');
     $actions = [
         [
-            'label' => Yii::t('admin/permission', 'Manage Permission'),
+            'label' => Yii::t('admin', 'Manage Permission'),
             'url' => ['/admin/permission/index'],
         ],
         [
-            'label' => Yii::t('admin/permission', 'Create Permission'),
+            'label' => Yii::t('admin', 'Create Permission'),
             'url' => ['/admin/permission/create'],
         ],
     ];
@@ -60,16 +60,16 @@ unset($rules[RouteRule::RULE_NAME]);
                     ['class' => 'yii\grid\SerialColumn'],
                     [
                         'attribute' => 'name',
-                        'label' => Yii::t('admin/role', 'Name'),
+                        'label' => Yii::t('admin', 'Role Name'),
                     ],
                     [
                         'attribute' => 'ruleName',
-                        'label' => Yii::t('admin/role', 'Rule Name'),
+                        'label' => Yii::t('admin', 'Rule Name'),
                         'filter' => $rules
                     ],
                     [
                         'attribute' => 'description',
-                        'label' => Yii::t('admin/role', 'Description'),
+                        'label' => Yii::t('admin', 'Role Description'),
                     ],
                     ['class' => 'yii\grid\ActionColumn',],
                 ],

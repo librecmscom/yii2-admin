@@ -44,22 +44,22 @@ $this->registerCss("
 $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>';
 
 if ($labels['Item'] == 'Role') {
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/role', 'Manage Role'), 'url' => ['index']];
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Role'), 'url' => ['index']];
     $actions = [
         [
-            'label' => Yii::t('admin/role', 'Manage Role'),
+            'label' => Yii::t('admin', 'Manage Role'),
             'url' => ['/admin/role/index'],
         ],
         [
-            'label' => Yii::t('admin/role', 'Create Role'),
+            'label' => Yii::t('admin', 'Create Role'),
             'url' => ['/admin/role/create'],
         ],
         [
-            'label' => Yii::t('admin/role', 'Update Role'),
+            'label' => Yii::t('admin', 'Update Role'),
             'url' => ['/admin/role/update', 'id' => $model->name],
         ],
         [
-            'label' => Yii::t('admin/role', 'Delete Role'),
+            'label' => Yii::t('admin', 'Delete Role'),
             'url' => ['/admin/role/delete', 'id' => $model->name],
             'options' => [
                 'class' => 'btn btn-danger  btn-sm',
@@ -69,22 +69,22 @@ if ($labels['Item'] == 'Role') {
         ],
     ];
 } else {
-    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin/permission', 'Manage Permission'), 'url' => ['index']];
+    $this->params['breadcrumbs'][] = ['label' => Yii::t('admin', 'Manage Permission'), 'url' => ['index']];
     $actions = [
         [
-            'label' => Yii::t('admin/permission', 'Manage Permission'),
+            'label' => Yii::t('admin', 'Manage Permission'),
             'url' => ['/admin/permission/index'],
         ],
         [
-            'label' => Yii::t('admin/permission', 'Create Permission'),
+            'label' => Yii::t('admin', 'Create Permission'),
             'url' => ['/admin/permission/create'],
         ],
         [
-            'label' => Yii::t('admin/permission', 'Update Permission'),
+            'label' => Yii::t('admin', 'Update Permission'),
             'url' => ['/admin/permission/update', 'id' => $model->name],
         ],
         [
-            'label' => Yii::t('admin/permission', 'Delete Permission'),
+            'label' => Yii::t('admin', 'Delete Permission'),
             'url' => ['/admin/permission/delete', 'id' => $model->name],
             'options' => [
                 'class' => 'btn btn-danger  btn-sm',
@@ -124,7 +124,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="row">
                 <div class="col-sm-5">
                     <input class="form-control search" data-target="avaliable"
-                           placeholder="<?= Yii::t('admin/role', 'Search for avaliable') ?>">
+                           placeholder="<?= Yii::t('admin', 'Search for avaliable') ?>">
                     <select multiple size="20" class="form-control list" data-target="avaliable">
                     </select>
                 </div>
@@ -141,7 +141,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="col-sm-5">
                     <input class="form-control search" data-target="assigned"
-                           placeholder="<?= Yii::t('admin/role', 'Search for assigned') ?>">
+                           placeholder="<?= Yii::t('admin', 'Search for assigned') ?>">
                     <select multiple size="20" class="form-control list" data-target="assigned">
                     </select>
                 </div>

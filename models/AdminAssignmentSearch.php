@@ -39,8 +39,8 @@ class AdminAssignmentSearch extends Model
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'username' => Yii::t('admin/admin', 'Username'),
-            'name' => Yii::t('admin/admin', 'Name'),
+            'username' => Yii::t('admin', 'Username'),
+            'name' => Yii::t('admin', 'Name'),
         ];
     }
 

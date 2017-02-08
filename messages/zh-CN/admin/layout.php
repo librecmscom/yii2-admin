@@ -17,19 +17,5 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
-    'Clear' => '取消',
-    'Close Popup' => '',
-    'Collapse Menu' => '',
-    'Loading...' => '',
-    'Logout' => '退出',
-    'Manage Center' => '管理中心',
-    'Refresh' => '',
     'Shortcut' => '',
-    'Voice command failed' => '',
-    'Warning! This will reset all your widget settings.' => '',
-    'You can improve your security further after logging out by closing this opened browser' => '',
-    'Cancel Search' => '取消搜索',
-    'Full Screen' => '全屏',
-    'Search' => '搜索',
-    'Sign Out' => '退出登录',
 ];

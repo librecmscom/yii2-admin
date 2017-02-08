@@ -10,7 +10,7 @@ use yuncms\admin\models\Banword;
 /* @var $searchModel yuncms\admin\models\BanwordSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('admin/ban-word', 'Manage Ban Word');
+$this->title = Yii::t('admin', 'Manage Ban Word');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <section id="widget-grid">
@@ -24,11 +24,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => Html::encode($this->title),
                 'bodyToolbarActions' => [
                     [
-                        'label' => Yii::t('admin/ban-word', 'Manage Ban Word'),
+                        'label' => Yii::t('admin', 'Manage Ban Word'),
                         'url' => ['/admin/ban-word/index'],
                     ],
                     [
-                        'label' => Yii::t('admin/ban-word', 'Create Ban Word'),
+                        'label' => Yii::t('admin', 'Create Ban Word'),
                         'url' => ['/admin/ban-word/create'],
                     ],
                 ]

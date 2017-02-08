@@ -16,7 +16,7 @@ $this->registerJs('pageSetUp();');
 
 $this->registerJs('var sound_path="' . $asset->baseUrl . '/sound/";', \yii\web\View::POS_HEAD);
 
-$this->title = Yii::t('admin/layout', 'Manage Center');
+$this->title = Yii::t('admin', 'Manage Center');
 //Meta
 $this->registerMetaTag(['charset' => Yii::$app->charset]);
 //$this->registerMetaTag(['http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge,chrome=1']);
@@ -116,9 +116,9 @@ $this->registerMetaTag(['rel' => 'apple-touch-startup-image', 'href' => $asset->
 
 				<span class="ribbon-button-alignment">
 					<span id="refresh" class="btn btn-ribbon" data-action="resetWidgets"
-                          data-title="<?= Yii::t('admin/layout', 'Refresh'); ?>"
+                          data-title="<?= Yii::t('admin', 'Refresh'); ?>"
                           rel="tooltip" data-placement="bottom"
-                          data-original-title="<i class='text-warning fa fa-warning'></i> <?= Yii::t('admin/layout', 'Warning! This will reset all your widget settings.'); ?>"
+                          data-original-title="<i class='text-warning fa fa-warning'></i> <?= Yii::t('admin', 'Warning! This will reset all your widget settings.'); ?>"
                           data-html="true">
 						<i class="fa fa-refresh"></i>
 					</span>
