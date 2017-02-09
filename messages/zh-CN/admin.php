@@ -17,6 +17,7 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Last account activity' => '最后活动',
     'Shortcut' => '捷径',
     'Warning! This will reset all your widget settings.' => '',
     'Account' => '账户',
