@@ -11,7 +11,7 @@ use yuncms\admin\helpers\MenuHelper;
     <div class="login-info">
 				<span> <!-- User image size is adjusted inside CSS, it should stay as it -->
 					<a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
-                        <i class="fa fa-lg fa-fw fa-user" aria-hidden="true"></i>
+                        <img src="<?= Yii::$app->user->identity->getAvatar('middle'); ?>" alt="me" class="online">
 						<span>
 							 <?= Yii::$app->user->identity->username; ?>
 						</span>
