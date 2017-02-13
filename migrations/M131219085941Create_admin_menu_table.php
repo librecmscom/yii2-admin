@@ -49,13 +49,9 @@ class M131219085941Create_admin_menu_table extends Migration
             [26, '路由管理', 2, '/admin/route/index', 'fa-cloud', NULL, NULL],
             [27, '规则管理', 2, '/admin/rule/index', 'fa-key', NULL, NULL],
             [28, '菜单管理', 2, '/admin/menu/index', 'fa-wrench', NULL, NULL],
-            [30, '附件设置', 2, '/attachment/setting', 'fa-cog', NULL, NULL],
+            //[30, '附件设置', 2, '/attachment/setting', 'fa-cog', NULL, NULL],
 
-            [40, '地区管理', 3, '/area/index', 'fa-globe', NULL, NULL],
-            [41, 'Url规则管理', 3, '/url-rule/index', 'fa-exclamation-triangle', NULL, NULL],
-            [42, '单页管理', 3, '/page/index', 'fa-edit', NULL, NULL],
-
-
+           // [40, '地区管理', 3, '/area/index', 'fa-globe', NULL, NULL],
             [43, '敏感词管理', 3, '/admin/ban-word/index', 'fa-exclamation-triangle', NULL, NULL],
         ]);
 
@@ -70,10 +66,7 @@ class M131219085941Create_admin_menu_table extends Migration
             ['路由查看', 26, '/admin/route/view', 0, NULL], ['创建路由', 26, '/admin/route/create', 0, NULL],
             ['规则查看', 27, '/admin/rule/view', 0, NULL], ['创建规则', 27, '/admin/rule/create', 0, NULL], ['更新规则', 27, '/admin/rule/update', 0, NULL],
             ['菜单查看', 28, '/admin/menu/view', 0, NULL], ['创建菜单', 28, '/admin/menu/create', 0, NULL], ['更新菜单', 28, '/admin/menu/update', 0, NULL],
-            ['创建地区', 40, '/area/create', 0, NULL], ['更新地区', 40, '/area/update', 0, NULL],
-            ['创建URL规则', 41, '/url-rule/create', 0, NULL], ['更新URL规则', 41, '/url-rule/update', 0, NULL],
-            ['创建单页', 42, '/page/create', 0, NULL], ['更新单页', 42, '/page/update', 0, NULL],
-
+            //['创建地区', 40, '/area/create', 0, NULL], ['更新地区', 40, '/area/update', 0, NULL],
             ['敏感词查看', 43, '/admin/ban-word/view', 0, NULL], ['创建敏感词', 43, '/admin/ban-word/create', 0, NULL], ['更新敏感词', 43, '/admin/ban-word/update', 0, NULL],
         ]);
     }

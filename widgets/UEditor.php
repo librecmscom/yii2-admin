@@ -34,7 +34,7 @@ class UEditor extends InputWidget
         parent::init();
         $this->clientOptions = array_merge([
             'autoHeight' => true,
-            'serverUrl'=>Url::to(['/upload/ueditor']),
+            'serverUrl'=>Url::to(['/attachment/upload/ueditor']),
         ], $this->clientOptions);
     }
 
