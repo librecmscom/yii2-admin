@@ -103,7 +103,7 @@ use yii\helpers\Html;
         <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
             <li class="">
                 <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
-                    <img src="<?= $asset->baseUrl; ?>/img/avatars/sunny.png" alt="John Doe" class="online"/>
+                    <img src="<?= Yii::$app->user->identity->getAvatar('middle'); ?>" alt="John Doe" class="online"/>
                 </a>
                 <ul class="dropdown-menu pull-right">
                     <li>
