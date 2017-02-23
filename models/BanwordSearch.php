@@ -21,8 +21,8 @@ class BanwordSearch extends Banword
     public function rules()
     {
         return [
-            [['id', 'created_at'], 'integer'],
-            [['word'], 'safe'],
+            [['id'], 'integer'],
+            [['word', 'created_at'], 'safe'],
         ];
     }
 
@@ -63,10 +63,15 @@ class BanwordSearch extends Banword
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'created_at' => $this->created_at,
         ]);
-
         $query->andFilterWhere(['like', 'word', $this->word]);
+
+        if ($this->created_at) {
+            $createdAt = strtotime($this->created_at);
+            $createdAtEnd = $createdAt + 24 * 3600;
+            $query->andWhere(['between', 'created_at', $createdAt, $createdAtEnd]);
+            // $query->andWhere("created_at >= {$createdAt} AND created_at <= {$createdAtEnd}");
+        }
 
         return $dataProvider;
     }

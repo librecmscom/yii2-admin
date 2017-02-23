@@ -35,6 +35,7 @@ return [
     'Close Popup' => '关闭弹出窗口',
     'Collapse Menu' => '折叠菜单',
     'Create' => '创建',
+    'Created At'=>'添加时间',
     'Create Admin' => '新建管理员',
     'Create Ban Word' => '创建敏感词',
     'Create Menu' => '创建菜单',

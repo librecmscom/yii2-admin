@@ -64,7 +64,7 @@ class Banword extends ActiveRecord
         return [
             'id' => Yii::t('app', 'ID'),
             'word' => Yii::t('admin', 'Ban Word'),
-            'created_at' => Yii::t('app', 'Created At'),
+            'created_at' => Yii::t('admin', 'Created At'),
         ];
     }
 
