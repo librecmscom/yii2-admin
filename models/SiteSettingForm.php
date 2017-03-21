@@ -31,8 +31,10 @@ class SiteSettingForm extends Model
     public function rules()
     {
         return [
-            [['name','title', 'keywords', 'description', 'copyright', 'closeReason', 'analysisCode'], 'string'],
+            [['name', 'title', 'keywords', 'description', 'copyright', 'url'], 'required'],
+            [['name', 'title', 'keywords', 'description', 'copyright', 'closeReason', 'analysisCode'], 'string'],
             ['close', 'boolean'],
+            ['close', 'default', 'value' => false],
             ['url', 'url']
         ];
     }
