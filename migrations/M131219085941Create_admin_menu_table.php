@@ -41,9 +41,8 @@ class M131219085941Create_admin_menu_table extends Migration
             [9, '模板管理', NULL, NULL, 'fa-laptop', NULL, NULL],
 
             //核心设置子菜单
-            [21, '站点设置', 2, '/site/setting', 'fa-gears', NULL, NULL],
+            [21, '站点设置', 2, '/system/setting/index', 'fa-gears', NULL, NULL],
             [22, '用户管理', 2, '/user/user/index', 'fa-user', NULL, NULL],
-            [23, '安全设置', 2, '/site/security', 'fa-sun-o', NULL, NULL],
             [24, '角色管理', 2, '/admin/role/index', 'fa-group', NULL, NULL],
             [25, '权限管理', 2, '/admin/permission/index', 'fa-certificate', NULL, NULL],
             [26, '路由管理', 2, '/admin/route/index', 'fa-cloud', NULL, NULL],

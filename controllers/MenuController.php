@@ -16,7 +16,6 @@ use yii\data\ActiveDataProvider;
 use yii\web\NotFoundHttpException;
 use yuncms\admin\models\AdminMenu;
 use yuncms\admin\components\Helper;
-use yuncms\admin\models\AdminMenuSearch;
 
 /**
  * Class MenuController
