@@ -18,7 +18,7 @@ use yii\behaviors\TimestampBehavior;
  *
  * @property integer $id
  * @property string $type
- * @property string $section
+ * @property string $group
  * @property string $key
  * @property string $value
  * @property integer $created_at
@@ -53,9 +53,9 @@ class Setting extends ActiveRecord
     {
         return [
             [['value'], 'string'],
-            [['type', 'section', 'key'], 'required'],
-            [['section', 'key'], 'string', 'max' => 255],
-            [['section', 'key'], 'unique', 'targetAttribute' => ['section', 'key'], 'message' => Yii::t('admin', 'The combination of Group and Key has already been taken.')],
+            [['type', 'group', 'key'], 'required'],
+            [['group', 'key'], 'string', 'max' => 255],
+            [['group', 'key'], 'unique', 'targetAttribute' => ['group', 'key'], 'message' => Yii::t('admin', 'The combination of Group and Key has already been taken.')],
             ['type', 'in', 'range' => ['string', 'integer', 'boolean', 'float', 'double', 'object', 'null']],
         ];
     }

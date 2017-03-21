@@ -16,14 +16,14 @@ class M170210020246Create_setting_table extends Migration
         $this->createTable('{{%setting}}', [
             'id' => $this->primaryKey(),
             'type' => $this->string(255)->notNull(),
-            'section' => $this->string(255)->notNull(),
+            'group' => $this->string(255)->notNull(),
             'key' => $this->string(255)->notNull(),
             'value' => $this->text(),
             'created_at' => $this->integer()->unsigned()->notNull(),
             'updated_at' => $this->integer()->unsigned()->notNull(),
         ], $tableOptions);
 
-        $this->createIndex('setting_unique_key_group', '{{%setting}}', ['section', 'key'], true);
+        $this->createIndex('setting_unique_key_group', '{{%setting}}', ['group', 'key'], true);
     }
 
     public function down()

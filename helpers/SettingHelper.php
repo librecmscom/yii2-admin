@@ -100,7 +100,7 @@ class SettingHelper
             $key = $pieces[1];
         }
 
-        $model = Setting::findOne(['section' => $group, 'key' => $key]);
+        $model = Setting::findOne(['group' => $group, 'key' => $key]);
         if ($model === null) {
             $model = new Setting();
         }
@@ -150,8 +150,8 @@ class SettingHelper
         if (YII_DEBUG || static::$settings === null || $refresh || Yii::$app->cache === null || ((static::$settings = Yii::$app->cache->get($key)) === false)) {
             $settings = (new Query)->from(Setting::tableName())->all();
             static::$settings = array_merge_recursive(
-                ArrayHelper::map($settings, 'key', 'value', 'section'),
-                ArrayHelper::map($settings, 'key', 'type', 'section')
+                ArrayHelper::map($settings, 'key', 'value', 'group'),
+                ArrayHelper::map($settings, 'key', 'type', 'group')
             );
             if (Yii::$app->cache !== null) {
                 Yii::$app->cache->set($key, static::$settings, 0, new TagDependency (['tags' => static::CACHE_TAG]));
