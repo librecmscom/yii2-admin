@@ -37,18 +37,6 @@ class Setting extends ActiveRecord
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
-        return [
-            'timestamp' => [
-                'class' => TimestampBehavior::className()
-            ],
-        ];
-    }
-
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -71,8 +59,6 @@ class Setting extends ActiveRecord
             'section' => Yii::t('admin', 'Section'),
             'key' => Yii::t('admin', 'Key'),
             'value' => Yii::t('admin', 'Value'),
-            'created_at' => Yii::t('admin', 'Created At'),
-            'updated_at' => Yii::t('admin', 'Updated At'),
         ];
     }
 

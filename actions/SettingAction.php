@@ -34,6 +34,9 @@ class SettingAction extends Action
      */
     public $viewName = 'setting';
 
+    /**
+     * @var string 分组
+     */
     public $group;
 
     /**

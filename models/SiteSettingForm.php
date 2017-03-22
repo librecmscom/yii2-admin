@@ -15,14 +15,49 @@ use yii\base\Model;
  */
 class SiteSettingForm extends Model
 {
+    /**
+     * @var string
+     */
     public $url;
+
+    /**
+     * @var string
+     */
     public $name;
+
+    /**
+     * @var string
+     */
     public $title;
+
+    /**
+     * @var string
+     */
     public $keywords;
+
+    /**
+     * @var string
+     */
     public $description;
+
+    /**
+     * @var string
+     */
     public $copyright;
+
+    /**
+     * @var string
+     */
     public $close;
+
+    /**
+     * @var string
+     */
     public $closeReason;
+
+    /**
+     * @var string
+     */
     public $analysisCode;
 
     /**

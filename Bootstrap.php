@@ -11,7 +11,7 @@ use Yii;
 use yii\web\Cookie;
 use yii\i18n\PhpMessageSource;
 use yii\base\BootstrapInterface;
-use common\helpers\SettingHelper;
+use yuncms\admin\helpers\SettingHelper;
 
 /**
  * Class Bootstrap
@@ -47,7 +47,7 @@ class Bootstrap implements BootstrapInterface
             });
 
             //设置前台URL
-            $app->frontUrlManager->baseUrl = SettingHelper::get('frontendUrl','site');
+            $app->frontUrlManager->baseUrl = SettingHelper::get('url','site');
 
             //附加权限验证行为
 //            $app->attachBehavior('access', Yii::createObject([
