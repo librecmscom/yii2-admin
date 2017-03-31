@@ -10,10 +10,7 @@
   "require": {
     "php": ">=5.4.0",
     "yiisoft/yii2": "~2.0",
-    "yuncms/yii2-user": "~1.0"
-  },
-  "require-dev": {
-    "yuncms/yii2-user": "dev-master"
+    "yuncms/yii2-user": "~1.0 | dev-master"
   },
   "autoload": {
     "psr-4": {
