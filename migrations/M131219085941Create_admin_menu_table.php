@@ -30,7 +30,7 @@ class M131219085941Create_admin_menu_table extends Migration
 
         $this->batchInsert('{{%admin_menu}}', ['id', 'name', 'parent', 'route', 'icon', 'sort', 'data'], [
             //一级主菜单
-            [1, '控制台', NULL, '/site/index', 'fa-home', NULL, NULL],
+            [1, '控制台', NULL, '/site/index', 'fa-th-large', NULL, NULL],
             [2, '核心设置', NULL, NULL, 'fa-cog', NULL, NULL],
             [3, '数据管理', NULL, NULL, 'fa-wrench', NULL, NULL],
             [4, '运营中心', NULL, NULL, 'fa-bar-chart-o', NULL, NULL],
