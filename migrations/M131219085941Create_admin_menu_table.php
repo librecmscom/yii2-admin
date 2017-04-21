@@ -22,7 +22,7 @@ class M131219085941Create_admin_menu_table extends Migration
             'icon' => $this->string(30),
             'visible' => $this->boolean()->defaultValue(true),
             //排序
-            'sort' => $this->smallInteger()->defaultValue(0),
+            'sort' => $this->smallInteger()->defaultValue(99),
             'data' => $this->text()
         ], $tableOptions);
         $this->addForeignKey('{{%admin_menu_ibfk_1}}', '{{%admin_menu}}', 'parent', '{{%admin_menu}}', 'id', 'SET NULL', 'CASCADE');
@@ -30,28 +30,28 @@ class M131219085941Create_admin_menu_table extends Migration
 
         $this->batchInsert('{{%admin_menu}}', ['id', 'name', 'parent', 'route', 'icon', 'sort', 'data'], [
             //一级主菜单
-            [1, '控制台', NULL, '/site/index', 'fa-th-large', NULL, NULL],
-            [2, '核心设置', NULL, NULL, 'fa-cog', NULL, NULL],
-            [3, '数据管理', NULL, NULL, 'fa-wrench', NULL, NULL],
-            [4, '运营中心', NULL, NULL, 'fa-bar-chart-o', NULL, NULL],
-            [5, '用户管理', NULL, NULL, 'fa-user', NULL, NULL],
-            [6, '网站管理', NULL, NULL, 'fa-bars', NULL, NULL],
-            [7, '财务管理', NULL, NULL, 'fa-cny', NULL, NULL],
-            [8, '模块管理', NULL, NULL, 'fa-th', NULL, NULL],
-            [9, '模板管理', NULL, NULL, 'fa-laptop', NULL, NULL],
+            [1, '控制台', NULL, '/site/index', 'fa-th-large', 1, NULL],
+            [2, '核心设置', NULL, NULL, 'fa-cog', 2, NULL],
+            [3, '数据管理', NULL, NULL, 'fa-wrench', 3, NULL],
+            [4, '运营中心', NULL, NULL, 'fa-bar-chart-o', 4, NULL],
+            [5, '用户管理', NULL, NULL, 'fa-user', 5, NULL],
+            [6, '网站管理', NULL, NULL, 'fa-bars', 6, NULL],
+            [7, '财务管理', NULL, NULL, 'fa-cny', 7, NULL],
+            [8, '模块管理', NULL, NULL, 'fa-th', 8, NULL],
+            [9, '模板管理', NULL, NULL, 'fa-laptop', 9, NULL],
 
             //核心设置子菜单
-            [21, '站点设置', 2, '/admin/setting/setting', 'fa-gears', NULL, NULL],
-            [22, '用户管理', 5, '/user/user/index', 'fa-user', NULL, NULL],
-            [24, '角色管理', 2, '/admin/role/index', 'fa-group', NULL, NULL],
-            [25, '权限管理', 2, '/admin/permission/index', 'fa-certificate', NULL, NULL],
-            [26, '路由管理', 2, '/admin/route/index', 'fa-cloud', NULL, NULL],
-            [27, '规则管理', 2, '/admin/rule/index', 'fa-key', NULL, NULL],
-            [28, '菜单管理', 2, '/admin/menu/index', 'fa-wrench', NULL, NULL],
-            //[30, '附件设置', 2, '/attachment/setting', 'fa-cog', NULL, NULL],
+            [21, '站点设置', 2, '/admin/setting/setting', 'fa-gears', 1, NULL],
+            [22, '用户管理', 5, '/user/user/index', 'fa-user', 2, NULL],
+            [24, '角色管理', 2, '/admin/role/index', 'fa-group', 3, NULL],
+            [25, '权限管理', 2, '/admin/permission/index', 'fa-certificate', 4, NULL],
+            [26, '路由管理', 2, '/admin/route/index', 'fa-cloud', 5, NULL],
+            [27, '规则管理', 2, '/admin/rule/index', 'fa-key', 6, NULL],
+            [28, '菜单管理', 2, '/admin/menu/index', 'fa-wrench', 7, NULL],
+            //[30, '附件设置', 2, '/attachment/setting', 'fa-cog', 8, NULL],
 
-           // [40, '地区管理', 3, '/area/index', 'fa-globe', NULL, NULL],
-            [43, '敏感词管理', 3, '/admin/ban-word/index', 'fa-exclamation-triangle', NULL, NULL],
+           // [40, '地区管理', 3, '/area/index', 'fa-globe', 1, NULL],
+            [43, '敏感词管理', 3, '/admin/ban-word/index', 'fa-exclamation-triangle', 2, NULL],
         ]);
 
         //隐藏的子菜单[隐藏的子菜单不设置id字段，使用自增]//从10000开始
