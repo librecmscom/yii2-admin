@@ -176,6 +176,7 @@ class MenuHelper
                     $item = [
                         'label' => $menu['name'],
                         'url' => static::parseRoute($menu['route']),
+                        'parent' => $menu['parent'],
                     ];
                     //绘制图标
                     if (!empty ($menu['icon'])) {

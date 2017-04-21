@@ -63,7 +63,15 @@ $this->registerJs("jQuery(\"#batch_deletion\").on(\"click\", function () {
 <?php endif; ?>
             <?= "<?= " ?>GridView::widget([
                 'dataProvider' => $dataProvider,
-                'options' => ['id' => 'gridview'],
+                'options' => ['id' => 'gridview', 'class' => 'table-responsive'],
+                'tableOptions' => ['class' => 'table table-bordered table-hover table-striped'],
+                'layout' => "{items}\n<div class=\"dt-toolbar-footer\">
+                <div class=\"col-sm-6 col-xs-12 hidden-xs\">
+                <div class=\"dataTables_info\"role=\"status\" aria-live=\"polite\">{summary}\n</div>
+            </div>
+            <div class=\"col-xs-12 col-sm-6\">
+            <div class=\"dataTables_paginate paging_simple_numbers\">{pager} </div>
+    </div></div>",
                 <?= !empty($generator->searchModelClass) ? "'filterModel' => \$searchModel,\n                'columns' => [\n" : "'columns' => [\n"; ?>
                     [
                         'class' => 'yii\grid\CheckboxColumn',
