@@ -25,8 +25,8 @@ class SettingHelper
     /**
      * Checks to see if a setting exists.
      * If $searchDisabled is set to true, calling this function will result in an additional query.
-     * @param $key
-     * @param string|null $sgroup
+     * @param string $key
+     * @param string|null $group
      * @param boolean $searchDisabled
      * @return boolean
      */
