@@ -1,10 +1,12 @@
 <?php
 
 use yii\helpers\Url;
-use yii\helpers\Html;
+use yuncms\admin\helpers\Html;
 use yii\widgets\Pjax;
 use yuncms\admin\grid\TreeGrid;
-use yuncms\admin\widgets\Jarvis;
+use xutl\inspinia\Box;
+use xutl\inspinia\Toolbar;
+use xutl\inspinia\Alert;
 
 /* @var \yii\web\View $this */
 /* @var \yii\data\ActiveDataProvider $dataProvider */
@@ -13,25 +15,30 @@ use yuncms\admin\widgets\Jarvis;
 $this->title = Yii::t('admin', 'Manage Menu');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section id="widget-grid">
+<div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <?php Jarvis::begin([
-                'noPadding' => true,
-                'editbutton' => false,
-                'deletebutton' => false,
+        <div class="col-lg-12">
+            <?= Alert::widget() ?>
+            <?php Box::begin([
                 'header' => Html::encode($this->title),
-                'bodyToolbarActions' => [
-                    [
-                        'label' => Yii::t('admin', 'Manage Menu'),
-                        'url' => ['/admin/menu/index'],
-                    ],
-                    [
-                        'label' => Yii::t('admin', 'Create Menu'),
-                        'url' => ['/admin/menu/create'],
-                    ],
-                ]
             ]); ?>
+            <div class="row">
+                <div class="col-sm-4 m-b-xs">
+                    <?= Toolbar::widget(['items' => [
+                        [
+                            'label' => Yii::t('admin', 'Manage Menu'),
+                            'url' => ['/admin/menu/index'],
+                        ],
+                        [
+                            'label' => Yii::t('admin', 'Create Menu'),
+                            'url' => ['/admin/menu/create'],
+                        ],
+                    ]]); ?>
+                </div>
+                <div class="col-sm-8 m-b-xs">
+
+                </div>
+            </div>
             <?php Pjax::begin(); ?>
             <?= TreeGrid::widget([
                 'dataProvider' => $dataProvider,
@@ -47,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     [
                         'attribute' => 'icon',
                         'value' => function($model) {
-                            return Html::icon($model->icon);
+                           return Html::icon($model->icon);
                         },
                         'format' => 'raw'
                     ],
@@ -71,7 +78,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ]); ?>
             <?php Pjax::end(); ?>
-            <?php Jarvis::end(); ?>
-        </article>
+            <?php Box::end(); ?>
+        </div>
     </div>
-</section>
+</div>

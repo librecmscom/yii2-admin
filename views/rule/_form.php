@@ -8,19 +8,18 @@ use yii\bootstrap\ActiveForm;
 /* @var $form ActiveForm */
 ?>
 <?php $form = ActiveForm::begin(['layout'=>'horizontal', ]); ?>
-<fieldset>
-    <?= $form->field($model, 'name')->textInput(['maxlength' => 64]) ?>
 
+    <?= $form->field($model, 'name')->textInput(['maxlength' => 64]) ?>
+    <div class="hr-line-dashed"></div>
     <?= $form->field($model, 'className')->textInput() ?>
-</fieldset>
-<div class="form-actions">
-    <div class="row">
-        <div class="col-md-12">
-            <?php
-            echo Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), [
-                'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'])
-            ?>
-        </div>
+    <div class="hr-line-dashed"></div>
+
+<div class="form-group">
+    <div class="col-sm-4 col-sm-offset-2">
+        <?php
+        echo Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), [
+            'class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary'])
+        ?>
     </div>
 </div>
 

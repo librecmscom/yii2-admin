@@ -6,41 +6,49 @@
  */
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use yuncms\admin\widgets\Jarvis;
+use xutl\inspinia\ActiveForm;
+use xutl\inspinia\Box;
+use xutl\inspinia\Toolbar;
+use xutl\inspinia\Alert;
 
 $this->title = Yii::t('admin', 'Site Setting');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section id="widget-grid">
+<div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <?php Jarvis::begin([
-                'editbutton' => false,
-                'deletebutton' => false,
+        <div class="col-lg-12">
+            <?= Alert::widget() ?>
+            <?php Box::begin([
                 'header' => Html::encode($this->title),
             ]); ?>
             <?php $form = ActiveForm::begin(['layout' => 'horizontal',]); ?>
-            <fieldset>
-                <?= $form->field($model, 'url') ?>
-                <?= $form->field($model, 'name') ?>
-                <?= $form->field($model, 'title') ?>
-                <?= $form->field($model, 'keywords') ?>
-                <?= $form->field($model, 'description') ?>
-                <?= $form->field($model, 'copyright')->textarea() ?>
-                <?= $form->field($model, 'close')->inline(true)->radioList(['1' => Yii::t('admin', 'Yes'), '0' => Yii::t('admin', 'No')]); ?>
-                <?= $form->field($model, 'closeReason')->textarea() ?>
-                <?= $form->field($model, 'analysisCode')->textarea() ?>
-            </fieldset>
-            <div class="form-actions">
-                <div class="row">
-                    <div class="col-md-12">
-                        <?= Html::submitButton(Yii::t('admin', 'Save'), ['class' => 'btn btn-primary']) ?>
-                    </div>
+
+            <?= $form->field($model, 'url') ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'name') ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'title') ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'keywords') ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'description') ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'copyright')->textarea() ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'close')->inline(true)->radioList(['1' => Yii::t('admin', 'Yes'), '0' => Yii::t('admin', 'No')]); ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'closeReason')->textarea() ?>
+            <div class="hr-line-dashed"></div>
+            <?= $form->field($model, 'analysisCode')->textarea() ?>
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <?= Html::submitButton(Yii::t('admin', 'Save'), ['class' => 'btn btn-primary']) ?>
                 </div>
             </div>
             <?php ActiveForm::end(); ?>
-            <?php Jarvis::end(); ?>
-        </article>
+            <?php Box::end(); ?>
+        </div>
     </div>
-</section>
+</div>

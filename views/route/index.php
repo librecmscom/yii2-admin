@@ -2,7 +2,9 @@
 
 use yii\helpers\Html;
 use yii\helpers\Json;
-use yuncms\admin\widgets\Jarvis;
+use xutl\inspinia\Box;
+use xutl\inspinia\Toolbar;
+use xutl\inspinia\Alert;
 
 /* @var \yii\web\View $this */
 $this->title = Yii::t('admin', 'Manage Route');
@@ -38,12 +40,11 @@ $this->registerCss("
 ");
 $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>';
 ?>
-<section id="widget-grid">
+<div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <?php Jarvis::begin([
-                'editbutton' => false,
-                'deletebutton' => false,
+        <div class="col-lg-12">
+            <?= Alert::widget() ?>
+            <?php Box::begin([
                 'header' => Html::encode($this->title),
             ]); ?>
             <div class="widget-body-toolbar">
@@ -90,7 +91,7 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
                 </div>
             </div>
 
-            <?php Jarvis::end(); ?>
-        </article>
+            <?php Box::end(); ?>
+        </div>
     </div>
-</section>
+</div>

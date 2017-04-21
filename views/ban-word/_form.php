@@ -13,17 +13,13 @@ use yuncms\admin\models\Banword;
     'enableAjaxValidation' => true,
     'enableClientValidation' => false,
 ]); ?>
-<fieldset>
     <?= $form->field($model, 'word')->textInput(['maxlength' => true]) ?>
-</fieldset>
-<div class="form-actions">
-    <div class="row">
-        <div class="col-md-12">
-            <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-        </div>
+    <div class="hr-line-dashed"></div>
+
+<div class="form-group">
+    <div class="col-sm-4 col-sm-offset-2">
+        <?= Html::submitButton($model->isNewRecord ? Yii::t('app', 'Create') : Yii::t('app', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 </div>
-
-
 <?php ActiveForm::end(); ?>
 

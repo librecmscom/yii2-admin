@@ -1,29 +1,39 @@
 <?php
 
 use yii\helpers\Html;
-use yuncms\admin\widgets\ActiveForm;
+use xutl\inspinia\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model yuncms\admin\models\BanwordSearch */
 /* @var $form yuncms\admin\widgets\ActiveForm */
 ?>
 
-<div class="badword-search">
+<div class="badword-search pull-right">
 
     <?php $form = ActiveForm::begin([
+        'layout' => 'inline',
         'action' => ['index'],
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?= $form->field($model, 'id', [
+        'inputOptions' => [
+            'placeholder' => $model->getAttributeLabel('id'),
+        ],
+    ]) ?>
 
-    <?= $form->field($model, 'word') ?>
+    <?= $form->field($model, 'word', [
+        'inputOptions' => [
+            'placeholder' => $model->getAttributeLabel('word'),
+        ],
+    ]) ?>
 
-    <?= $form->field($model, 'replace_word') ?>
 
-    <?= $form->field($model, 'level') ?>
-
-    <?= $form->field($model, 'created_at') ?>
+    <?= $form->field($model, 'created_at', [
+        'inputOptions' => [
+            'placeholder' => $model->getAttributeLabel('created_at'),
+        ],
+    ]) ?>
 
     <?php // echo $form->field($model, 'updated_at') ?>
 

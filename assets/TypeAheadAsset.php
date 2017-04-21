@@ -18,11 +18,11 @@ class TypeAheadAsset extends AssetBundle
     public $sourcePath = '@yuncms/admin/resources/assets';
 
     public $css = [
-        'js/plugins/bootstrap-typeahead/css/bootstrap-typeahead.css',
+        'bootstrap-typeahead/css/bootstrap-typeahead.css',
     ];
 
     public $js = [
-        'js/plugins/bootstrap-typeahead/js/typeahead.bundle.min.js',
+        'bootstrap-typeahead/js/typeahead.bundle.min.js',
     ];
 
     public $depends = [

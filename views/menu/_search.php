@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yuncms\admin\widgets\ActiveForm;
+use xutl\inspinia\ActiveForm;
 
 /**
  * @var \yii\web\View $this
@@ -10,9 +10,10 @@ use yuncms\admin\widgets\ActiveForm;
  */
 ?>
 
-<div class="menu-search">
+<div class="menu-search pull-right">
 
     <?php $form = ActiveForm::begin([
+        'layout' => 'inline',
         'action' => ['index'],
         'method' => 'get',
     ]); ?>

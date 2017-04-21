@@ -3,7 +3,9 @@
 use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
-use yuncms\admin\widgets\Jarvis;
+use xutl\inspinia\Box;
+use xutl\inspinia\Toolbar;
+use xutl\inspinia\Alert;
 
 /* @var yii\web\View $this */
 /* @var \yuncms\admin\models\AdminAssignment $model */
@@ -26,24 +28,30 @@ $this->registerJs("var _opts = {$opts};");
 $this->registerJs($this->render('_script.js'));
 $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>';
 ?>
-<section id="widget-grid">
+<div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 assignment-view">
-            <?php Jarvis::begin([
-                'editbutton' => false,
-                'deletebutton' => false,
+        <div class="col-lg-12 assignment-view">
+            <?= Alert::widget() ?>
+            <?php Box::begin([
                 'header' => Html::encode($this->title),
-                'bodyToolbarActions' => [
-                    [
-                        'label' => Yii::t('admin', 'Manage Assignment'),
-                        'url' => ['/admin/assignment/index'],
-                    ],
-                    [
-                        'label' => Yii::t('admin', 'Create'),
-                        'url' => ['/user/user/create'],
-                    ],
-                ]
             ]); ?>
+            <div class="row">
+                <div class="col-sm-4 m-b-xs">
+                    <?= Toolbar::widget(['items' => [
+                        [
+                            'label' => Yii::t('admin', 'Manage Assignment'),
+                            'url' => ['/admin/assignment/index'],
+                        ],
+                        [
+                            'label' => Yii::t('admin', 'Create'),
+                            'url' => ['/user/user/create'],
+                        ],
+                    ]]); ?>
+                </div>
+                <div class="col-sm-8 m-b-xs">
+
+                </div>
+            </div>
 
             <div class="row">
                 <div class="col-sm-5">
@@ -73,7 +81,7 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
                     </select>
                 </div>
             </div>
-            <?php Jarvis::end(); ?>
-        </article>
+            <?php Box::end(); ?>
+        </div>
     </div>
-</section>
+</div>

@@ -1,10 +1,11 @@
 <?php
 
 use yii\helpers\Html;
-use yuncms\admin\widgets\Jarvis;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use yuncms\admin\models\Banword;
+use xutl\inspinia\Box;
+use xutl\inspinia\Toolbar;
+use xutl\inspinia\Alert;
 
 /* @var $this yii\web\View */
 /* @var $searchModel yuncms\admin\models\BanwordSearch */
@@ -13,30 +14,37 @@ use yuncms\admin\models\Banword;
 $this->title = Yii::t('admin', 'Manage Ban Word');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<section id="widget-grid">
+<div class="wrapper wrapper-content animated fadeInRight">
     <div class="row">
-        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12 badword-index">
+        <div class="col-lg-12 ban-word-index">
+            <?= Alert::widget() ?>
             <?php Pjax::begin(); ?>
-            <?php Jarvis::begin([
-                'noPadding' => true,
-                'editbutton' => false,
-                'deletebutton' => false,
+            <?php Box::begin([
+                //'noPadding' => true,
                 'header' => Html::encode($this->title),
-                'bodyToolbarActions' => [
-                    [
-                        'label' => Yii::t('admin', 'Manage Ban Word'),
-                        'url' => ['/admin/ban-word/index'],
-                    ],
-                    [
-                        'label' => Yii::t('admin', 'Create Ban Word'),
-                        'url' => ['/admin/ban-word/create'],
-                    ],
-                ]
             ]); ?>
-            <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+            <div class="row">
+                <div class="col-sm-4 m-b-xs">
+                    <?= Toolbar::widget(['items' => [
+                        [
+                            'label' => Yii::t('admin', 'Manage Ban Word'),
+                            'url' => ['/admin/ban-word/index'],
+                        ],
+                        [
+                            'label' => Yii::t('admin', 'Create Ban Word'),
+                            'url' => ['/admin/ban-word/create'],
+                        ],
+                    ]]); ?>
+                </div>
+                <div class="col-sm-8 m-b-xs">
+                    <?= $this->render('_search', ['model' => $searchModel]); ?>
+                </div>
+            </div>
             <?= GridView::widget([
+                'options' => ['id' => 'gridview'],
+                'layout' => "{items}\n{summary}\n{pager}",
                 'dataProvider' => $dataProvider,
-                'filterModel' => $searchModel,
+                //'filterModel' => $searchModel,
                 'columns' => [
                     ['class' => 'yii\grid\SerialColumn'],
                     'id',
@@ -46,8 +54,8 @@ $this->params['breadcrumbs'][] = $this->title;
                         'format' => 'datetime',
                         'filter' => \yii\jui\DatePicker::widget([
                             'model' => $searchModel,
-                            'options'=>[
-                                'class'=>'form-control'
+                            'options' => [
+                                'class' => 'form-control'
                             ],
                             'attribute' => 'created_at',
                             'name' => 'created_at',
@@ -60,8 +68,8 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                 ],
             ]); ?>
-            <?php Jarvis::end(); ?>
+            <?php Box::end(); ?>
             <?php Pjax::end(); ?>
-        </article>
+        </div>
     </div>
-</section>
+</div>

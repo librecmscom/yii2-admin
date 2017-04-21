@@ -13,11 +13,11 @@ class TreeGridAsset extends AssetBundle {
     public $sourcePath = '@yuncms/admin/resources/assets';
 
     public $js = [
-        'js/plugins/jquery-treegrid/js/jquery.treegrid.min.js',
+        'jquery-treegrid/js/jquery.treegrid.min.js',
     ];
 
     public $css = [
-        'js/plugins/jquery-treegrid/css/jquery.treegrid.css',
+        'jquery-treegrid/css/jquery.treegrid.css',
     ];
 
     public $depends = [
