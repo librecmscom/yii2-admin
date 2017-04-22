@@ -1,7 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use xutl\inspinia\ActiveForm;
 
 /* @var \yii\web\View $this */
 /* @var \yuncms\admin\models\AdminBizRule $model */

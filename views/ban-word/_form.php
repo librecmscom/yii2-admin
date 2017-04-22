@@ -1,8 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-use yuncms\admin\models\Banword;
+use xutl\inspinia\ActiveForm;
 
 /* @var \yii\web\View $this */
 /* @var yuncms\admin\models\Banword $model */

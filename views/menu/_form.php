@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
+use xutl\inspinia\ActiveForm;
 use yuncms\admin\widgets\IconpIcker;
 use xutl\typeahead\Bloodhound;
 use xutl\typeahead\TypeAhead;
