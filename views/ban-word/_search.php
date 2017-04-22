@@ -5,7 +5,7 @@ use xutl\inspinia\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model yuncms\admin\models\BanwordSearch */
-/* @var $form yuncms\admin\widgets\ActiveForm */
+/* @var $form ActiveForm */
 ?>
 
 <div class="badword-search pull-right">
