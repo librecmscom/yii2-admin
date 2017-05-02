@@ -54,7 +54,7 @@ class Position extends Action
     }
 
     /**
-     * @param \yii\db\ActiveRecordInterface|\yuncms\admin\behaviors\PositionBehavior $model
+     * @param \yii\db\ActiveRecordInterface|\yii2tech\ar\position\PositionBehavior $model
      * @param $position
      * @throws BadRequestHttpException
      */
