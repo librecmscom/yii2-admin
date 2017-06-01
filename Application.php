@@ -48,9 +48,9 @@ class Application extends \yii\web\Application
         return array_merge(parent::coreComponents(), [
             'request' => [
                 'class' => 'yii\web\Request',
-                'csrfParam' => '_csrf-backend',
+                'csrfParam' => '_csrf_backend',
             ],
-            'session' => [
+            'session' => [//默认session
                 'class' => 'yii\web\Session',
                 'name' => 'backend',
             ],
