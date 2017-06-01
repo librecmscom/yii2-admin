@@ -50,10 +50,6 @@ class Application extends \yii\web\Application
                 'class' => 'yii\web\Request',
                 'csrfParam' => '_csrf_backend',
             ],
-            'session' => [//默认session
-                'class' => 'yii\web\Session',
-                'name' => 'backend',
-            ],
             'user' => [
                 'class' => 'yii\web\User',
                 'enableAutoLogin' => true,
