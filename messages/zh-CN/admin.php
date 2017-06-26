@@ -24,6 +24,7 @@ return [
     'Memory Load' => '',
     'VerifyCode' => '验证码',
     'No' => '否',
+    'Operating' => '操作',
     'Please select correct type' => '请选择正确的类型',
     'Section' => '',
     'Server Load' => '',
