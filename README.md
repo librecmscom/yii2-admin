@@ -7,6 +7,8 @@
 [![Build Status](https://img.shields.io/travis/yiisoft/yii2-admin.svg)](http://travis-ci.org/yuncms/yii2-admin)
 [![Dependency Status](https://www.versioneye.com/php/yuncms:yii2-admin/dev-master/badge.png)](https://www.versioneye.com/php/yuncms:yii2-admin/dev-master)
 [![License](https://poser.pugx.org/yuncms/yii2-admin/license.svg)](https://packagist.org/packages/yuncms/yii2-admin)
+
+
 Installation
 ------------
 
@@ -23,7 +25,7 @@ composer require --prefer-dist yuncms/yii2-admin
 or add
 
 ```json
-"yuncms/yii2-admin": "~1.0.0"
+"yuncms/yii2-admin": "~2.0.0"
 ```
 
 to the `require` section of your composer.json.
