@@ -52,3 +52,8 @@ After you downloaded and configured Yii2-admin, the last thing you need to do is
 ```bash
 $ php yii migrate/up 
 ```
+
+## License
+
+This is released under the MIT License. See the bundled [LICENSE.md](LICENSE.md)
+for details.
