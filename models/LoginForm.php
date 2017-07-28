@@ -29,8 +29,11 @@ class LoginForm extends Model
     /**
      * @var bool 记住我
      */
-    public $rememberMe = true;
+    public $rememberMe;
 
+    /**
+     * @var string 验证码
+     */
     public $verifyCode;
 
 
@@ -100,7 +103,7 @@ class LoginForm extends Model
     protected function getUser()
     {
         if ($this->_user === null) {
-            $this->_user = User::findByUsernameOrEmailOrMobile($this->login);
+            $this->_user = User::findByEmailOrMobile($this->login);
         }
         return $this->_user;
     }
