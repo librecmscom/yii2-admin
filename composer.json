@@ -9,7 +9,7 @@
   "license": "MIT",
   "require": {
     "php": ">=5.4.0",
-    "yiisoft/yii2": "~2.0",
+    "yiisoft/yii2": "~2.0.6",
     "yii2tech/ar-position": "~1.0",
     "yuncms/yii2-user": "~2.0",
     "xutl/yii2-inspinia-widget": "~1.0"
