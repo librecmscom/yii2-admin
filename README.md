@@ -8,9 +8,7 @@
 [![Dependency Status](https://www.versioneye.com/php/yuncms:yii2-admin/dev-master/badge.png)](https://www.versioneye.com/php/yuncms:yii2-admin/dev-master)
 [![License](https://poser.pugx.org/yuncms/yii2-admin/license.svg)](https://packagist.org/packages/yuncms/yii2-admin)
 
-
-Installation
-------------
+## Installation
 
 Next steps will guide you through the process of installing yii2-admin using [composer](http://getcomposer.org/download/). Installation is a quick and easy three-step process.
 
