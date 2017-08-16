@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="hr-line-dashed"></div>
             <?= $form->field($model, 'copyright')->textarea() ?>
             <div class="hr-line-dashed"></div>
-            <?= $form->field($model, 'close')->inline(true)->radioList(['1' => Yii::t('admin', 'Yes'), '0' => Yii::t('admin', 'No')]); ?>
+            <?= $form->field($model, 'close')->inline()->checkbox([], false) ?>
             <div class="hr-line-dashed"></div>
             <?= $form->field($model, 'closeReason')->textarea() ?>
             <div class="hr-line-dashed"></div>

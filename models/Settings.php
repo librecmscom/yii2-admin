@@ -66,7 +66,7 @@ class Settings extends Model
      */
     public function formName()
     {
-        return 'user';
+        return 'system';
     }
 
     /**
