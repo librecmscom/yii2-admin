@@ -18,9 +18,9 @@ if (!function_exists('seo')) {
         if (!empty($description)) $description = strip_tags($description);
         if (!empty($keyword)) $keyword = str_replace(' ', ',', strip_tags($keyword));
 
-        Yii::$app->view->params['site_title'] = \yuncms\admin\helpers\SettingHelper::get('title', 'site', Yii::$app->name);
-        Yii::$app->view->params['keyword'] = !empty($keyword) ? $keyword : \yuncms\admin\helpers\SettingHelper::get('keywords', 'site');
-        Yii::$app->view->params['description'] = isset($description) && !empty($description) ? $description : \yuncms\admin\helpers\SettingHelper::get('description', 'site');
+        Yii::$app->view->params['site_title'] = Yii::$app->settings->get('title', 'system', Yii::$app->name);
+        Yii::$app->view->params['keyword'] = !empty($keyword) ? $keyword : Yii::$app->settings->get('keywords', 'system');
+        Yii::$app->view->params['description'] = isset($description) && !empty($description) ? $description : Yii::$app->settings->get('description', 'system');
         Yii::$app->view->params['title'] = (!empty($title) ? $title . ' - ' : '');
     }
 }
