@@ -10,17 +10,19 @@ use yii\web\Controller;
 
 class SettingController extends Controller
 {
-    /**
-     * @inheritdoc
-     */
+
     public function actions()
     {
         return [
+            //....
             'setting' => [
-                'class' => 'yuncms\admin\actions\SettingAction',
-                'modelClass' => 'yuncms\admin\models\SiteSettingForm',
-                'group' => 'site',
+                'class' => 'yuncms\system\actions\SettingsAction',
+                'modelClass' => 'yuncms\admin\models\Settings',
+                //'scenario' => 'user',
+                //'scenario' => 'site', // Change if you want to re-use the model for multiple setting form.
+                'viewName' => 'settings'    // The form we need to render
             ],
+            //....
         ];
     }
 }

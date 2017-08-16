@@ -47,7 +47,7 @@ class Bootstrap implements BootstrapInterface
             });
 
             //设置前台URL
-            $app->frontUrlManager->baseUrl = SettingHelper::get('url','site');
+            $app->frontUrlManager->baseUrl = Yii::$app->settings->get('url','system');
 
             //附加权限验证行为
 //            $app->attachBehavior('access', Yii::createObject([

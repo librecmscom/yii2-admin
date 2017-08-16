@@ -4,16 +4,17 @@
  * @copyright Copyright (c) 2012 TintSoft Technology Co. Ltd.
  * @license http://www.tintsoft.com/license/
  */
+
 namespace yuncms\admin\models;
 
 use Yii;
 use yii\base\Model;
 
 /**
- * Class SiteSettingForm
- * @package backend\models
+ * Class Settings
+ * @package yuncms\admin\models
  */
-class SiteSettingForm extends Model
+class Settings extends Model
 {
     /**
      * @var string
@@ -59,6 +60,35 @@ class SiteSettingForm extends Model
      * @var string
      */
     public $analysisCode;
+
+    /**
+     * 返回标识
+     */
+    public function formName()
+    {
+        return 'user';
+    }
+
+    /**
+     * 定义字段类型
+     * @return array
+     */
+    public function getTypes()
+    {
+        return [
+            'name' => 'string',
+            'title' => 'string',
+            'keywords' => 'string',
+            'description' => 'string',
+            'copyright' => 'string',
+            'url' => 'string',
+            'enablePasswordRecovery' => 'string',
+            'close'=>'boolean',
+            'closeReason'=>'string',
+            'analysisCode' => 'string',
+
+        ];
+    }
 
     /**
      * @return array
