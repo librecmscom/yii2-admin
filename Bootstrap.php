@@ -42,7 +42,7 @@ class Bootstrap implements BootstrapInterface
             $app->on(\yii\web\Application::EVENT_AFTER_REQUEST, function ($event) use ($app) {
                 if (!$app->user->isGuest) {
                     //记录最后活动时间
-                    $app->user->identity->userData->updateAttributes(['last_visit' => time()]);
+                    $app->user->identity->extend->updateAttributes(['last_visit' => time()]);
                 }
             });
 
