@@ -29,8 +29,8 @@
         "class": "yuncms\\admin\\Module"
       },
       "frontend": {},
-      "message": "",
-      "migration": ""
+      "message": "messages",
+      "migration": "migrations"
     },
     "branch-alias": {
       "dev-master": "2.0-dev"
