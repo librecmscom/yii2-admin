@@ -24,6 +24,12 @@
     }
   },
   "extra": {
+    "yuncms": {
+      "backend": [],
+      "frontend": [],
+      "message": "",
+      "migration": ""
+    },
     "branch-alias": {
       "dev-master": "2.0-dev"
     }
