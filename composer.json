@@ -25,12 +25,13 @@
   },
   "extra": {
     "yuncms": {
+      "name": "admin",
+      "i18n": "messages",
+      "migration": "migrations",
       "backend": {
         "class": "yuncms\\admin\\Module"
       },
-      "frontend": {},
-      "message": "messages",
-      "migration": "migrations"
+      "frontend": {}
     },
     "branch-alias": {
       "dev-master": "2.0-dev"
