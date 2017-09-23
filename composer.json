@@ -28,6 +28,7 @@
       "name": "admin",
       "i18n": {
         "class":"yii\\i18n\\PhpMessageSource",
+        "sourceLanguage": "en-US",
         "basePath":"@yuncms/admin/message"
       },
       "migrationNamespace": "yuncms\\admin\\migrations",
