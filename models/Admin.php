@@ -60,7 +60,7 @@ class Admin extends ActiveRecord implements IdentityInterface
         return [
             [
                 'class' => TimestampBehavior::className(),
-            ]
+            ],
         ];
     }
 
@@ -71,11 +71,10 @@ class Admin extends ActiveRecord implements IdentityInterface
     {
         $scenarios = parent::scenarios();
         return ArrayHelper::merge($scenarios, [
-            static::SCENARIO_CREATE => [],
+            static::SCENARIO_CREATE => ['username', 'password', 'email', 'mobile'],
             static::SCENARIO_UPDATE => [],
         ]);
     }
-
 
     /**
      * @inheritdoc
@@ -86,11 +85,10 @@ class Admin extends ActiveRecord implements IdentityInterface
             [['username', 'email', 'mobile'], 'required'],
 
             // username rules
-            [['username'], 'string', 'max' => 50],
+            ['username', 'string', 'min' => 3, 'max' => 50],
             ['username', 'match', 'pattern' => self::$usernameRegexp],
             [['username'], 'unique', 'message' => Yii::t('admin', 'This username has already been taken')],
             ['username', 'trim'],
-
 
             // email rules
             [['email'], 'string', 'max' => 60],
@@ -100,7 +98,7 @@ class Admin extends ActiveRecord implements IdentityInterface
 
             // mobile rules
             [['mobile'], 'string', 'max' => 11],
-            ['username', 'match', 'pattern' => self::$mobileRegexp],
+            ['mobile', 'match', 'pattern' => self::$mobileRegexp],
             [['mobile'], 'unique', 'message' => Yii::t('admin', 'This mobile has already been taken')],
 
             // password rules
@@ -121,6 +119,7 @@ class Admin extends ActiveRecord implements IdentityInterface
             'username' => Yii::t('admin', 'Username'),
             'email' => Yii::t('admin', 'EMail'),
             'mobile' => Yii::t('admin', 'Mobile'),
+            'password' => Yii::t('admin', 'Password'),
             'auth_key' => Yii::t('admin', 'Auth Key'),
             'password_hash' => Yii::t('admin', 'Password Hash'),
             'status' => Yii::t('admin', 'Status'),
