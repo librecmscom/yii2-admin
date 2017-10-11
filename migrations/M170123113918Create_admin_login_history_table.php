@@ -15,7 +15,7 @@ class M170123113918Create_admin_login_history_table extends Migration
         }
         $this->createTable('{{%admin_login_history}}', [
             'id' => $this->primaryKey(11),
-            'user_id' => $this->integer()->notNull(),
+            'user_id' => $this->integer()->unsigned()->notNull(),
             'ip' => $this->string()->notNull(),
             'created_at' => $this->integer()->unsigned()->notNull()
         ], $tableOptions);
