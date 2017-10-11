@@ -17,6 +17,21 @@
  * NOTE: this file must be saved in UTF-8 encoding.
  */
 return [
+    'Operating' => '操作',
+    'Logout' => '退出',
+    'Auth Key' => '',
+    'You can improve your security further after logging out by closing this opened browser' => '关闭浏览器在打开，可以提高安全性！',
+    'Create success.' => '创建成功！',
+    'EMail' => '电子邮箱',
+    'ID' => '',
+    'Last Login At' => '最后登录',
+    'Mobile' => '手机',
+    'Password Hash' => '密码哈希',
+    'Status' => '状态',
+    'This email has already been taken' => '该邮箱已被使用',
+    'This mobile has already been taken' => '该手机号已被使用',
+    'This username has already been taken' => '该用户名已被使用',
+    'Updated At' => '更新时间',
     'Account' => '账户',
     'Add' => '添加',
     'Add subMenu' => '添加子菜单',

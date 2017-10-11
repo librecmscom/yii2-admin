@@ -69,6 +69,7 @@ class M170123113843Create_admin_rbac_table extends Migration
 
         //给超级管理员组授权
         $this->insert('{{%admin_auth_item_child}}', ['parent' => 'Super Administrator', 'child' => '/*']);
+        $this->insert('{{%admin_auth_assignment}}', ['item_name' => 'Super Administrator', 'user_id' => 1, 'created_at' => time()]);
     }
 
     public function down()

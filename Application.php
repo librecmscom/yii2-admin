@@ -54,7 +54,7 @@ class Application extends \yii\web\Application
                 'class' => 'yii\web\User',
                 'enableAutoLogin' => true,
                 'loginUrl' => ['/admin/security/login'],
-                'identityClass' => 'yuncms\user\models\User',
+                'identityClass' => 'yuncms\admin\models\Admin',
                 'identityCookie' => [
                     'name' => '_identity_backend',
                     'httpOnly' => true
@@ -75,7 +75,6 @@ class Application extends \yii\web\Application
             'frontUrlManager' => [
                 'class' => 'yii\web\UrlManager',
             ],
-
         ]);
     }
 

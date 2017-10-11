@@ -74,7 +74,7 @@ class ItemController extends Controller
         $model = new AdminAuthItem(null);
         $model->type = $this->type;
         if ($model->load(Yii::$app->getRequest()->post()) && $model->save()) {
-            Yii::$app->getSession()->setFlash('success', Yii::t('app','Create success.'));
+            Yii::$app->getSession()->setFlash('success', Yii::t('admin','Create success.'));
             return $this->redirect(['view', 'id' => $model->name]);
         } else {
             return $this->render('create', ['model' => $model]);
@@ -179,7 +179,7 @@ class ItemController extends Controller
         if ($item) {
             return new AdminAuthItem($item);
         } else {
-            throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+            throw new NotFoundHttpException(Yii::t('yii', 'The requested page does not exist.'));
         }
     }
 }

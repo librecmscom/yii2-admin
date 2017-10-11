@@ -20,7 +20,7 @@ class M170123113918Create_admin_login_history_table extends Migration
             'created_at' => $this->integer()->unsigned()->notNull()
         ], $tableOptions);
 
-        $this->addForeignKey('{{%admin_login_history_ibfk_1}}', '{{%admin_login_history}}', 'user_id', '{{%user}}', 'id', 'CASCADE', 'RESTRICT');
+        $this->addForeignKey('{{%admin_login_history_ibfk_1}}', '{{%admin_login_history}}', 'user_id', '{{%admin}}', 'id', 'CASCADE', 'RESTRICT');
     }
 
     public function down()

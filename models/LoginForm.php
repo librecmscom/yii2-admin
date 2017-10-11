@@ -103,7 +103,7 @@ class LoginForm extends Model
     protected function getUser()
     {
         if ($this->_user === null) {
-            $this->_user = User::findByEmailOrMobile($this->login);
+            $this->_user = Admin::findByEmailOrMobileOrUsername($this->login);
         }
         return $this->_user;
     }

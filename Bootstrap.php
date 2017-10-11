@@ -37,15 +37,6 @@ class Bootstrap implements BootstrapInterface
             //    'cache' => 'cache',
             //]);
 
-            //监听用户活动时间
-            /** @var \yii\web\UserEvent $event */
-            $app->on(\yii\web\Application::EVENT_AFTER_REQUEST, function ($event) use ($app) {
-                if (!$app->user->isGuest) {
-                    //记录最后活动时间
-                    $app->user->identity->extend->updateAttributes(['last_visit' => time()]);
-                }
-            });
-
             //设置前台URL
             $app->frontUrlManager->baseUrl = Yii::$app->settings->get('url','system');
 
