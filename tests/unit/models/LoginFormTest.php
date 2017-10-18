@@ -22,7 +22,7 @@ class LoginFormTest extends \Codeception\Test\Unit
     public function testLoginNoUser()
     {
         $this->model = new LoginForm([
-            'username' => 'not_existing_username',
+            'login' => 'not_existing_username',
             'password' => 'not_existing_password',
         ]);
         expect_not($this->model->login());
@@ -32,7 +32,7 @@ class LoginFormTest extends \Codeception\Test\Unit
     public function testLoginWrongPassword()
     {
         $this->model = new LoginForm([
-            'username' => 'demo',
+            'login' => 'demo',
             'password' => 'wrong_password',
         ]);
         expect_not($this->model->login());
@@ -43,7 +43,7 @@ class LoginFormTest extends \Codeception\Test\Unit
     public function testLoginCorrect()
     {
         $this->model = new LoginForm([
-            'username' => 'demo',
+            'login' => 'demo',
             'password' => 'demo',
         ]);
         expect_that($this->model->login());

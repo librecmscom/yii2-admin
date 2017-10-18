@@ -12,7 +12,7 @@ class LoginCest
     public function ensureThatLoginWorks(AcceptanceTester $I)
     {
         $I->amOnPage(Url::toRoute('/admin/security/login'));
-        $I->see('Login', 'h1');
+        $I->see('Y+', 'h1');
         $I->amGoingTo('try to login with correct credentials');
         $I->fillField('input[name="LoginForm[login]"]', 'admin');
         $I->fillField('input[name="LoginForm[password]"]', 'admin');
