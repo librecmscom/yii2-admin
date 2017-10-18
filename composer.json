@@ -46,5 +46,11 @@
     "branch-alias": {
       "dev-master": "2.0-dev"
     }
-  }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ]
 }
