@@ -4,11 +4,11 @@ $time = time();
 
 return [
     'admin' => [
-        'username' => 'user',
+        'username' => 'admin',
         'email' => 'user@example.com',
         'mobile' => '13800138000',
-        'password_hash' => '$2y$13$qY.ImaYBppt66qez6B31QO92jc5DYVRzo5NxM1ivItkW74WsSG6Ui',
-        'auth_key' => '39HU0m5lpjWtqstFVGFjj6lFb7UZDeRq',
+        'password_hash' => '$2y$13$BzPeMPVIFLkiZXwkjJ/HZu0o6Mk0EUQdePC0ufnpzJCzIb4sOrUKK',
+        'auth_key' => '0B8C1dRH1XxKhO15h_9JzaN0OAY9WprZ',
         'status' => 1,
         'last_login_at' => $time,
         'created_at' => $time,

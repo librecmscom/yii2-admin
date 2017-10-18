@@ -11,13 +11,6 @@ use yuncms\admin\models\Admin;
 
 class AdminTest extends \Codeception\Test\Unit
 {
-    public function testFindUserById()
-    {
-        expect_that($user = Admin::findIdentity(100));
-        expect($user->username)->equals('admin');
-        expect_not(Admin::findIdentity(999));
-    }
-
     public function testFindUserByUsername()
     {
         expect_that($user = Admin::findByUsername('admin'));
@@ -30,9 +23,9 @@ class AdminTest extends \Codeception\Test\Unit
     public function testValidateUser($user)
     {
         $user = Admin::findByUsername('admin');
-        expect_that($user->validateAuthKey('test100key'));
+        expect_that($user->validateAuthKey('39HU0m5lpjWtqstFVGFjj6lFb7UZDeRq'));
         expect_not($user->validateAuthKey('test102key'));
-        expect_that($user->validatePassword('admin'));
-        expect_not($user->validatePassword('123456'));
+        expect_that($user->validatePassword('123456'));
+        expect_not($user->validatePassword('admin'));
     }
 }

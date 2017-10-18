@@ -36,6 +36,7 @@ $this->registerMetaTag(['name' => 'author', 'content' => 'TintSoft Team']);
         </div>
         <h3><?= Yii::t('admin', 'Manage Center'); ?></h3>
         <?php $form = ActiveForm::begin([
+            'id' => 'login-form',
             'options' => [
                 'class' => 'm-t'
             ],
