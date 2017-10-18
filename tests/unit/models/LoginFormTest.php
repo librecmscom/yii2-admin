@@ -24,6 +24,7 @@ class LoginFormTest extends \Codeception\Test\Unit
         $this->model = new LoginForm([
             'login' => 'not_existing_login',
             'password' => 'not_existing_password',
+            'verifyCode' => 'test',
         ]);
         expect_not($this->model->login());
         expect_that(\Yii::$app->user->isGuest);
@@ -34,6 +35,7 @@ class LoginFormTest extends \Codeception\Test\Unit
         $this->model = new LoginForm([
             'login' => 'demo',
             'password' => 'wrong_password',
+            'verifyCode' => 'test',
         ]);
         expect_not($this->model->login());
         expect_that(\Yii::$app->user->isGuest);
@@ -43,8 +45,9 @@ class LoginFormTest extends \Codeception\Test\Unit
     public function testLoginCorrect()
     {
         $this->model = new LoginForm([
-            'login' => 'demo',
-            'password' => 'demo',
+            'login' => 'admin',
+            'password' => '123456',
+            'verifyCode' => 'test',
         ]);
         expect_that($this->model->login());
         expect_not(\Yii::$app->user->isGuest);

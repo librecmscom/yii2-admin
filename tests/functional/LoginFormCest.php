@@ -9,7 +9,7 @@ class LoginFormCest
 {
     public function _before(\FunctionalTester $I)
     {
-        $I->amOnRoute('admin/security/login');
+        $I->amOnRoute('/admin/security/login');
         $I->haveFixtures(['admin' => \tests\_fixtures\AdminFixture::className()]);
     }
 

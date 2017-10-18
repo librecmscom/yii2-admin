@@ -23,7 +23,7 @@ class AdminTest extends \Codeception\Test\Unit
     public function testValidateUser($user)
     {
         $user = Admin::findByUsername('admin');
-        expect_that($user->validateAuthKey('39HU0m5lpjWtqstFVGFjj6lFb7UZDeRq'));
+        expect_that($user->validateAuthKey('0B8C1dRH1XxKhO15h_9JzaN0OAY9WprZ'));
         expect_not($user->validateAuthKey('test102key'));
         expect_that($user->validatePassword('123456'));
         expect_not($user->validatePassword('admin'));
