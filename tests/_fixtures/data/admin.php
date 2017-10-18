@@ -13,7 +13,6 @@ return [
         'last_login_at' => $time,
         'created_at' => $time,
         'updated_at' => $time,
-
     ],
     'blocked' => [
         'username' => 'steven',
