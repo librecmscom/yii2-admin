@@ -16,6 +16,10 @@ return [
         ],
     ],
     'components' => [
+        'request' => [
+            'cookieValidationKey' => 'test',
+            'enableCsrfValidation' => false,
+        ],
         'db' => require __DIR__ . '/db.php',
         'urlManager' => [
             'showScriptName' => true,
@@ -36,10 +40,7 @@ return [
                 ],
             ],
         ],
-        'request' => [
-            'cookieValidationKey' => 'test',
-            'enableCsrfValidation' => false,
-        ],
+
     ],
     'params' => [],
 ];
