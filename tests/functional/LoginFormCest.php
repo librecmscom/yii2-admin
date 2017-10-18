@@ -5,12 +5,19 @@
  * @license http://www.tintsoft.com/license/
  */
 
+
 class LoginFormCest
 {
     public function _before(\FunctionalTester $I)
     {
+        $I->wantTo('ensure that login works');
+        $I->haveFixtures([
+            'admin' => [
+                'class' => \tests\_fixtures\AdminFixture::className(),
+                'dataFile' => codecept_data_dir() . 'admin.php'
+            ]
+        ]);
         $I->amOnRoute('/admin/security/login');
-        $I->haveFixtures(['admin' => \tests\_fixtures\AdminFixture::className()]);
     }
 
     public function openLoginPage(\FunctionalTester $I)
@@ -19,17 +26,10 @@ class LoginFormCest
     }
 
     // demonstrates `amLoggedInAs` method
-    public function internalLoginById(\FunctionalTester $I)
-    {
-        $I->amLoggedInAs(1);
-        $I->amOnPage('/');
-        $I->see('Logout');
-    }
-
-    // demonstrates `amLoggedInAs` method
     public function internalLoginByInstance(\FunctionalTester $I)
     {
-        $I->amLoggedInAs(\yuncms\admin\models\Admin::findByUsername('admin'));
+        $user = $I->grabFixture('admin', 'admin');
+        $I->amLoggedInAs($user);
         $I->amOnPage('/');
         $I->see('Logout');
     }
@@ -45,8 +45,9 @@ class LoginFormCest
 
     public function loginWithWrongCredentials(\FunctionalTester $I)
     {
+        $user = $I->grabFixture('admin', 'admin');
         $I->submitForm('#login-form', [
-            'LoginForm[login]' => 'admin',
+            'LoginForm[login]' => $user->username,
             'LoginForm[password]' => 'wrong',
             'LoginForm[verifyCode]' => 'test',
             'LoginForm[rememberMe]' => 1
@@ -57,12 +58,14 @@ class LoginFormCest
 
     public function loginSuccessfully(\FunctionalTester $I)
     {
+        $user = $I->grabFixture('admin', 'admin');
         $I->submitForm('#login-form', [
-            'LoginForm[login]' => 'admin',
+            'LoginForm[login]' => $user->username,
             'LoginForm[password]' => '123456',
             'LoginForm[verifyCode]' => 'test',
             'LoginForm[rememberMe]' => 1
         ]);
+        $I->amOnPage('/');
         $I->see('Logout');
         $I->dontSeeElement('form#login-form');
     }
