@@ -19,8 +19,21 @@ return [
         ],
     ],
     'components' => [
-        'log'   => null,
+        'log' => null,
         'cache' => null,
-        'db'    => require __DIR__ . '/db.php',
+        'i18n' => [
+            'translations' => [
+                'admin*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    //'basePath' => '@app/messages',
+                    'sourceLanguage' => 'en-US',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                        'app/error' => 'error.php',
+                    ],
+                ],
+            ],
+        ],
+        'db' => require __DIR__ . '/db.php',
     ],
 ];
