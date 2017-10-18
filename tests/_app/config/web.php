@@ -18,7 +18,7 @@ $config = [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
-            'identityClass' => 'app\models\User',
+            'identityClass' => 'yuncms\admin\models\Admin',
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [

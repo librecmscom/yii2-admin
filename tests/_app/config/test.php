@@ -20,7 +20,10 @@ return [
         'urlManager' => [
             'showScriptName' => true,
         ],
-        'i18n'=>[
+        'user' => [
+            'identityClass' => 'yuncms\admin\models\Admin',
+        ],
+        'i18n' => [
             'translations' => [
                 'admin*' => [
                     'class' => 'yii\i18n\PhpMessageSource',

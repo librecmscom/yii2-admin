@@ -21,6 +21,9 @@ return [
     'components' => [
         'log' => null,
         'cache' => null,
+        'user' => [
+            'identityClass' => 'yuncms\admin\models\Admin'
+        ],
         'i18n' => [
             'translations' => [
                 'admin*' => [
