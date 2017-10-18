@@ -4,6 +4,7 @@ return [
     'id' => 'yii2-admin-tests',
     'basePath' => dirname(__DIR__),
     'language' => 'en-US',
+    'layout' => '@vendor/xutl/yii2-inspinia-widget/views/layouts/main',
     'aliases' => [
         '@yuncms/admin' => dirname(dirname(dirname(__DIR__))),
         '@tests' => dirname(dirname(__DIR__)),
@@ -26,6 +27,12 @@ return [
         ],
         'user' => [
             'identityClass' => 'yuncms\admin\models\Admin',
+            'enableAutoLogin' => true,
+            'loginUrl' => ['/admin/security/login'],
+            'identityCookie' => [
+                'name' => '_identity_backend',
+                'httpOnly' => true
+            ],
         ],
         'i18n' => [
             'translations' => [

@@ -18,13 +18,6 @@ class AdminTest extends \Codeception\Test\Unit
         expect_not(Admin::findIdentity(999));
     }
 
-    public function testFindUserByAccessToken()
-    {
-        expect_that($user = Admin::findIdentityByAccessToken('100-token'));
-        expect($user->username)->equals('admin');
-        expect_not(Admin::findIdentityByAccessToken('non-existing'));
-    }
-
     public function testFindUserByUsername()
     {
         expect_that($user = Admin::findByUsername('admin'));
