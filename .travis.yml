@@ -20,9 +20,6 @@ cache:
 install:
   - travis_retry composer self-update && composer --version
   - travis_retry composer install --prefer-dist
-# setup application:
-  - |
-    sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" test/_app/config/web.php
 
 before_script:
   - mysql -e 'create database yuncms_test;'

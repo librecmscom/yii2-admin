@@ -20,9 +20,6 @@ return [
         'mailer' => [
             'useFileTransport' => true,
         ],
-        'authClientCollection' => [
-            'class' => 'yii\authclient\Collection'
-        ],
         'urlManager' => [
             'showScriptName' => true,
         ],
