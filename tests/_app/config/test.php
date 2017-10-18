@@ -12,7 +12,7 @@ return [
     ],
     'modules' => [
         'admin' => [
-            'class' => 'yuncms\user\frontend\Module',
+            'class' => 'yuncms\admin\Module',
         ],
     ],
     'components' => [
