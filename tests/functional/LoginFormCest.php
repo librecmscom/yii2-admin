@@ -10,6 +10,7 @@ class LoginFormCest
     public function _before(\FunctionalTester $I)
     {
         $I->amOnRoute('admin/security/login');
+        $I->haveFixtures(['admin' => \tests\_fixtures\AdminFixture::className()]);
     }
 
     public function openLoginPage(\FunctionalTester $I)
@@ -20,9 +21,9 @@ class LoginFormCest
     // demonstrates `amLoggedInAs` method
     public function internalLoginById(\FunctionalTester $I)
     {
-        $I->amLoggedInAs(100);
+        $I->amLoggedInAs(1);
         $I->amOnPage('/');
-        $I->see('Logout (admin)');
+        $I->see('Logout');
     }
 
     // demonstrates `amLoggedInAs` method
@@ -30,15 +31,16 @@ class LoginFormCest
     {
         $I->amLoggedInAs(\yuncms\admin\models\Admin::findByUsername('admin'));
         $I->amOnPage('/');
-        $I->see('Logout (admin)');
+        $I->see('Logout');
     }
 
     public function loginWithEmptyCredentials(\FunctionalTester $I)
     {
         $I->submitForm('#login-form', []);
         $I->expectTo('see validations errors');
-        $I->see('Username cannot be blank.');
+        $I->see('Account cannot be blank.');
         $I->see('Password cannot be blank.');
+        $I->see('Verify Code cannot be blank.');
     }
 
     public function loginWithWrongCredentials(\FunctionalTester $I)
@@ -46,6 +48,8 @@ class LoginFormCest
         $I->submitForm('#login-form', [
             'LoginForm[login]' => 'admin',
             'LoginForm[password]' => 'wrong',
+            'LoginForm[verifyCode]' => 'test',
+            'LoginForm[rememberMe]' => 1
         ]);
         $I->expectTo('see validations errors');
         $I->see('Incorrect username or password.');
@@ -56,8 +60,10 @@ class LoginFormCest
         $I->submitForm('#login-form', [
             'LoginForm[login]' => 'admin',
             'LoginForm[password]' => '123456',
+            'LoginForm[verifyCode]' => 'test',
+            'LoginForm[rememberMe]' => 1
         ]);
-        $I->see('Logout (admin)');
+        $I->see('Logout');
         $I->dontSeeElement('form#login-form');
     }
 }

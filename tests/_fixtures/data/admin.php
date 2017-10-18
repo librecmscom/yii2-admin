@@ -5,7 +5,7 @@ $time = time();
 return [
     'admin' => [
         'username' => 'admin',
-        'email' => 'user@example.com',
+        'email' => 'xutongle@gmail.com',
         'mobile' => '13800138000',
         'password_hash' => '$2y$13$BzPeMPVIFLkiZXwkjJ/HZu0o6Mk0EUQdePC0ufnpzJCzIb4sOrUKK',
         'auth_key' => '0B8C1dRH1XxKhO15h_9JzaN0OAY9WprZ',
