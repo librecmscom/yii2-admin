@@ -48,7 +48,7 @@ class M131219085941Create_admin_menu_table extends Migration
             [26, '路由管理', 2, '/admin/route/index', 'fa-cloud', 5, NULL],
             [27, '规则管理', 2, '/admin/rule/index', 'fa-key', 6, NULL],
             [28, '菜单管理', 2, '/admin/menu/index', 'fa-wrench', 7, NULL],
-            [30, '附件设置', 2, '/attachment/attachment/setting', 'fa-cog', 8, NULL],
+            //[30, '附件设置', 2, '/attachment/attachment/setting', 'fa-cog', 8, NULL],
 
            // [40, '地区管理', 3, '/area/index', 'fa-globe', 1, NULL],
             [43, '敏感词管理', 3, '/admin/ban-word/index', 'fa-exclamation-triangle', 2, NULL],
