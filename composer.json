@@ -1,6 +1,6 @@
 {
   "name": "yuncms/yuncms-admin",
-  "description": "The admin extension for the yuncms",
+  "description": "The admin module for the yuncms.",
   "keywords": [
     "yii",
     "yii2",
