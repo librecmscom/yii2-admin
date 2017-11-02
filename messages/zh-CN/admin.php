@@ -19,6 +19,7 @@
 return [
     'Are you sure you want to delete this item?' => '你确定要删除该项目？',
     'Auth Key' => '',
+    'Base Url' => '基础Url',
     'Delete Admin' => '删除管理员',
     'ID' => '',
     'Update' => '更新',
