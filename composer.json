@@ -1,5 +1,5 @@
 {
-  "name": "yuncms/yii2-admin",
+  "name": "yuncms/yuncms-admin",
   "description": "The admin extension for the yuncms",
   "keywords": [
     "yii",
@@ -38,6 +38,8 @@
         "class": "yii\\i18n\\PhpMessageSource",
         "sourceLanguage": "en-US",
         "basePath": "@yuncms/admin/messages"
+      },
+      "cron": {
       },
       "migrationNamespace": "yuncms\\admin\\migrations",
       "backend": {
