@@ -17,9 +17,9 @@ use yii\base\Model;
 class Settings extends Model
 {
     /**
-     * @var string
+     * @var string 基础Url
      */
-    public $url;
+    public $baseUrl;
 
     /**
      * @var string
@@ -81,10 +81,10 @@ class Settings extends Model
             'keywords' => 'string',
             'description' => 'string',
             'copyright' => 'string',
-            'url' => 'string',
+            'baseUrl' => 'string',
             'enablePasswordRecovery' => 'string',
-            'close'=>'boolean',
-            'closeReason'=>'string',
+            'close' => 'boolean',
+            'closeReason' => 'string',
             'analysisCode' => 'string',
 
         ];
@@ -96,11 +96,11 @@ class Settings extends Model
     public function rules()
     {
         return [
-            [['name', 'title', 'keywords', 'description', 'copyright', 'url'], 'required'],
+            [['name', 'title', 'keywords', 'description', 'copyright', 'baseUrl'], 'required'],
             [['name', 'title', 'keywords', 'description', 'copyright', 'closeReason', 'analysisCode'], 'string'],
             ['close', 'boolean'],
             ['close', 'default', 'value' => false],
-            ['url', 'url']
+            ['baseUrl', 'url']
         ];
     }
 
@@ -110,7 +110,7 @@ class Settings extends Model
     public function attributeLabels()
     {
         return [
-            'url' => Yii::t('admin', 'Site Url'),
+            'baseUrl' => Yii::t('admin', 'Base Url'),
             'name' => Yii::t('admin', 'Site Name'),
             'title' => Yii::t('admin', 'Site Title'),
             'keywords' => Yii::t('admin', 'Site Keywords'),

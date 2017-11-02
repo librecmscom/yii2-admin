@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ]); ?>
             <?php $form = ActiveForm::begin(['layout' => 'horizontal',]); ?>
 
-            <?= $form->field($model, 'url') ?>
+            <?= $form->field($model, 'baseUrl') ?>
             <div class="hr-line-dashed"></div>
             <?= $form->field($model, 'name') ?>
             <div class="hr-line-dashed"></div>
@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $form->field($model, 'keywords') ?>
             <div class="hr-line-dashed"></div>
             <?= $form->field($model, 'description') ?>
+
             <div class="hr-line-dashed"></div>
             <?= $form->field($model, 'copyright')->textarea() ?>
             <div class="hr-line-dashed"></div>
